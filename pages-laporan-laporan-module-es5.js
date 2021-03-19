@@ -22,7 +22,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack(0)\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Isi Laporan {{ title }}</ion-title>\n\n    <!-- <ion-buttons slot=\"primary\">\n      <ion-button color=\"light\" fill=\"solid\" size=\"small\">\n        {{question_current / question_total * 100}} %\n      </ion-button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\n    </ion-title>\n    \n  </ion-toolbar>\n  <ion-progress-bar color=\"warning\" [value]=\"question_current/question_total\"></ion-progress-bar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  \n\n  <div id=\"container-custom\" *ngIf=\"showCurrentQuestion\">\n\n    <ion-card *ngIf=\"!showButtonSend\">\n      <ion-card-content>\n        \n        <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"currentQuestion?.question\"></div>\n\n        <!-- Multiple select (single select) -->\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 3\">\n          <ion-radio-group value=\"\" *ngIf=\"currentQuestion.Options.length>0\" \n            (ionChange)=\"radioGroupChange($event)\" value=\"{{ singleAnswer }}\">\n            <ion-item lines=\"none\" *ngFor=\"let option of currentQuestion.Options\">\n              <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n              <ion-radio slot=\"start\" value=\"{{ option.id }}\"></ion-radio>\n            </ion-item>\n          </ion-radio-group>\n        </ion-list>\n\n\n        <!-- Boolean -->\n        <ion-segment  *ngIf=\"currentQuestion.id_question_type == 2 && currentQuestion.Options.length>0\" \n          (ionChange)=\"segmentChanged($event)\" value=\"{{ singleAnswer }}\">\n          <ion-segment-button *ngFor=\"let option of currentQuestion.Options\" value=\"{{option.id}}\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n          </ion-segment-button>\n        </ion-segment>\n\n\n        <!-- Essay text -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 1\" lines=\"none\">\n          <ion-textarea rows=\"3\" placeholder=\"Ketik jawaban...\" [(ngModel)]=\"singleAnswer\"></ion-textarea>\n        </ion-item>\n\n        <!-- Essay number -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 5\" lines=\"none\">\n          <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input>\n        </ion-item>\n\n        <!-- Essay image -->\n        <div *ngIf=\"currentQuestion.id_question_type == 6\" style=\"margin-bottom: 15px;\">\n          <ion-row>\n            <ion-col text-center>\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromGalery()\">\n                  <ion-icon slot=\"start\" name=\"image\"></ion-icon>\n                  Buka Galery</ion-button>\n            </ion-col>\n            <ion-col text-center>\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromCamera()\">\n                  <ion-icon slot=\"start\" name=\"camera\"></ion-icon>\n                  Buka Kamera</ion-button>\n            </ion-col>\n          </ion-row>\n        </div>\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 6 && !singleAnswer == ''\" style=\"--padding-bottom:15px;--padding-top:15px;\" lines=\"none\">\n              <img src=\"{{singleAnswer}}\" alt=\"\" srcset=\"\">\n        </ion-item>\n\n\n        <!-- Multiple select (multy select) -->\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 4\">\n          <ion-item *ngFor=\"let option of currentQuestion.Options\" lines=\"none\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n            <!-- [(ngModel)]=\"entry.isChecked\" -->\n            <ion-checkbox slot=\"end\" (ionChange)=\"selectSize($event)\" value=\"{{ option.id }}\" [(ngModel)]=\"option.isChecked\" ></ion-checkbox>\n          </ion-item>\n        </ion-list>\n\n      </ion-card-content>\n    </ion-card>\n\n    <div *ngIf=\"showButtonSend\" style=\"padding: 15px;\">\n      <ion-card>\n\n        <img src=\"./assets/sending.jpg\" />\n\n        <ion-card-content>\n          \n          <ion-button style=\"margin-bottom: 10px;\" (click)=\"getNextQuestion( 0, 'next' )\" expand=\"block\" fill=\"solid\" color=\"light\">Koreksi Ulang Laporan</ion-button>\n          <!-- <ion-button style=\"margin-bottom: 10px;\" *ngIf=\"params.page_from!='temporary'\" (click)=\"temporarySave()\" expand=\"block\" fill=\"solid\" color=\"medium\">Simpan Laporan Sementara</ion-button> -->\n          <ion-button (click)=\"sendAnswer()\" expand=\"block\" fill=\"solid\" color=\"warning\">Kirim Laporan</ion-button>\n\n        </ion-card-content>\n      </ion-card>\n    </div>\n    \n\n\n  </div>\n\n  \n\n</ion-content>\n\n<ion-footer *ngIf=\"!showButtonSend\" class=\"ion-no-border\" mode=\"ios\">\n  <ion-toolbar>\n    <ion-row>\n      <ion-col size=\"6\">\n        <!-- {{question_current}} -->\n        <ion-button *ngIf=\"showButtonBack\" expand=\"block\" (click)=\"getNextQuestion( number_of_back, 'back' )\" shape=\"round\" color=\"light\" fill=\"solid\">\n          <ion-icon slot=\"start\" name=\"arrow-back-outline\"></ion-icon>\n          Sebelumnya</ion-button>\n      </ion-col>\n      <ion-col size=\"6\">\n        <ion-button expand=\"block\" (click)=\"getNextQuestion( number_of_forward, 'next')\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Selanjutnya\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button>\n\n        \n        <!-- <ion-button *ngIf=\"!showButtonForward\" expand=\"block\" (click)=\"sendAnswer()\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Kirim Jawaban\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button> -->\n      </ion-col>\n    </ion-row>\n  </ion-toolbar>\n</ion-footer>";
+      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack(0)\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Isi Laporan {{ title }}</ion-title>\n\n    <!-- <ion-buttons slot=\"primary\">\n      <ion-button color=\"light\" fill=\"solid\" size=\"small\">\n        {{question_current / question_total * 100}} %\n      </ion-button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\n    </ion-title>\n    \n  </ion-toolbar>\n  <ion-progress-bar color=\"warning\" [value]=\"question_current/question_total\"></ion-progress-bar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  \n\n  <div id=\"container-custom\" *ngIf=\"showCurrentQuestion\">\n\n    <ion-card *ngIf=\"!showButtonSend\">\n      <ion-card-content>\n        \n        <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"currentQuestion?.question\"></div>\n\n        <!-- Multiple select (single select) -->\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 3\">\n          <ion-radio-group value=\"\" *ngIf=\"currentQuestion.Options.length>0\" \n            (ionChange)=\"radioGroupChange($event)\" value=\"{{ singleAnswer }}\">\n            <ion-item lines=\"none\" *ngFor=\"let option of currentQuestion.Options\">\n              <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n              <ion-radio slot=\"start\" value=\"{{ option.id }}\"></ion-radio>\n            </ion-item>\n          </ion-radio-group>\n        </ion-list>\n\n\n        <!-- Boolean -->\n        <ion-segment  *ngIf=\"currentQuestion.id_question_type == 2 && currentQuestion.Options.length>0\" \n          (ionChange)=\"segmentChanged($event)\" value=\"{{ singleAnswer }}\">\n          <ion-segment-button *ngFor=\"let option of currentQuestion.Options\" value=\"{{option.id}}\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n          </ion-segment-button>\n        </ion-segment>\n\n\n        <!-- Essay text -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 1\" lines=\"none\">\n          <ion-textarea rows=\"3\" placeholder=\"Ketik jawaban...\" [(ngModel)]=\"singleAnswer\"></ion-textarea>\n        </ion-item>\n\n        <!-- Essay number -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 5\" lines=\"none\">\n          <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input>\n        </ion-item>\n\n        <!-- Essay date -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 7\" lines=\"none\">\n          <!-- <ion-item>\n            <ion-label>MMMM</ion-label>\n            <ion-datetime displayFormat=\"MMMM\" value=\"2012-12-15T13:47:20.789\"></ion-datetime>\n          </ion-item> -->\n\n            <ion-datetime displayFormat=\"DD/MMM/YYYY\" pickerFormat=\"DD MMM YYYY\" cancel-text=\"Tutup\" done-text=\"Pilih\" \n            [(ngModel)]=\"singleAnswer\" placeholder=\"Pilih tanggal\"></ion-datetime>\n            \n          <!-- <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input> -->\n        </ion-item>\n\n        <!-- Essay image -->\n        <div *ngIf=\"currentQuestion.id_question_type == 6\" style=\"margin-bottom: 15px;\">\n          <ion-row>\n            <ion-col text-center>\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromGalery()\">\n                  <ion-icon slot=\"start\" name=\"image\"></ion-icon>\n                  Buka Galery</ion-button>\n            </ion-col>\n            <ion-col text-center>\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromCamera()\">\n                  <ion-icon slot=\"start\" name=\"camera\"></ion-icon>\n                  Buka Kamera</ion-button>\n            </ion-col>\n          </ion-row>\n        </div>\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 6 && !singleAnswer == ''\" style=\"--padding-bottom:15px;--padding-top:15px;\" lines=\"none\">\n              <img src=\"{{singleAnswer}}\" alt=\"\" srcset=\"\">\n        </ion-item>\n\n\n        <!-- Multiple select (multy select) -->\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 4\">\n          <ion-item *ngFor=\"let option of currentQuestion.Options\" lines=\"none\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n            <!-- [(ngModel)]=\"entry.isChecked\" -->\n            <ion-checkbox slot=\"end\" (ionChange)=\"selectSize($event)\" value=\"{{ option.id }}\" [(ngModel)]=\"option.isChecked\" ></ion-checkbox>\n          </ion-item>\n        </ion-list>\n\n      </ion-card-content>\n    </ion-card>\n\n    <div *ngIf=\"showButtonSend\" style=\"padding: 15px;\">\n      <ion-card>\n\n        <img src=\"./assets/sending.jpg\" />\n\n        <ion-card-content>\n          \n          <ion-button style=\"margin-bottom: 10px;\" (click)=\"getNextQuestion( 0, 'next' )\" expand=\"block\" fill=\"solid\" color=\"light\">Koreksi Ulang Laporan</ion-button>\n          <!-- <ion-button style=\"margin-bottom: 10px;\" *ngIf=\"params.page_from!='temporary'\" (click)=\"temporarySave()\" expand=\"block\" fill=\"solid\" color=\"medium\">Simpan Laporan Sementara</ion-button> -->\n          <ion-button (click)=\"sendAnswer()\" expand=\"block\" fill=\"solid\" color=\"warning\">Kirim Laporan</ion-button>\n\n        </ion-card-content>\n      </ion-card>\n    </div>\n    \n  </div>\n  \n</ion-content>\n\n<ion-footer *ngIf=\"!showButtonSend\" class=\"ion-no-border\" mode=\"ios\">\n  <ion-toolbar>\n    <ion-row>\n      <ion-col size=\"6\">\n        <!-- {{question_current}} -->\n        <ion-button *ngIf=\"showButtonBack\" expand=\"block\" (click)=\"getNextQuestion( number_of_back, 'back' )\" shape=\"round\" color=\"light\" fill=\"solid\">\n          <ion-icon slot=\"start\" name=\"arrow-back-outline\"></ion-icon>\n          Sebelumnya</ion-button>\n      </ion-col>\n      <ion-col size=\"6\">\n        <ion-button expand=\"block\" (click)=\"getNextQuestion( number_of_forward, 'next')\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Selanjutnya\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button>\n\n        \n        <!-- <ion-button *ngIf=\"!showButtonForward\" expand=\"block\" (click)=\"sendAnswer()\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Kirim Jawaban\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button> -->\n      </ion-col>\n    </ion-row>\n  </ion-toolbar>\n</ion-footer>";
       /***/
     },
 
@@ -162,7 +162,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Laporan {{ title }}</ion-title>\n\n    \n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\n    </ion-title>\n    \n  </ion-toolbar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <div *ngIf=\"listQuestion.length > 0\">\n    <div *ngFor=\"let item of listQuestion\">\n      \n      <ion-card *ngIf=\"item.Answers.length > 0\">\n        <!-- <ion-item style=\"--background: #eaeaea;--padding-bottom:0px;--inner-padding-bottom:0px;\" lines=\"none\">\n          \n          <ion-label class=\"label-title\">\n            <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"item?.question\"></div>\n          </ion-label>          \n        </ion-item> -->\n\n        <ion-card-content>\n\n          <ion-label class=\"label-title\" [innerHTML]=\"item?.question\"></ion-label>\n\n          <!-- Boolean -->\n           <ion-grid *ngIf=\"item.id_question_type == 2 && item.Answers.length>0\" fixed=\"true\">\n             <ion-row>\n               <ion-col class=\"boolean-1\">\n                <div [ngClass]=\"{'boolean-active' : item.Answers[0].id_question_option == item.Options[0].id }\" [innerHTML]=\"item.Options[0]?.option\"></div>\n              </ion-col>\n               <ion-col class=\"boolean-2\">\n                <div [ngClass]=\"{'boolean-active' : item.Answers[0].id_question_option == item.Options[1].id }\" [innerHTML]=\"item.Options[1]?.option\"></div>\n              </ion-col>\n             </ion-row>\n           </ion-grid>\n\n\n        <!-- Essay text -->\n        <div *ngIf=\"item.id_question_type == 1\">\n          <b>Jawaban : </b>{{item.Answers[0].essay_text}}\n        </div>\n\n        <!-- Essay number -->\n        <div *ngIf=\"item.id_question_type == 5\">\n          <b>Jawaban : </b>{{item.Answers[0].essay_number}}\n        </div>\n\n        <!-- Essay file -->\n        <div *ngIf=\"item.id_question_type == 6\">\n          <b>Jawaban : </b>\n          <div>\n            <img src=\"https://movtaskforce.oss-ap-southeast-5.aliyuncs.com/answers/{{item.Answers[0].essay_file}}\"  alt=\"{{item.Answers[0].essay_file}}\"/>\n          </div>\n        </div>\n\n\n        <ion-list *ngIf=\"item.id_question_type == 3 && item.Options.length>0  && item.Answers.length>0\">\n          <ion-item *ngFor=\"let option of item.Options\" lines=\"full\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n\n            <ion-icon slot=\"start\" *ngIf=\"item.Answers[0].id_question_option != option.id\" color=\"medium\" name=\"ellipse-outline\"></ion-icon>\n            <ion-icon slot=\"start\" *ngIf=\"item.Answers[0].id_question_option == option.id\" color=\"success\" name=\"checkmark-circle\"></ion-icon>\n          </ion-item>\n        </ion-list>\n\n        <ion-list *ngIf=\"item.id_question_type == 4 && item.Options.length>0  && item.Answers.length>0\">\n          <ion-item *ngFor=\"let option of item.Options\" lines=\"full\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n\n            <ion-icon slot=\"end\" *ngIf=\"!item.Answers.includes(option.id)\" color=\"medium\" name=\"ellipse-outline\"></ion-icon>\n            <ion-icon slot=\"end\" *ngIf=\"item.Answers.includes(option.id)\" color=\"success\" name=\"checkmark-circle\"></ion-icon>\n          </ion-item>\n        </ion-list>\n\n\n        </ion-card-content>\n      </ion-card>\n\n    </div>\n  </div>\n\n</ion-content>\n";
+      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Laporan {{ title }}</ion-title>\n\n    \n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\n    </ion-title>\n    \n  </ion-toolbar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <div *ngIf=\"listQuestion.length > 0\">\n    <div *ngFor=\"let item of listQuestion\">\n      \n      <ion-card *ngIf=\"item.Answers.length > 0\">\n        <!-- <ion-item style=\"--background: #eaeaea;--padding-bottom:0px;--inner-padding-bottom:0px;\" lines=\"none\">\n          \n          <ion-label class=\"label-title\">\n            <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"item?.question\"></div>\n          </ion-label>          \n        </ion-item> -->\n\n        <ion-card-content>\n\n          <ion-label class=\"label-title\" [innerHTML]=\"item?.question\"></ion-label>\n\n          <!-- Boolean -->\n           <ion-grid *ngIf=\"item.id_question_type == 2 && item.Answers.length>0\" fixed=\"true\">\n             <ion-row>\n               <ion-col class=\"boolean-1\">\n                <div [ngClass]=\"{'boolean-active' : item.Answers[0].id_question_option == item.Options[0].id }\" [innerHTML]=\"item.Options[0]?.option\"></div>\n              </ion-col>\n               <ion-col class=\"boolean-2\">\n                <div [ngClass]=\"{'boolean-active' : item.Answers[0].id_question_option == item.Options[1].id }\" [innerHTML]=\"item.Options[1]?.option\"></div>\n              </ion-col>\n             </ion-row>\n           </ion-grid>\n\n\n        <!-- Essay text -->\n        <div *ngIf=\"item.id_question_type == 1\">\n          <b>Jawaban : </b>{{item.Answers[0].essay_text}}\n        </div>\n\n        <!-- Essay number -->\n        <div *ngIf=\"item.id_question_type == 5\">\n          <b>Jawaban : </b>{{item.Answers[0].essay_number}}\n        </div>\n\n        <!-- Essay number -->\n        <div *ngIf=\"item.id_question_type == 7\">\n          <b>Jawaban : </b>{{ formatingDate(item.Answers[0].essay_date)}}\n        </div>\n\n        <!-- Essay file -->\n        <div *ngIf=\"item.id_question_type == 6\">\n          <b>Jawaban : </b>\n          <div>\n            <img src=\"https://movtaskforce.oss-ap-southeast-5.aliyuncs.com/answers/{{item.Answers[0].essay_file}}\"  alt=\"{{item.Answers[0].essay_file}}\"/>\n          </div>\n        </div>\n\n\n        <ion-list *ngIf=\"item.id_question_type == 3 && item.Options.length>0  && item.Answers.length>0\">\n          <ion-item *ngFor=\"let option of item.Options\" lines=\"full\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n\n            <ion-icon slot=\"start\" *ngIf=\"item.Answers[0].id_question_option != option.id\" color=\"medium\" name=\"ellipse-outline\"></ion-icon>\n            <ion-icon slot=\"start\" *ngIf=\"item.Answers[0].id_question_option == option.id\" color=\"success\" name=\"checkmark-circle\"></ion-icon>\n          </ion-item>\n        </ion-list>\n\n        <ion-list *ngIf=\"item.id_question_type == 4 && item.Options.length>0  && item.Answers.length>0\">\n          <ion-item *ngFor=\"let option of item.Options\" lines=\"full\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n\n            <ion-icon slot=\"end\" *ngIf=\"!item.Answers.includes(option.id)\" color=\"medium\" name=\"ellipse-outline\"></ion-icon>\n            <ion-icon slot=\"end\" *ngIf=\"item.Answers.includes(option.id)\" color=\"success\" name=\"checkmark-circle\"></ion-icon>\n          </ion-item>\n        </ion-list>\n\n\n        </ion-card-content>\n      </ion-card>\n\n    </div>\n  </div>\n\n</ion-content>\n";
       /***/
     },
 
@@ -246,7 +246,27 @@
 
       var _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @ionic-native/image-picker/ngx */
-      "./node_modules/@ionic-native/image-picker/__ivy_ngcc__/ngx/index.js"); // import { resolve } from 'dns';
+      "./node_modules/@ionic-native/image-picker/__ivy_ngcc__/ngx/index.js");
+      /* harmony import */
+
+
+      var moment_locale_id__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! moment/locale/id */
+      "./node_modules/moment/locale/id.js");
+      /* harmony import */
+
+
+      var moment_locale_id__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment_locale_id__WEBPACK_IMPORTED_MODULE_7__);
+      /* harmony import */
+
+
+      var moment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! moment */
+      "./node_modules/moment/moment.js");
+      /* harmony import */
+
+
+      var moment__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_8__); // import { resolve } from 'dns';
 
 
       var FormlaporanPage = /*#__PURE__*/function () {
@@ -614,6 +634,8 @@
                         this.singleAnswer = element.answer[0].essay_text;
                       } else if (Questions.id_question_type == 6) {
                         this.singleAnswer = element.answer[0].essay_file;
+                      } else if (Questions.id_question_type == 7) {
+                        this.singleAnswer = element.answer[0].essay_date;
                       } else {
                         this.singleAnswer = element.answer[0].id_question_option;
                       }
@@ -653,6 +675,7 @@
             var id_question_option = '';
             var essay_text = '';
             var essay_file = '';
+            var essay_date = '';
             var essay_number = '';
             var result = true;
             var answer = [];
@@ -676,22 +699,27 @@
                   else if (Questions.id_question_type == 6) {
                       go_to_id = Questions.go_to_id != null && Questions.go_to_id != '' ? Questions.go_to_id : '';
                       essay_file = this.singleAnswer;
-                    } else {
-                      id_question_option = this.singleAnswer;
+                    } // essay file
+                    else if (Questions.id_question_type == 7) {
+                        go_to_id = Questions.go_to_id != null && Questions.go_to_id != '' ? Questions.go_to_id : '';
+                        essay_date = this.formatingToInsertDB(this.singleAnswer);
+                      } else {
+                        id_question_option = this.singleAnswer;
 
-                      for (var q = 0; q < Questions.Options.length; q++) {
-                        var element = Questions.Options[q];
+                        for (var q = 0; q < Questions.Options.length; q++) {
+                          var element = Questions.Options[q];
 
-                        if (element.id == id_question_option) {
-                          go_to_id = element.go_to_id != null && element.go_to_id != '' ? element.go_to_id : '';
+                          if (element.id == id_question_option) {
+                            go_to_id = element.go_to_id != null && element.go_to_id != '' ? element.go_to_id : '';
+                          }
                         }
                       }
-                    }
 
                 answer.push({
                   id_question_option: id_question_option,
                   essay_text: essay_text,
                   essay_file: essay_file,
+                  essay_date: essay_date,
                   essay_number: essay_number
                 });
                 this.singleAnswer = '';
@@ -710,7 +738,8 @@
                     id_question_option: _element4,
                     essay_text: essay_text,
                     essay_number: essay_number,
-                    essay_file: essay_file
+                    essay_file: essay_file,
+                    essay_date: essay_date
                   });
                 }
 
@@ -1129,6 +1158,17 @@
               type: mimeString
             });
             return bb;
+          }
+        }, {
+          key: "formatingDate",
+          value: function formatingDate(myDate) {
+            var res = new Date(myDate).toISOString();
+            return res;
+          }
+        }, {
+          key: "formatingToInsertDB",
+          value: function formatingToInsertDB(myDate) {
+            return moment__WEBPACK_IMPORTED_MODULE_8__(myDate).format('YYYY-MM-DD');
           }
         }, {
           key: "goBack",
@@ -4487,6 +4527,26 @@
       var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/_services/api.service */
       "./src/app/_services/api.service.ts");
+      /* harmony import */
+
+
+      var moment_locale_id__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! moment/locale/id */
+      "./node_modules/moment/locale/id.js");
+      /* harmony import */
+
+
+      var moment_locale_id__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment_locale_id__WEBPACK_IMPORTED_MODULE_5__);
+      /* harmony import */
+
+
+      var moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! moment */
+      "./node_modules/moment/moment.js");
+      /* harmony import */
+
+
+      var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
 
       var ViewlaporanPage = /*#__PURE__*/function () {
         function ViewlaporanPage(route, NavController, apiService) {
@@ -4554,6 +4614,11 @@
             }, function (error) {
               console.log(error);
             });
+          }
+        }, {
+          key: "formatingDate",
+          value: function formatingDate(myDate) {
+            return moment__WEBPACK_IMPORTED_MODULE_6__(myDate).format('DD MMM YYYY');
           }
         }, {
           key: "goBack",
