@@ -7,6 +7,46 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-laporan-laporan-module"], {
     /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesa/datadasardesa.page.html":
+    /*!***********************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesa/datadasardesa.page.html ***!
+      \***********************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppPagesLaporanDatadasardesaDatadasardesaPageHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Data Dasar Desa</ion-title>\n  </ion-toolbar>\n\n\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <div *ngIf=\"listAPBDes.length>0\">\n\n    \n\n    <ion-list>\n      <ion-item   (click)=\"gotoInformasiDasarDesa()\" lines=\"full\">\n            <ion-icon slot=\"start\" color=\"success\" *ngIf=\"statusBasicInformasi==1\" name=\"checkmark-circle\"></ion-icon>\n            <!-- <ion-icon slot=\"start\" color=\"warning\"  *ngIf=\"item.status == 1\" name=\"timer\"></ion-icon> -->\n            <ion-icon slot=\"start\" color=\"medium\" *ngIf=\"statusBasicInformasi==0\" name=\"ellipse-outline\"></ion-icon>\n            <ion-label>\n              <h2 class=\"label-title\">Informasi Dasar Desa</h2>\n            </ion-label>\n            <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\n          </ion-item>\n      <ion-list-header>\n          DATA REFOCUSING APB Desa\n        </ion-list-header>\n        <ion-item  *ngFor=\"let item of listAPBDes\"  (click)=\"gotoDataDasarForm(item)\" lines=\"full\">\n            <ion-icon slot=\"start\" color=\"success\" *ngIf=\"item.status==2\" name=\"checkmark-circle\"></ion-icon>\n            <ion-icon slot=\"start\" color=\"warning\"  *ngIf=\"item.status == 1\" name=\"timer\"></ion-icon>\n            <ion-icon slot=\"start\" color=\"medium\" *ngIf=\"item.status==0\" name=\"ellipse-outline\"></ion-icon>\n            <ion-label>\n              <h3 class=\"label-title\">{{ item.description }}</h3>\n              <p>{{ item.code }}</p>\n            </ion-label>\n            <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\n          </ion-item>\n    </ion-list>\n\n  </div>\n\n  \n\n\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.html":
+    /*!*******************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.html ***!
+      \*******************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppPagesLaporanDatadasardesaformDatadasardesaformPageHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Form Data Dasar</ion-title>\n\n    <!-- <ion-buttons slot=\"primary\">\n      <ion-button color=\"light\" fill=\"solid\" size=\"small\">\n        {{question_current / question_total * 100}} %\n      </ion-button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ params.code }} - {{ params.description }}\n    </ion-title>\n    \n  </ion-toolbar>\n  \n</ion-header>\n\n<ion-content mode=\"ios\">\n\n\n  <ion-card>\n\n    <div *ngIf=\"listQuestions.length>0\">\n\n      <div *ngFor=\"let item of listQuestions; let i = index\">\n\n        <ion-card-content>\n          {{ item.code }} - {{ item.descriptions }}\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\"  style=\"text-align: right;\" [(ngModel)]=\"listQuestions[i].value\" ></ion-input>\n          </ion-item>\n          <p style=\"text-align: right;color: #ff5722;\">{{ formatRupiah(listQuestions[i].value) }}</p>\n        </ion-card-content>\n\n      </div>\n\n    </div>\n\n    \n  </ion-card>\n\n</ion-content>\n\n<ion-footer class=\"ion-no-border\" mode=\"ios\">\n  <ion-toolbar>\n    <ion-row>\n      <ion-col size=\"6\">\n      </ion-col>\n      <ion-col size=\"6\">\n        <ion-button expand=\"block\" (click)=\"kirimDataDasar()\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Kirim\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button>\n      </ion-col>\n    </ion-row>\n  </ion-toolbar>\n</ion-footer>\n";
+      /***/
+    },
+
+    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/formlaporan/formlaporan.page.html":
     /*!*******************************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/formlaporan/formlaporan.page.html ***!
@@ -22,7 +62,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack(0)\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Isi Laporan {{ title }}</ion-title>\n\n    <!-- <ion-buttons slot=\"primary\">\n      <ion-button color=\"light\" fill=\"solid\" size=\"small\">\n        {{question_current / question_total * 100}} %\n      </ion-button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\n    </ion-title>\n    \n  </ion-toolbar>\n  <ion-progress-bar color=\"warning\" [value]=\"question_current/question_total\"></ion-progress-bar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  \n\n  <div id=\"container-custom\" *ngIf=\"showCurrentQuestion\">\n\n    <ion-card *ngIf=\"!showButtonSend\">\n      <ion-card-content>\n        \n        <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"currentQuestion?.question\"></div>\n\n        <!-- Multiple select (single select) -->\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 3\">\n          <ion-radio-group value=\"\" *ngIf=\"currentQuestion.Options.length>0\" \n            (ionChange)=\"radioGroupChange($event)\" value=\"{{ singleAnswer }}\">\n            <ion-item lines=\"none\" *ngFor=\"let option of currentQuestion.Options\">\n              <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n              <ion-radio slot=\"start\" value=\"{{ option.id }}\"></ion-radio>\n            </ion-item>\n          </ion-radio-group>\n        </ion-list>\n\n\n        <!-- Boolean -->\n        <ion-segment  *ngIf=\"currentQuestion.id_question_type == 2 && currentQuestion.Options.length>0\" \n          (ionChange)=\"segmentChanged($event)\" value=\"{{ singleAnswer }}\">\n          <ion-segment-button *ngFor=\"let option of currentQuestion.Options\" value=\"{{option.id}}\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n          </ion-segment-button>\n        </ion-segment>\n\n\n        <!-- Essay text -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 1\" lines=\"none\">\n          <ion-textarea rows=\"3\" placeholder=\"Ketik jawaban...\" [(ngModel)]=\"singleAnswer\"></ion-textarea>\n        </ion-item>\n\n        <!-- Essay number -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 5\" lines=\"none\">\n          <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input>\n        </ion-item>\n\n        <!-- Essay date -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 7\" lines=\"none\">\n          <!-- <ion-item>\n            <ion-label>MMMM</ion-label>\n            <ion-datetime displayFormat=\"MMMM\" value=\"2012-12-15T13:47:20.789\"></ion-datetime>\n          </ion-item> -->\n\n            <ion-datetime displayFormat=\"DD/MMM/YYYY\" pickerFormat=\"DD MMM YYYY\" cancel-text=\"Tutup\" done-text=\"Pilih\" \n            [(ngModel)]=\"singleAnswer\" placeholder=\"Pilih tanggal\"></ion-datetime>\n            \n          <!-- <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input> -->\n        </ion-item>\n\n        <!-- Essay image -->\n        <div *ngIf=\"currentQuestion.id_question_type == 6\" style=\"margin-bottom: 15px;\">\n          <ion-row>\n            <ion-col text-center>\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromGalery()\">\n                  <ion-icon slot=\"start\" name=\"image\"></ion-icon>\n                  Buka Galery</ion-button>\n            </ion-col>\n            <ion-col text-center>\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromCamera()\">\n                  <ion-icon slot=\"start\" name=\"camera\"></ion-icon>\n                  Buka Kamera</ion-button>\n            </ion-col>\n          </ion-row>\n        </div>\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 6 && !singleAnswer == ''\" style=\"--padding-bottom:15px;--padding-top:15px;\" lines=\"none\">\n              <img src=\"{{singleAnswer}}\" alt=\"\" srcset=\"\">\n        </ion-item>\n\n\n        <!-- Multiple select (multy select) -->\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 4\">\n          <ion-item *ngFor=\"let option of currentQuestion.Options\" lines=\"none\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n            <!-- [(ngModel)]=\"entry.isChecked\" -->\n            <ion-checkbox slot=\"end\" (ionChange)=\"selectSize($event)\" value=\"{{ option.id }}\" [(ngModel)]=\"option.isChecked\" ></ion-checkbox>\n          </ion-item>\n        </ion-list>\n\n      </ion-card-content>\n    </ion-card>\n\n    <div *ngIf=\"showButtonSend\" style=\"padding: 15px;\">\n      <ion-card>\n\n        <img src=\"./assets/sending.jpg\" />\n\n        <ion-card-content>\n          \n          <ion-button style=\"margin-bottom: 10px;\" (click)=\"getNextQuestion( 0, 'next' )\" expand=\"block\" fill=\"solid\" color=\"light\">Koreksi Ulang Laporan</ion-button>\n          <!-- <ion-button style=\"margin-bottom: 10px;\" *ngIf=\"params.page_from!='temporary'\" (click)=\"temporarySave()\" expand=\"block\" fill=\"solid\" color=\"medium\">Simpan Laporan Sementara</ion-button> -->\n          <ion-button (click)=\"sendAnswer()\" expand=\"block\" fill=\"solid\" color=\"warning\">Kirim Laporan</ion-button>\n\n        </ion-card-content>\n      </ion-card>\n    </div>\n    \n  </div>\n  \n</ion-content>\n\n<ion-footer *ngIf=\"!showButtonSend\" class=\"ion-no-border\" mode=\"ios\">\n  <ion-toolbar>\n    <ion-row>\n      <ion-col size=\"6\">\n        <!-- {{question_current}} -->\n        <ion-button *ngIf=\"showButtonBack\" expand=\"block\" (click)=\"getNextQuestion( number_of_back, 'back' )\" shape=\"round\" color=\"light\" fill=\"solid\">\n          <ion-icon slot=\"start\" name=\"arrow-back-outline\"></ion-icon>\n          Sebelumnya</ion-button>\n      </ion-col>\n      <ion-col size=\"6\">\n        <ion-button expand=\"block\" (click)=\"getNextQuestion( number_of_forward, 'next')\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Selanjutnya\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button>\n\n        \n        <!-- <ion-button *ngIf=\"!showButtonForward\" expand=\"block\" (click)=\"sendAnswer()\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Kirim Jawaban\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button> -->\n      </ion-col>\n    </ion-row>\n  </ion-toolbar>\n</ion-footer>";
+      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\r\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button color=\"light\" (click)=\"goBack(0)\">\r\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\r\n      </ion-button>\r\n    </ion-buttons>\r\n    <ion-title>Isi Laporan {{ title }}</ion-title>\r\n\r\n    <!-- <ion-buttons slot=\"primary\">\r\n      <ion-button color=\"light\" fill=\"solid\" size=\"small\">\r\n        {{question_current / question_total * 100}} %\r\n      </ion-button>\r\n    </ion-buttons> -->\r\n\r\n  </ion-toolbar>\r\n\r\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\r\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\r\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\r\n    </ion-title>\r\n    \r\n  </ion-toolbar>\r\n  <ion-progress-bar color=\"warning\" [value]=\"question_current/question_total\"></ion-progress-bar>\r\n</ion-header>\r\n\r\n<ion-content mode=\"ios\">\r\n\r\n  \r\n\r\n  <div id=\"container-custom\" *ngIf=\"showCurrentQuestion\">\r\n\r\n    <ion-card *ngIf=\"!showButtonSend\">\r\n      <ion-card-content>\r\n        \r\n        <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"currentQuestion?.question\"></div>\r\n\r\n        <!-- Multiple select (single select) -->\r\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 3\">\r\n          <ion-radio-group value=\"\" *ngIf=\"currentQuestion.Options.length>0\" \r\n            (ionChange)=\"radioGroupChange($event)\" value=\"{{ singleAnswer }}\">\r\n            <ion-item lines=\"none\" *ngFor=\"let option of currentQuestion.Options\">\r\n              <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\r\n              <ion-radio slot=\"start\" value=\"{{ option.id }}\"></ion-radio>\r\n            </ion-item>\r\n          </ion-radio-group>\r\n        </ion-list>\r\n\r\n\r\n        <!-- Boolean -->\r\n        <ion-segment  *ngIf=\"currentQuestion.id_question_type == 2 && currentQuestion.Options.length>0\" \r\n          (ionChange)=\"segmentChanged($event)\" value=\"{{ singleAnswer }}\">\r\n          <ion-segment-button *ngFor=\"let option of currentQuestion.Options\" value=\"{{option.id}}\">\r\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\r\n          </ion-segment-button>\r\n        </ion-segment>\r\n\r\n\r\n        <!-- Essay text -->\r\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 1\" lines=\"none\">\r\n          <ion-textarea rows=\"3\" placeholder=\"Ketik jawaban...\" [(ngModel)]=\"singleAnswer\"></ion-textarea>\r\n        </ion-item>\r\n\r\n        <!-- Essay number -->\r\n        <div *ngIf=\"currentQuestion.id_question_type == 5\">\r\n\r\n          <ion-item lines=\"none\">\r\n          <!-- <ion-input type=\"text\" style=\"text-align: right;\" (keypress)=\"numberOnlyValidation($event)\" [(ngModel)]=\"singleAnswer\" (ngModelChange)=\"updateQuantity(singleAnswer)\"></ion-input> -->\r\n            <ion-input type=\"text\" style=\"text-align: right;\" [(ngModel)]=\"singleAnswer\"></ion-input>\r\n          </ion-item>\r\n\r\n          <p style=\"text-align: right;color: #ff5722;\">{{ formatRupiah(singleAnswer) }}</p>\r\n\r\n        </div>\r\n        \r\n\r\n        <!-- Essay date -->\r\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 7\" lines=\"none\">\r\n          <!-- <ion-item>\r\n            <ion-label>MMMM</ion-label>\r\n            <ion-datetime displayFormat=\"MMMM\" value=\"2012-12-15T13:47:20.789\"></ion-datetime>\r\n          </ion-item> -->\r\n\r\n            <ion-datetime displayFormat=\"DD/MMM/YYYY\" pickerFormat=\"DD MMM YYYY\" cancel-text=\"Tutup\" done-text=\"Pilih\" \r\n            [(ngModel)]=\"singleAnswer\" placeholder=\"Pilih tanggal\"></ion-datetime>\r\n            \r\n          <!-- <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input> -->\r\n        </ion-item>\r\n\r\n        <!-- Essay image -->\r\n        <div *ngIf=\"currentQuestion.id_question_type == 6\" style=\"margin-bottom: 15px;\">\r\n          <ion-row>\r\n            <ion-col text-center>\r\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromGalery()\">\r\n                  <ion-icon slot=\"start\" name=\"image\"></ion-icon>\r\n                  Buka Galery</ion-button>\r\n            </ion-col>\r\n            <ion-col text-center>\r\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromCamera()\">\r\n                  <ion-icon slot=\"start\" name=\"camera\"></ion-icon>\r\n                  Buka Kamera</ion-button>\r\n            </ion-col>\r\n          </ion-row>\r\n        </div>\r\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 6 && !singleAnswer == ''\" style=\"--padding-bottom:15px;--padding-top:15px;\" lines=\"none\">\r\n              <img src=\"{{singleAnswer}}\" alt=\"\" srcset=\"\">\r\n        </ion-item>\r\n\r\n\r\n        <!-- Multiple select (multy select) -->\r\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 4\">\r\n          <ion-item *ngFor=\"let option of currentQuestion.Options\" lines=\"none\">\r\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\r\n            <!-- [(ngModel)]=\"entry.isChecked\" -->\r\n            <ion-checkbox slot=\"end\" (ionChange)=\"selectSize($event)\" value=\"{{ option.id }}\" [(ngModel)]=\"option.isChecked\" ></ion-checkbox>\r\n          </ion-item>\r\n        </ion-list>\r\n\r\n      </ion-card-content>\r\n    </ion-card>\r\n\r\n    <div *ngIf=\"showButtonSend\" style=\"padding: 15px;\">\r\n      <ion-card>\r\n\r\n        <img src=\"./assets/sending.jpg\" />\r\n\r\n        <ion-card-content>\r\n          \r\n          <ion-button style=\"margin-bottom: 10px;\" (click)=\"getNextQuestion( 0, 'next' )\" expand=\"block\" fill=\"solid\" color=\"light\">Koreksi Ulang Laporan</ion-button>\r\n          <!-- <ion-button style=\"margin-bottom: 10px;\" *ngIf=\"params.page_from!='temporary'\" (click)=\"temporarySave()\" expand=\"block\" fill=\"solid\" color=\"medium\">Simpan Laporan Sementara</ion-button> -->\r\n          <ion-button (click)=\"sendAnswer()\" expand=\"block\" fill=\"solid\" color=\"warning\">Kirim Laporan</ion-button>\r\n\r\n        </ion-card-content>\r\n      </ion-card>\r\n    </div>\r\n    \r\n  </div>\r\n  \r\n</ion-content>\r\n\r\n<ion-footer *ngIf=\"!showButtonSend\" class=\"ion-no-border\" mode=\"ios\">\r\n  <ion-toolbar>\r\n    <ion-row>\r\n      <ion-col size=\"6\">\r\n        <!-- {{question_current}} -->\r\n        <ion-button *ngIf=\"showButtonBack\" expand=\"block\" (click)=\"getNextQuestion( number_of_back, 'back' )\" shape=\"round\" color=\"light\" fill=\"solid\">\r\n          <ion-icon slot=\"start\" name=\"arrow-back-outline\"></ion-icon>\r\n          Sebelumnya</ion-button>\r\n      </ion-col>\r\n      <ion-col size=\"6\">\r\n        <ion-button expand=\"block\" (click)=\"getNextQuestion( number_of_forward, 'next')\" shape=\"round\" color=\"warning\" fill=\"solid\">\r\n          Selanjutnya\r\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\r\n        </ion-button>\r\n\r\n        \r\n        <!-- <ion-button *ngIf=\"!showButtonForward\" expand=\"block\" (click)=\"sendAnswer()\" shape=\"round\" color=\"warning\" fill=\"solid\">\r\n          Kirim Jawaban\r\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\r\n        </ion-button> -->\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-toolbar>\r\n</ion-footer>";
       /***/
     },
 
@@ -42,7 +82,27 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>List Group</ion-title>\n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      Pilih group pertanyaan untuk mulai mengisi laporan\n    </ion-title>\n    \n  </ion-toolbar>\n\n  <!-- <ion-toolbar style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      <ion-button expand=\"block\" (click)=\"selectTime()\" color=\"warning\" fill=\"solid\">Tambah Laporan</ion-button>\n    </ion-title>\n  </ion-toolbar> -->\n\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <ion-list *ngIf=\"lists.length > 0\" id=\"list-group\">\n    <ion-item *ngFor=\"let item of lists\" lines=\"full\" (click)=\"presentActionSheetSelectPeriode(item)\">\n      <ion-label>\n        <h3>{{item.title}}</h3>\n        <p><span [ngClass]=\"{'type-active' : item.Q_Mingguan.length>0 }\">Mingguan</span>\n          <span [ngClass]=\"{'type-active' : item.Q_Bulanan.length>0 }\">, Bulanan</span>\n          <span [ngClass]=\"{'type-active' : item.Q_Triwulan.length>0 }\">, Triwulan</span></p>\n        <span class=\"range-group\">{{getMonthName(item.month_start)}} {{item.year_start}}\n          <span *ngIf=\"item.is_period=='1'\"> - {{getMonthName(item.month_end)}} {{item.year_end}}</span>\n        </span>\n                </ion-label>\n      <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\n    </ion-item>\n  </ion-list>\n\n  \n\n</ion-content>\n";
+      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button color=\"light\" (click)=\"goBack()\">\r\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\r\n      </ion-button>\r\n    </ion-buttons>\r\n    <ion-title>List Group</ion-title>\r\n  </ion-toolbar>\r\n\r\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\r\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\r\n      <!-- Pilih group pertanyaan untuk mulai mengisi laporan -->\r\n      <ion-button expand=\"block\" (click)=\"gotoDataDasar()\" color=\"warning\" fill=\"solid\">Data Dasar Desa</ion-button>\r\n    </ion-title>\r\n    \r\n  </ion-toolbar>\r\n\r\n  <!-- <ion-toolbar style=\"--background: #eaeaea;color: #333333;\">\r\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\r\n      <ion-button expand=\"block\" (click)=\"selectTime()\" color=\"warning\" fill=\"solid\">Tambah Laporan</ion-button>\r\n    </ion-title>\r\n  </ion-toolbar> -->\r\n\r\n</ion-header>\r\n\r\n<ion-content mode=\"ios\">\r\n\r\n  <ion-list *ngIf=\"lists.length > 0\" id=\"list-group\">\r\n    <ion-item *ngFor=\"let item of lists\" lines=\"full\" (click)=\"presentActionSheetSelectPeriode(item)\">\r\n      <ion-label>\r\n        <h3>{{item.title}}</h3>\r\n        <p><span [ngClass]=\"{'type-active' : item.Q_Mingguan.length>0 }\">Mingguan</span>\r\n          <span [ngClass]=\"{'type-active' : item.Q_Bulanan.length>0 }\">, Bulanan</span>\r\n          <span [ngClass]=\"{'type-active' : item.Q_Triwulan.length>0 }\">, Triwulan</span></p>\r\n        <span class=\"range-group\">{{getMonthName(item.month_start)}} {{item.year_start}}\r\n          <span *ngIf=\"item.is_period=='1'\"> - {{getMonthName(item.month_end)}} {{item.year_end}}</span>\r\n        </span>\r\n                </ion-label>\r\n      <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n  \r\n\r\n</ion-content>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/informasidesa/informasidesa.page.html":
+    /*!***********************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/informasidesa/informasidesa.page.html ***!
+      \***********************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppPagesLaporanInformasidesaInformasidesaPageHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Informasi Dasar</ion-title>\n\n  </ion-toolbar>\n\n  \n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <ion-card>\n\n    <div>\n\n      <div>\n\n        <ion-card-content>\n          Jumlah RT\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\" [(ngModel)]=\"rt\" ></ion-input>\n          </ion-item>\n\n          \n          Jumlah RW\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\" [(ngModel)]=\"rw\" ></ion-input>\n          </ion-item>\n\n          \n          Jumlah Posko Desa\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\" [(ngModel)]=\"posko_desa\" ></ion-input>\n          </ion-item>\n\n          \n          Nomor HP\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-label>+62</ion-label>\n            <ion-input [(ngModel)]=\"phone_number\" type=\"number\"></ion-input>\n          </ion-item>\n\n          \n          Nomor Telpon\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\" [(ngModel)]=\"telephone\" ></ion-input>\n          </ion-item>\n        </ion-card-content>\n\n      </div>\n\n    </div>\n\n    \n  </ion-card>\n\n\n</ion-content>\n\n\n<ion-footer class=\"ion-no-border\" mode=\"ios\">\n  <ion-toolbar>\n    <ion-row>\n      <ion-col size=\"6\">\n      </ion-col>\n      <ion-col size=\"6\">\n        <ion-button expand=\"block\" (click)=\"kirimDataDasar()\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Kirim\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button>\n      </ion-col>\n    </ion-row>\n  </ion-toolbar>\n</ion-footer>\n";
       /***/
     },
 
@@ -122,7 +182,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Laporan {{target}} - {{params.type}}</ion-title>\n  </ion-toolbar>\n\n  <ion-toolbar style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      List Group <ion-icon name=\"chevron-forward-outline\"></ion-icon>\n      Laporan {{target}} <ion-icon name=\"chevron-forward-outline\"></ion-icon>\n      Pilih Periode {{params.type}}\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n  <ion-list *ngIf=\"listTime.length > 0\">\n    <ion-list-header>\n          {{params.title}}\n        </ion-list-header>\n    <ion-item *ngFor=\"let item of sortDESCBy('sort')\" (click)=\"gotoFormLaporan(item)\" lines=\"full\">\n      <ion-label>\n        <h3>{{item.label}}</h3>\n              <p>{{item.range}}</p>\n      </ion-label>\n      \n\n      <ion-icon slot=\"start\" color=\"success\" *ngIf=\"item.status==2\" name=\"checkmark-circle\"></ion-icon>\n      <ion-icon slot=\"start\" color=\"warning\"  *ngIf=\"item.status == 1\" name=\"timer\"></ion-icon>\n      <ion-icon slot=\"start\" color=\"medium\" *ngIf=\"item.status==0\" name=\"ellipse-outline\"></ion-icon>\n\n      <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n";
+      __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button color=\"light\" (click)=\"goBack()\">\r\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\r\n      </ion-button>\r\n    </ion-buttons>\r\n    <ion-title>Laporan {{target}} - {{params.type}}</ion-title>\r\n  </ion-toolbar>\r\n\r\n  <ion-toolbar style=\"--background: #eaeaea;color: #333333;\">\r\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\r\n      List Group <ion-icon name=\"chevron-forward-outline\"></ion-icon>\r\n      Laporan {{target}} <ion-icon name=\"chevron-forward-outline\"></ion-icon>\r\n      Pilih Periode {{params.type}}\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content mode=\"ios\">\r\n  <ion-list *ngIf=\"listTime.length > 0\">\r\n    <ion-list-header>\r\n          {{params.title}}\r\n        </ion-list-header>\r\n    <ion-item *ngFor=\"let item of sortDESCBy('sort')\" (click)=\"gotoFormLaporan(item)\" lines=\"full\">\r\n      <ion-label>\r\n        <h3>{{item.label}}</h3>\r\n              <p>{{item.range}}</p>\r\n      </ion-label>\r\n      \r\n\r\n      <ion-icon slot=\"start\" color=\"success\" *ngIf=\"item.status==2\" name=\"checkmark-circle\"></ion-icon>\r\n      <ion-icon slot=\"start\" color=\"warning\"  *ngIf=\"item.status == 1\" name=\"timer\"></ion-icon>\r\n      <ion-icon slot=\"start\" color=\"medium\" *ngIf=\"item.status==0\" name=\"ellipse-outline\"></ion-icon>\r\n\r\n      <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n</ion-content>\r\n";
       /***/
     },
 
@@ -163,6 +223,423 @@
 
 
       __webpack_exports__["default"] = "<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Laporan {{ title }}</ion-title>\n\n    \n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\n    </ion-title>\n    \n  </ion-toolbar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <div *ngIf=\"listQuestion.length > 0\">\n    <div *ngFor=\"let item of listQuestion\">\n      \n      <ion-card *ngIf=\"item.Answers.length > 0\">\n        <!-- <ion-item style=\"--background: #eaeaea;--padding-bottom:0px;--inner-padding-bottom:0px;\" lines=\"none\">\n          \n          <ion-label class=\"label-title\">\n            <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"item?.question\"></div>\n          </ion-label>          \n        </ion-item> -->\n\n        <ion-card-content>\n\n          <ion-label class=\"label-title\" [innerHTML]=\"item?.question\"></ion-label>\n\n          <!-- Boolean -->\n           <ion-grid *ngIf=\"item.id_question_type == 2 && item.Answers.length>0\" fixed=\"true\">\n             <ion-row>\n               <ion-col class=\"boolean-1\">\n                <div [ngClass]=\"{'boolean-active' : item.Answers[0].id_question_option == item.Options[0].id }\" [innerHTML]=\"item.Options[0]?.option\"></div>\n              </ion-col>\n               <ion-col class=\"boolean-2\">\n                <div [ngClass]=\"{'boolean-active' : item.Answers[0].id_question_option == item.Options[1].id }\" [innerHTML]=\"item.Options[1]?.option\"></div>\n              </ion-col>\n             </ion-row>\n           </ion-grid>\n\n\n        <!-- Essay text -->\n        <div *ngIf=\"item.id_question_type == 1\">\n          <b>Jawaban : </b>{{item.Answers[0].essay_text}}\n        </div>\n\n        <!-- Essay number -->\n        <div *ngIf=\"item.id_question_type == 5\">\n          <b>Jawaban : </b>{{item.Answers[0].essay_number}}\n        </div>\n\n        <!-- Essay number -->\n        <div *ngIf=\"item.id_question_type == 7\">\n          <b>Jawaban : </b>{{ formatingDate(item.Answers[0].essay_date)}}\n        </div>\n\n        <!-- Essay file -->\n        <div *ngIf=\"item.id_question_type == 6\">\n          <b>Jawaban : </b>\n          <div>\n            <img src=\"https://movtaskforce.oss-ap-southeast-5.aliyuncs.com/answers/{{item.Answers[0].essay_file}}\"  alt=\"{{item.Answers[0].essay_file}}\"/>\n          </div>\n        </div>\n\n\n        <ion-list *ngIf=\"item.id_question_type == 3 && item.Options.length>0  && item.Answers.length>0\">\n          <ion-item *ngFor=\"let option of item.Options\" lines=\"full\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n\n            <ion-icon slot=\"start\" *ngIf=\"item.Answers[0].id_question_option != option.id\" color=\"medium\" name=\"ellipse-outline\"></ion-icon>\n            <ion-icon slot=\"start\" *ngIf=\"item.Answers[0].id_question_option == option.id\" color=\"success\" name=\"checkmark-circle\"></ion-icon>\n          </ion-item>\n        </ion-list>\n\n        <ion-list *ngIf=\"item.id_question_type == 4 && item.Options.length>0  && item.Answers.length>0\">\n          <ion-item *ngFor=\"let option of item.Options\" lines=\"full\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n\n            <ion-icon slot=\"end\" *ngIf=\"!item.Answers.includes(option.id)\" color=\"medium\" name=\"ellipse-outline\"></ion-icon>\n            <ion-icon slot=\"end\" *ngIf=\"item.Answers.includes(option.id)\" color=\"success\" name=\"checkmark-circle\"></ion-icon>\n          </ion-item>\n        </ion-list>\n\n\n        </ion-card-content>\n      </ion-card>\n\n    </div>\n  </div>\n\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/laporan/datadasardesa/datadasardesa.page.scss":
+    /*!*********************************************************************!*\
+      !*** ./src/app/pages/laporan/datadasardesa/datadasardesa.page.scss ***!
+      \*********************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppPagesLaporanDatadasardesaDatadasardesaPageScss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "ion-header ion-toolbar {\n  --background: #2f9495;\n  color: #ffffff;\n}\n\nion-content #listLaporan ion-card-content {\n  text-align: center;\n}\n\nion-content #list-group .range-group {\n  color: #fffdfd;\n  background: #92949c9e;\n  font-size: 12px;\n  padding-left: 5px;\n  padding-right: 5px;\n  border-radius: 3px;\n}\n\nion-content #list-group p {\n  color: #e6e6e6;\n}\n\nion-content #list-group .type-active {\n  color: #576c7d;\n}\n\n.label-title {\n  white-space: break-spaces !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9kYXRhZGFzYXJkZXNhL2RhdGFkYXNhcmRlc2EucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNJO0VBRUkscUJBQUE7RUFDQSxjQUFBO0FBRFI7O0FBVUk7RUFDSSxrQkFBQTtBQVBSOztBQVlRO0VBQ0ksY0FBQTtFQUNBLHFCQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtBQVZaOztBQWFRO0VBQ0ksY0FBQTtBQVhaOztBQWNRO0VBQ0ksY0FBQTtBQVpaOztBQXFCQTtFQUNJLG9DQUFBO0FBbEJKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9kYXRhZGFzYXJkZXNhL2RhdGFkYXNhcmRlc2EucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWhlYWRlciB7XHJcbiAgICBpb24tdG9vbGJhciB7XHJcblxyXG4gICAgICAgIC0tYmFja2dyb3VuZDogIzJmOTQ5NTtcclxuICAgICAgICBjb2xvcjogI2ZmZmZmZjtcclxuXHJcbiAgICB9XHJcbn1cclxuXHJcbmlvbi1jb250ZW50IHtcclxuICAgIC8vIC0tYmFja2dyb3VuZDogI2NhZWNlOTtcclxuICAgIC8vIC0tcGFkZGluZy10b3A6IDMwcHg7XHJcblxyXG4gICAgI2xpc3RMYXBvcmFuIGlvbi1jYXJkLWNvbnRlbnQge1xyXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIH1cclxuXHJcbiAgICAjbGlzdC1ncm91cCB7XHJcblxyXG4gICAgICAgIC5yYW5nZS1ncm91cCB7XHJcbiAgICAgICAgICAgIGNvbG9yOiAjZmZmZGZkO1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kOiAjOTI5NDljOWU7XHJcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgICAgICAgICAgcGFkZGluZy1sZWZ0OiA1cHg7XHJcbiAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6IDVweDtcclxuICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogM3B4O1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgcCB7XHJcbiAgICAgICAgICAgIGNvbG9yOiAjZTZlNmU2O1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgLnR5cGUtYWN0aXZlIHtcclxuICAgICAgICAgICAgY29sb3I6ICM1NzZjN2Q7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxufVxyXG5cclxuXHJcblxyXG5cclxuLmxhYmVsLXRpdGxlIHtcclxuICAgIHdoaXRlLXNwYWNlOiBicmVhay1zcGFjZXMgIWltcG9ydGFudDtcclxufSJdfQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/laporan/datadasardesa/datadasardesa.page.ts":
+    /*!*******************************************************************!*\
+      !*** ./src/app/pages/laporan/datadasardesa/datadasardesa.page.ts ***!
+      \*******************************************************************/
+
+    /*! exports provided: DatadasardesaPage */
+
+    /***/
+    function srcAppPagesLaporanDatadasardesaDatadasardesaPageTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "DatadasardesaPage", function () {
+        return DatadasardesaPage;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/_services/api.service */
+      "./src/app/_services/api.service.ts");
+
+      var DatadasardesaPage = /*#__PURE__*/function () {
+        function DatadasardesaPage(NavController, apiService) {
+          _classCallCheck(this, DatadasardesaPage);
+
+          this.NavController = NavController;
+          this.apiService = apiService;
+          this.listAPBDes = [];
+          this.statusBasicInformasi = 0;
+        }
+
+        _createClass(DatadasardesaPage, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "ionViewDidEnter",
+          value: function ionViewDidEnter() {
+            this.getBasicData();
+            this.getListAPBDes();
+          }
+        }, {
+          key: "getListAPBDes",
+          value: function getListAPBDes() {
+            var _this = this;
+
+            var geo_id = localStorage.getItem('geo_id');
+            this.subscribe = this.apiService.get('v2/apbdes?geo_id=' + geo_id, {}).subscribe(function (data) {
+              console.log(data);
+              _this.listAPBDes = data;
+            }, function (error) {
+              if (error.status == 401) {// this.alertToRelogin();
+              }
+            });
+          }
+        }, {
+          key: "getBasicData",
+          value: function getBasicData() {
+            var _this2 = this;
+
+            var geo_id = localStorage.getItem('geo_id');
+            this.subscribe = this.apiService.get('v2/basic_data?geo_id=' + geo_id, {}).subscribe(function (data) {
+              console.log(data);
+
+              if (data.length > 0) {
+                _this2.statusBasicInformasi = 1;
+              }
+            }, function (error) {
+              if (error.status == 401) {// this.alertToRelogin();
+              }
+            });
+          }
+        }, {
+          key: "gotoDataDasarForm",
+          value: function gotoDataDasarForm(item) {
+            console.log(item);
+            this.NavController.navigateForward(['/laporan/datadasardesaform', item]);
+          }
+        }, {
+          key: "gotoInformasiDasarDesa",
+          value: function gotoInformasiDasarDesa() {
+            this.NavController.navigateForward(['/laporan/informasidesa', []]);
+          }
+        }, {
+          key: "goBack",
+          value: function goBack() {
+            this.NavController.navigateBack(['/laporan/groups'], {
+              replaceUrl: true
+            });
+          }
+        }]);
+
+        return DatadasardesaPage;
+      }();
+
+      DatadasardesaPage.ctorParameters = function () {
+        return [{
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]
+        }, {
+          type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]
+        }];
+      };
+
+      DatadasardesaPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-datadasardesa',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! raw-loader!./datadasardesa.page.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesa/datadasardesa.page.html"))["default"],
+        providers: [src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! ./datadasardesa.page.scss */
+        "./src/app/pages/laporan/datadasardesa/datadasardesa.page.scss"))["default"]]
+      })], DatadasardesaPage);
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.scss":
+    /*!*****************************************************************************!*\
+      !*** ./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.scss ***!
+      \*****************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppPagesLaporanDatadasardesaformDatadasardesaformPageScss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "ion-header ion-toolbar {\n  --background: #2f9495;\n  color: #ffffff;\n}\n\nion-content #container {\n  padding: 10px;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 47%;\n  transform: translateY(-50%);\n}\n\nion-content ion-item {\n  border: 1px solid #eaeaea;\n  margin-bottom: 10px;\n  border-radius: 5px;\n}\n\n.label-title {\n  white-space: break-spaces !important;\n}\n\nion-footer ion-toolbar {\n  --background: #2f9495 !important;\n  min-height: 70px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9kYXRhZGFzYXJkZXNhZm9ybS9kYXRhZGFzYXJkZXNhZm9ybS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0k7RUFFSSxxQkFBQTtFQUNBLGNBQUE7QUFEUjs7QUFTSTtFQUNJLGFBQUE7RUFHQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLDJCQUFBO0FBUlI7O0FBV0k7RUFDSSx5QkFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7QUFUUjs7QUFjQTtFQUNJLG9DQUFBO0FBWEo7O0FBZUk7RUFDSSxnQ0FBQTtFQUNBLGdCQUFBO0FBWlIiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9sYXBvcmFuL2RhdGFkYXNhcmRlc2Fmb3JtL2RhdGFkYXNhcmRlc2Fmb3JtLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1oZWFkZXIge1xyXG4gICAgaW9uLXRvb2xiYXIge1xyXG5cclxuICAgICAgICAtLWJhY2tncm91bmQ6ICMyZjk0OTU7XHJcbiAgICAgICAgY29sb3I6ICNmZmZmZmY7XHJcblxyXG4gICAgfVxyXG59XHJcblxyXG5pb24tY29udGVudCB7XHJcbiAgICAvLyAtLWJhY2tncm91bmQ6ICMyZjk0OTU7XHJcblxyXG4gICAgI2NvbnRhaW5lciB7XHJcbiAgICAgICAgcGFkZGluZzogMTBweDtcclxuICAgICAgICAvLyB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcblxyXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICBsZWZ0OiAwO1xyXG4gICAgICAgIHJpZ2h0OiAwO1xyXG4gICAgICAgIHRvcDogNDclO1xyXG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcclxuICAgIH1cclxuXHJcbiAgICBpb24taXRlbSB7XHJcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2VhZWFlYTtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgIH1cclxufVxyXG5cclxuXHJcbi5sYWJlbC10aXRsZSB7XHJcbiAgICB3aGl0ZS1zcGFjZTogYnJlYWstc3BhY2VzICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbmlvbi1mb290ZXIge1xyXG4gICAgaW9uLXRvb2xiYXIge1xyXG4gICAgICAgIC0tYmFja2dyb3VuZDogIzJmOTQ5NSAhaW1wb3J0YW50O1xyXG4gICAgICAgIG1pbi1oZWlnaHQ6IDcwcHg7XHJcbiAgICB9XHJcbn0iXX0= */";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.ts":
+    /*!***************************************************************************!*\
+      !*** ./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.ts ***!
+      \***************************************************************************/
+
+    /*! exports provided: DatadasardesaformPage */
+
+    /***/
+    function srcAppPagesLaporanDatadasardesaformDatadasardesaformPageTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "DatadasardesaformPage", function () {
+        return DatadasardesaformPage;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/api.service */
+      "./src/app/_services/api.service.ts");
+
+      var DatadasardesaformPage = /*#__PURE__*/function () {
+        function DatadasardesaformPage(NavController, route, toastController, loadingController, apiService) {
+          _classCallCheck(this, DatadasardesaformPage);
+
+          this.NavController = NavController;
+          this.route = route;
+          this.toastController = toastController;
+          this.loadingController = loadingController;
+          this.apiService = apiService;
+          this.listQuestions = [];
+          this.params = this.route.snapshot.params;
+          console.log(this.params);
+        }
+
+        _createClass(DatadasardesaformPage, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "ionViewDidEnter",
+          value: function ionViewDidEnter() {
+            this.getListAPBDesDetail();
+          }
+        }, {
+          key: "presentLoading",
+          value: function presentLoading() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var loading, _yield$loading$onDidD, role, data;
+
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.next = 2;
+                      return this.loadingController.create({
+                        cssClass: 'my-custom-class',
+                        message: 'Mengirim data...',
+                        mode: 'ios',
+                        duration: 2000
+                      });
+
+                    case 2:
+                      loading = _context.sent;
+                      _context.next = 5;
+                      return loading.present();
+
+                    case 5:
+                      _context.next = 7;
+                      return loading.onDidDismiss();
+
+                    case 7:
+                      _yield$loading$onDidD = _context.sent;
+                      role = _yield$loading$onDidD.role;
+                      data = _yield$loading$onDidD.data;
+
+                    case 10:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
+          }
+        }, {
+          key: "presentToast",
+          value: function presentToast(color, header, message) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              var toast;
+              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                while (1) {
+                  switch (_context2.prev = _context2.next) {
+                    case 0:
+                      _context2.next = 2;
+                      return this.toastController.create({
+                        header: header,
+                        message: message,
+                        color: color,
+                        mode: "ios",
+                        position: "middle",
+                        duration: 3000
+                      });
+
+                    case 2:
+                      toast = _context2.sent;
+                      toast.present();
+
+                    case 4:
+                    case "end":
+                      return _context2.stop();
+                  }
+                }
+              }, _callee2, this);
+            }));
+          }
+        }, {
+          key: "getListAPBDesDetail",
+          value: function getListAPBDesDetail() {
+            var _this3 = this;
+
+            var geo_id = localStorage.getItem('geo_id');
+            this.subscribe = this.apiService.get('v2/apbdes_details?geo_id=' + geo_id + '&apbdesa_head_id=' + this.params.id, {}).subscribe(function (data) {
+              console.log(data);
+              _this3.listQuestions = data;
+            }, function (error) {
+              if (error.status == 401) {// this.alertToRelogin();
+              }
+            });
+          }
+        }, {
+          key: "kirimDataDasar",
+          value: function kirimDataDasar() {
+            var _this4 = this;
+
+            this.presentLoading();
+            var geo_id = localStorage.getItem('geo_id');
+            var paramPost = {
+              geo_id: geo_id,
+              apbdesa_head_id: this.params.id,
+              listQuestions: JSON.stringify(this.listQuestions)
+            };
+            this.subscribe = this.apiService.post('v2/apbdes_details', paramPost).subscribe(function (data) {
+              // this.getListItems();
+              setTimeout(function () {
+                _this4.presentToast('success', 'Success', 'Data tersimpan'); // this.NavController.navigateBack(['/basicdata/registrasidusun'], { replaceUrl: true });
+
+              }, 2000);
+            }, function (error) {
+              setTimeout(function () {
+                _this4.presentToast('danger', 'Error', 'Data tidak tersimpan');
+              }, 2000);
+            });
+          }
+        }, {
+          key: "formatRupiah",
+          value: function formatRupiah(angka) {
+            if (angka != null && angka != '') {
+              var number_string = parseFloat(angka).toString(),
+                  split = number_string.split(','),
+                  sisa = split[0].length % 3,
+                  rupiah = split[0].substr(0, sisa),
+                  ribuan = split[0].substr(sisa).match(/\d{3}/gi); // tambahkan titik jika yang di input sudah menjadi angka ribuan
+
+              if (ribuan) {
+                var separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+              }
+
+              rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+              return rupiah;
+            }
+          }
+        }, {
+          key: "goBack",
+          value: function goBack() {
+            this.NavController.navigateBack(['/laporan/datadasardesa'], {
+              replaceUrl: true
+            });
+          }
+        }]);
+
+        return DatadasardesaformPage;
+      }();
+
+      DatadasardesaformPage.ctorParameters = function () {
+        return [{
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["LoadingController"]
+        }, {
+          type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]
+        }];
+      };
+
+      DatadasardesaformPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-datadasardesaform',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! raw-loader!./datadasardesaform.page.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.html"))["default"],
+        providers: [src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! ./datadasardesaform.page.scss */
+        "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.scss"))["default"]]
+      })], DatadasardesaformPage);
       /***/
     },
 
@@ -250,27 +727,33 @@
       /* harmony import */
 
 
-      var moment_locale_id__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var src_app_modals_input_number_input_number_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/_modals/input-number/input-number.component */
+      "./src/app/_modals/input-number/input-number.component.ts");
+      /* harmony import */
+
+
+      var moment_locale_id__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! moment/locale/id */
       "./node_modules/moment/locale/id.js");
       /* harmony import */
 
 
-      var moment_locale_id__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment_locale_id__WEBPACK_IMPORTED_MODULE_7__);
+      var moment_locale_id__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(moment_locale_id__WEBPACK_IMPORTED_MODULE_8__);
       /* harmony import */
 
 
-      var moment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var moment__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! moment */
       "./node_modules/moment/moment.js");
       /* harmony import */
 
 
-      var moment__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_8__); // import { resolve } from 'dns';
+      var moment__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_9__); // import { resolve } from 'dns';
 
 
       var FormlaporanPage = /*#__PURE__*/function () {
-        function FormlaporanPage(route, NavController, apiService, toastController, alertController, loadingController, camera, imagePicker) {
+        function FormlaporanPage(route, NavController, apiService, toastController, alertController, loadingController, camera, imagePicker, modalController) {
           _classCallCheck(this, FormlaporanPage);
 
           this.route = route;
@@ -281,6 +764,7 @@
           this.loadingController = loadingController;
           this.camera = camera;
           this.imagePicker = imagePicker;
+          this.modalController = modalController;
           this.title = '';
           this.subtitle = '';
           this.subtitle_2 = '';
@@ -318,13 +802,13 @@
         }, {
           key: "presentToast",
           value: function presentToast(color, header, message) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
               var toast;
-              return regeneratorRuntime.wrap(function _callee$(_context) {
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
                 while (1) {
-                  switch (_context.prev = _context.next) {
+                  switch (_context3.prev = _context3.next) {
                     case 0:
-                      _context.next = 2;
+                      _context3.next = 2;
                       return this.toastController.create({
                         header: header,
                         message: message,
@@ -335,28 +819,28 @@
                       });
 
                     case 2:
-                      toast = _context.sent;
+                      toast = _context3.sent;
                       toast.present();
 
                     case 4:
                     case "end":
-                      return _context.stop();
+                      return _context3.stop();
                   }
                 }
-              }, _callee, this);
+              }, _callee3, this);
             }));
           }
         }, {
           key: "presentLoading",
           value: function presentLoading(message) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-              var loading, _yield$loading$onDidD, role, data;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+              var loading, _yield$loading$onDidD2, role, data;
 
-              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              return regeneratorRuntime.wrap(function _callee4$(_context4) {
                 while (1) {
-                  switch (_context2.prev = _context2.next) {
+                  switch (_context4.prev = _context4.next) {
                     case 0:
-                      _context2.next = 2;
+                      _context4.next = 2;
                       return this.loadingController.create({
                         cssClass: 'my-custom-class',
                         message: message,
@@ -365,39 +849,73 @@
                       });
 
                     case 2:
-                      loading = _context2.sent;
-                      _context2.next = 5;
+                      loading = _context4.sent;
+                      _context4.next = 5;
                       return loading.present();
 
                     case 5:
-                      _context2.next = 7;
+                      _context4.next = 7;
                       return loading.onDidDismiss();
 
                     case 7:
-                      _yield$loading$onDidD = _context2.sent;
-                      role = _yield$loading$onDidD.role;
-                      data = _yield$loading$onDidD.data;
+                      _yield$loading$onDidD2 = _context4.sent;
+                      role = _yield$loading$onDidD2.role;
+                      data = _yield$loading$onDidD2.data;
 
                     case 10:
                     case "end":
-                      return _context2.stop();
+                      return _context4.stop();
                   }
                 }
-              }, _callee2, this);
+              }, _callee4, this);
+            }));
+          }
+        }, {
+          key: "openModal",
+          value: function openModal() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+              var modal;
+              return regeneratorRuntime.wrap(function _callee5$(_context5) {
+                while (1) {
+                  switch (_context5.prev = _context5.next) {
+                    case 0:
+                      _context5.next = 2;
+                      return this.modalController.create({
+                        component: src_app_modals_input_number_input_number_component__WEBPACK_IMPORTED_MODULE_7__["InputNumberComponent"],
+                        cssClass: 'my-custom-modal-css',
+                        mode: 'ios',
+                        showBackdrop: false,
+                        componentProps: []
+                      });
+
+                    case 2:
+                      modal = _context5.sent;
+                      _context5.next = 5;
+                      return modal.present();
+
+                    case 5:
+                      return _context5.abrupt("return", _context5.sent);
+
+                    case 6:
+                    case "end":
+                      return _context5.stop();
+                  }
+                }
+              }, _callee5, this);
             }));
           }
         }, {
           key: "temporarySave",
           value: function temporarySave() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-              var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+              var _this5 = this;
 
               var alert;
-              return regeneratorRuntime.wrap(function _callee4$(_context4) {
+              return regeneratorRuntime.wrap(function _callee7$(_context7) {
                 while (1) {
-                  switch (_context4.prev = _context4.next) {
+                  switch (_context7.prev = _context7.next) {
                     case 0:
-                      _context4.next = 2;
+                      _context7.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Warning !',
@@ -410,43 +928,43 @@
                         }, {
                           text: 'Simpan',
                           handler: function handler() {
-                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-                              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this5, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+                              return regeneratorRuntime.wrap(function _callee6$(_context6) {
                                 while (1) {
-                                  switch (_context3.prev = _context3.next) {
+                                  switch (_context6.prev = _context6.next) {
                                     case 0:
                                       this.presentLoading('Menyimpan laporan...');
-                                      _context3.next = 3;
+                                      _context6.next = 3;
                                       return this.beforeSendAnswer(true);
 
                                     case 3:
                                     case "end":
-                                      return _context3.stop();
+                                      return _context6.stop();
                                   }
                                 }
-                              }, _callee3, this);
+                              }, _callee6, this);
                             }));
                           }
                         }]
                       });
 
                     case 2:
-                      alert = _context4.sent;
-                      _context4.next = 5;
+                      alert = _context7.sent;
+                      _context7.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context4.stop();
+                      return _context7.stop();
                   }
                 }
-              }, _callee4, this);
+              }, _callee7, this);
             }));
           }
         }, {
           key: "getQuestion",
           value: function getQuestion() {
-            var _this2 = this;
+            var _this6 = this;
 
             this.listQuestion = [];
             var glue = this.params.glue;
@@ -457,22 +975,22 @@
               if (data.user_area_report.length > 0) {
                 var q = data.user_area_report[0];
                 var geo_id = localStorage.getItem('geo_id');
-                localStorage.setItem(_this2.params.id_questionnaire + '_drafQuestions_' + geo_id, JSON.stringify(q.Question));
-                _this2.listQuestion = q.Question;
-                _this2.question_total = _this2.listQuestion.length;
+                localStorage.setItem(_this6.params.id_questionnaire + '_drafQuestions_' + geo_id, JSON.stringify(q.Question));
+                _this6.listQuestion = q.Question;
+                _this6.question_total = _this6.listQuestion.length;
 
-                _this2.getNextQuestion(0, 'next'); // console.log(this.listQuestion);
+                _this6.getNextQuestion(0, 'next'); // console.log(this.listQuestion);
 
               }
             }, function (error) {
               var geo_id = localStorage.getItem('geo_id');
-              var drafQuestions = localStorage.getItem(_this2.params.id_questionnaire + '_drafQuestions_' + geo_id);
+              var drafQuestions = localStorage.getItem(_this6.params.id_questionnaire + '_drafQuestions_' + geo_id);
 
               if (drafQuestions != null && drafQuestions != '') {
-                _this2.listQuestion = JSON.parse(drafQuestions);
-                _this2.question_total = _this2.listQuestion.length;
+                _this6.listQuestion = JSON.parse(drafQuestions);
+                _this6.question_total = _this6.listQuestion.length;
 
-                _this2.getNextQuestion(0, 'next');
+                _this6.getNextQuestion(0, 'next');
               }
             });
           }
@@ -792,24 +1310,24 @@
         }, {
           key: "sendAnswer",
           value: function sendAnswer() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
-              var _this3 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
+              var _this7 = this;
 
               var dataAnswers, params;
-              return regeneratorRuntime.wrap(function _callee6$(_context6) {
+              return regeneratorRuntime.wrap(function _callee9$(_context9) {
                 while (1) {
-                  switch (_context6.prev = _context6.next) {
+                  switch (_context9.prev = _context9.next) {
                     case 0:
                       this.presentLoading('Mengirim laporan...');
-                      _context6.next = 3;
+                      _context9.next = 3;
                       return this.beforeSendAnswer(false);
 
                     case 3:
-                      _context6.next = 5;
+                      _context9.next = 5;
                       return this.sendToServer();
 
                     case 5:
-                      dataAnswers = _context6.sent;
+                      dataAnswers = _context9.sent;
                       params = {
                         ans_id: this.params.ans_id,
                         glue: this.params.glue,
@@ -817,13 +1335,13 @@
                         answer: JSON.stringify(dataAnswers)
                       };
                       this.subscribe = this.apiService.post('v2/user_area_questionnaire', params).subscribe(function (data) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this3, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
-                          var _this4 = this;
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this7, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+                          var _this8 = this;
 
                           var geo_id, temporarySave, newTemp, index, element;
-                          return regeneratorRuntime.wrap(function _callee5$(_context5) {
+                          return regeneratorRuntime.wrap(function _callee8$(_context8) {
                             while (1) {
-                              switch (_context5.prev = _context5.next) {
+                              switch (_context8.prev = _context8.next) {
                                 case 0:
                                   geo_id = localStorage.getItem('geo_id');
                                   temporarySave = localStorage.getItem('temporarySave_' + geo_id);
@@ -841,50 +1359,50 @@
                                   localStorage.setItem('temporarySave_' + geo_id, JSON.stringify(newTemp)); // console.log(data);
 
                                   setTimeout(function () {
-                                    _this4.presentToast('success', 'Sukses', 'Data tersimpan');
+                                    _this8.presentToast('success', 'Sukses', 'Data tersimpan');
 
-                                    _this4.goBack(1);
+                                    _this8.goBack(1);
                                   }, 2000);
 
                                 case 7:
                                 case "end":
-                                  return _context5.stop();
+                                  return _context8.stop();
                               }
                             }
-                          }, _callee5, this);
+                          }, _callee8, this);
                         }));
                       }, function (error) {
                         // this.presentAlertConfirmError();
                         console.log(error);
 
-                        _this3.presentToast('error', 'Gagal', 'Tidak tersimpan');
+                        _this7.presentToast('error', 'Gagal', 'Tidak tersimpan');
                       });
 
                     case 8:
                     case "end":
-                      return _context6.stop();
+                      return _context9.stop();
                   }
                 }
-              }, _callee6, this);
+              }, _callee9, this);
             }));
           }
         }, {
           key: "sendToServer",
           value: function sendToServer() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
-              var _this5 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
+              var _this9 = this;
 
-              return regeneratorRuntime.wrap(function _callee8$(_context8) {
+              return regeneratorRuntime.wrap(function _callee11$(_context11) {
                 while (1) {
-                  switch (_context8.prev = _context8.next) {
+                  switch (_context11.prev = _context11.next) {
                     case 0:
-                      _context8.next = 2;
+                      _context11.next = 2;
                       return new Promise(function (resolve, reject) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this5, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this9, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
                           var glue, id_questionnaire, geo_id, data_answer, drafQuestions, answers, go_to_id, i, element, answer, a, element_answer, ans_id_question_opstion, c, c_e, newAns;
-                          return regeneratorRuntime.wrap(function _callee7$(_context7) {
+                          return regeneratorRuntime.wrap(function _callee10$(_context10) {
                             while (1) {
-                              switch (_context7.prev = _context7.next) {
+                              switch (_context10.prev = _context10.next) {
                                 case 0:
                                   glue = this.params.glue;
                                   id_questionnaire = this.params.id_questionnaire;
@@ -949,43 +1467,99 @@
 
                                 case 11:
                                 case "end":
-                                  return _context7.stop();
+                                  return _context10.stop();
                               }
                             }
-                          }, _callee7, this);
+                          }, _callee10, this);
                         }));
                       });
 
                     case 2:
-                      return _context8.abrupt("return", _context8.sent);
+                      return _context11.abrupt("return", _context11.sent);
 
                     case 3:
                     case "end":
-                      return _context8.stop();
+                      return _context11.stop();
                   }
                 }
-              }, _callee8);
+              }, _callee11);
             }));
+          }
+        }, {
+          key: "updateQuantity2",
+          value: function updateQuantity2(qp) {
+            this.singleAnswer = qp / 100;
+            this.singleAnswer = qp + '%';
+          }
+        }, {
+          key: "updateQuantity",
+          value: function updateQuantity(q) {
+            var angka = q.toString().replace(/\./g, ''); // console.log(angka);
+            // console.log(angka);
+
+            var number_string = parseFloat(angka).toString(),
+                split = number_string.split(','),
+                sisa = split[0].length % 3,
+                rupiah = split[0].substr(0, sisa),
+                ribuan = split[0].substr(sisa).match(/\d{3}/gi); // tambahkan titik jika yang di input sudah menjadi angka ribuan
+
+            if (ribuan) {
+              var separator = sisa ? '.' : '';
+              rupiah += separator + ribuan.join('.');
+            }
+
+            rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+            this.singleAnswer = rupiah;
+          }
+        }, {
+          key: "formatRupiah",
+          value: function formatRupiah(angka) {
+            if (angka != null && angka != '') {
+              var number_string = parseFloat(angka).toString(),
+                  split = number_string.split(','),
+                  sisa = split[0].length % 3,
+                  rupiah = split[0].substr(0, sisa),
+                  ribuan = split[0].substr(sisa).match(/\d{3}/gi); // tambahkan titik jika yang di input sudah menjadi angka ribuan
+
+              if (ribuan) {
+                var separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+              }
+
+              rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+              return rupiah;
+            }
+          }
+        }, {
+          key: "numberOnlyValidation",
+          value: function numberOnlyValidation(event) {
+            var pattern = /[0-9.,]/;
+            var inputChar = String.fromCharCode(event.charCode);
+
+            if (!pattern.test(inputChar)) {
+              // invalid character, prevent input
+              event.preventDefault();
+            }
           }
         }, {
           key: "beforeSendAnswer",
           value: function beforeSendAnswer(back) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
-              var _this6 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
+              var _this10 = this;
 
-              return regeneratorRuntime.wrap(function _callee10$(_context10) {
+              return regeneratorRuntime.wrap(function _callee13$(_context13) {
                 while (1) {
-                  switch (_context10.prev = _context10.next) {
+                  switch (_context13.prev = _context13.next) {
                     case 0:
-                      _context10.next = 2;
+                      _context13.next = 2;
                       return new Promise(function (resolve, reject) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this6, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
-                          var _this7 = this;
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this10, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
+                          var _this11 = this;
 
                           var glue, geo_id, temp, NewTemp, dataTemp, i, element, id_questionnaire, temporarySave, locationLocalStorage, draf;
-                          return regeneratorRuntime.wrap(function _callee9$(_context9) {
+                          return regeneratorRuntime.wrap(function _callee12$(_context12) {
                             while (1) {
-                              switch (_context9.prev = _context9.next) {
+                              switch (_context12.prev = _context12.next) {
                                 case 0:
                                   try {
                                     glue = this.params.glue;
@@ -1015,9 +1589,9 @@
 
                                     if (back) {
                                       setTimeout(function () {
-                                        _this7.presentToast('success', 'Sukses', 'Data tersimpan');
+                                        _this11.presentToast('success', 'Sukses', 'Data tersimpan');
 
-                                        _this7.goBack(1);
+                                        _this11.goBack(1);
                                       }, 2000);
                                     }
 
@@ -1028,22 +1602,22 @@
 
                                 case 1:
                                 case "end":
-                                  return _context9.stop();
+                                  return _context12.stop();
                               }
                             }
-                          }, _callee9, this);
+                          }, _callee12, this);
                         }));
                       });
 
                     case 2:
-                      return _context10.abrupt("return", _context10.sent);
+                      return _context13.abrupt("return", _context13.sent);
 
                     case 3:
                     case "end":
-                      return _context10.stop();
+                      return _context13.stop();
                   }
                 }
-              }, _callee10);
+              }, _callee13);
             }));
           }
         }, {
@@ -1083,7 +1657,7 @@
         }, {
           key: "getImagesFromGalery",
           value: function getImagesFromGalery() {
-            var _this8 = this;
+            var _this12 = this;
 
             var options = {
               // Android only. Max images to be selected, defaults to 15. If this is set to 1, upon
@@ -1112,9 +1686,9 @@
               // }
 
               var base64Image = 'data:image/jpeg;base64,' + results[0];
-              _this8.singleAnswer = base64Image;
+              _this12.singleAnswer = base64Image;
 
-              var file = _this8.dataURItoBlob(base64Image);
+              var file = _this12.dataURItoBlob(base64Image);
 
               console.log(file); // this.viewImage = 
             }, function (err) {
@@ -1124,7 +1698,7 @@
         }, {
           key: "getImagesFromCamera",
           value: function getImagesFromCamera() {
-            var _this9 = this;
+            var _this13 = this;
 
             var options = {
               quality: 100,
@@ -1138,7 +1712,7 @@
             this.camera.getPicture(options).then(function (imageData) {
               // imageData is either a base64 encoded string or a file URI
               // If it's base64 (DATA_URL):
-              _this9.singleAnswer = 'data:image/jpeg;base64,' + imageData;
+              _this13.singleAnswer = 'data:image/jpeg;base64,' + imageData;
             }, function (err) {// Handle error
             });
           }
@@ -1168,7 +1742,7 @@
         }, {
           key: "formatingToInsertDB",
           value: function formatingToInsertDB(myDate) {
-            return moment__WEBPACK_IMPORTED_MODULE_8__(myDate).format('YYYY-MM-DD');
+            return moment__WEBPACK_IMPORTED_MODULE_9__(myDate).format('YYYY-MM-DD');
           }
         }, {
           key: "goBack",
@@ -1225,6 +1799,8 @@
           type: _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_5__["Camera"]
         }, {
           type: _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_6__["ImagePicker"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]
         }];
       };
 
@@ -1345,13 +1921,13 @@
         }, {
           key: "presentAlertNoQuestion",
           value: function presentAlertNoQuestion() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
               var alert;
-              return regeneratorRuntime.wrap(function _callee11$(_context11) {
+              return regeneratorRuntime.wrap(function _callee14$(_context14) {
                 while (1) {
-                  switch (_context11.prev = _context11.next) {
+                  switch (_context14.prev = _context14.next) {
                     case 0:
-                      _context11.next = 2;
+                      _context14.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Info !',
@@ -1365,36 +1941,36 @@
                       });
 
                     case 2:
-                      alert = _context11.sent;
-                      _context11.next = 5;
+                      alert = _context14.sent;
+                      _context14.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context11.stop();
+                      return _context14.stop();
                   }
                 }
-              }, _callee11, this);
+              }, _callee14, this);
             }));
           }
         }, {
           key: "presentActionSheetSelectPeriode",
           value: function presentActionSheetSelectPeriode(item) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
-              var _this10 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
+              var _this14 = this;
 
               var buttons, actionSheet;
-              return regeneratorRuntime.wrap(function _callee12$(_context12) {
+              return regeneratorRuntime.wrap(function _callee15$(_context15) {
                 while (1) {
-                  switch (_context12.prev = _context12.next) {
+                  switch (_context15.prev = _context15.next) {
                     case 0:
                       if (!(item.Q_Mingguan.length == 0 && item.Q_Bulanan.length == 0 && item.Q_Triwulan.length == 0)) {
-                        _context12.next = 4;
+                        _context15.next = 4;
                         break;
                       }
 
                       this.presentAlertNoQuestion();
-                      _context12.next = 15;
+                      _context15.next = 15;
                       break;
 
                     case 4:
@@ -1404,7 +1980,7 @@
                         buttons.push({
                           text: 'Mingguan',
                           handler: function handler() {
-                            _this10.gotoSelectPeriode(item, 'Mingguan');
+                            _this14.gotoSelectPeriode(item, 'Mingguan');
                           }
                         });
                       }
@@ -1413,7 +1989,7 @@
                         buttons.push({
                           text: 'Bulanan',
                           handler: function handler() {
-                            _this10.gotoSelectPeriode(item, 'Bulanan');
+                            _this14.gotoSelectPeriode(item, 'Bulanan');
                           }
                         });
                       }
@@ -1422,7 +1998,7 @@
                         buttons.push({
                           text: 'Triwulan',
                           handler: function handler() {
-                            _this10.gotoSelectPeriode(item, 'Triwulan');
+                            _this14.gotoSelectPeriode(item, 'Triwulan');
                           }
                         });
                       }
@@ -1434,7 +2010,7 @@
                         }
                       });
                       console.log('buttons', buttons);
-                      _context12.next = 12;
+                      _context15.next = 12;
                       return this.actionSheetController.create({
                         header: 'Pilih Periode',
                         cssClass: 'my-custom-class',
@@ -1443,30 +2019,30 @@
                       });
 
                     case 12:
-                      actionSheet = _context12.sent;
-                      _context12.next = 15;
+                      actionSheet = _context15.sent;
+                      _context15.next = 15;
                       return actionSheet.present();
 
                     case 15:
                     case "end":
-                      return _context12.stop();
+                      return _context15.stop();
                   }
                 }
-              }, _callee12, this);
+              }, _callee15, this);
             }));
           }
         }, {
           key: "presentAlertSelectTarget",
           value: function presentAlertSelectTarget(id_questionnaire_desa, id_questionnaire_dusun) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
-              var _this11 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
+              var _this15 = this;
 
               var alert;
-              return regeneratorRuntime.wrap(function _callee15$(_context15) {
+              return regeneratorRuntime.wrap(function _callee18$(_context18) {
                 while (1) {
-                  switch (_context15.prev = _context15.next) {
+                  switch (_context18.prev = _context18.next) {
                     case 0:
-                      _context15.next = 2;
+                      _context18.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Target Laporan',
@@ -1476,101 +2052,101 @@
                           text: 'Desa',
                           cssClass: 'specialClass',
                           handler: function handler() {
-                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this11, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
+                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this15, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
                               var dataParam;
-                              return regeneratorRuntime.wrap(function _callee13$(_context13) {
+                              return regeneratorRuntime.wrap(function _callee16$(_context16) {
                                 while (1) {
-                                  switch (_context13.prev = _context13.next) {
+                                  switch (_context16.prev = _context16.next) {
                                     case 0:
-                                      _context13.prev = 0;
-                                      _context13.next = 3;
+                                      _context16.prev = 0;
+                                      _context16.next = 3;
                                       return this.getPeriode(id_questionnaire_desa);
 
                                     case 3:
-                                      dataParam = _context13.sent;
+                                      dataParam = _context16.sent;
                                       this.NavController.navigateForward(['/laporan/selectperiode', dataParam[0]]);
-                                      _context13.next = 10;
+                                      _context16.next = 10;
                                       break;
 
                                     case 7:
-                                      _context13.prev = 7;
-                                      _context13.t0 = _context13["catch"](0);
+                                      _context16.prev = 7;
+                                      _context16.t0 = _context16["catch"](0);
 
-                                      if (_context13.t0.status == 401) {
+                                      if (_context16.t0.status == 401) {
                                         this.alertToRelogin();
                                       }
 
                                     case 10:
                                     case "end":
-                                      return _context13.stop();
+                                      return _context16.stop();
                                   }
                                 }
-                              }, _callee13, this, [[0, 7]]);
+                              }, _callee16, this, [[0, 7]]);
                             }));
                           }
                         }, {
                           text: 'Dusun',
                           handler: function handler() {
-                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this11, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
+                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this15, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
                               var dataParam;
-                              return regeneratorRuntime.wrap(function _callee14$(_context14) {
+                              return regeneratorRuntime.wrap(function _callee17$(_context17) {
                                 while (1) {
-                                  switch (_context14.prev = _context14.next) {
+                                  switch (_context17.prev = _context17.next) {
                                     case 0:
-                                      _context14.prev = 0;
-                                      _context14.next = 3;
+                                      _context17.prev = 0;
+                                      _context17.next = 3;
                                       return this.getPeriode(id_questionnaire_dusun);
 
                                     case 3:
-                                      dataParam = _context14.sent;
+                                      dataParam = _context17.sent;
                                       this.NavController.navigateForward(['/laporan/selectperiode', dataParam[0]]);
-                                      _context14.next = 10;
+                                      _context17.next = 10;
                                       break;
 
                                     case 7:
-                                      _context14.prev = 7;
-                                      _context14.t0 = _context14["catch"](0);
+                                      _context17.prev = 7;
+                                      _context17.t0 = _context17["catch"](0);
 
-                                      if (_context14.t0.status == 401) {
+                                      if (_context17.t0.status == 401) {
                                         this.alertToRelogin();
                                       }
 
                                     case 10:
                                     case "end":
-                                      return _context14.stop();
+                                      return _context17.stop();
                                   }
                                 }
-                              }, _callee14, this, [[0, 7]]);
+                              }, _callee17, this, [[0, 7]]);
                             }));
                           }
                         }]
                       });
 
                     case 2:
-                      alert = _context15.sent;
-                      _context15.next = 5;
+                      alert = _context18.sent;
+                      _context18.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context15.stop();
+                      return _context18.stop();
                   }
                 }
-              }, _callee15, this);
+              }, _callee18, this);
             }));
           }
         }, {
           key: "alertToRelogin",
           value: function alertToRelogin() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
-              var _this12 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
+              var _this16 = this;
 
               var alert;
-              return regeneratorRuntime.wrap(function _callee16$(_context16) {
+              return regeneratorRuntime.wrap(function _callee19$(_context19) {
                 while (1) {
-                  switch (_context16.prev = _context16.next) {
+                  switch (_context19.prev = _context19.next) {
                     case 0:
-                      _context16.next = 2;
+                      _context19.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Warning !',
@@ -1584,49 +2160,49 @@
                             localStorage.removeItem('geo_id');
                             localStorage.removeItem('api_key');
 
-                            _this12.router.navigate(['front/']);
+                            _this16.router.navigate(['front/']);
                           }
                         }]
                       });
 
                     case 2:
-                      alert = _context16.sent;
-                      _context16.next = 5;
+                      alert = _context19.sent;
+                      _context19.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context16.stop();
+                      return _context19.stop();
                   }
                 }
-              }, _callee16, this);
+              }, _callee19, this);
             }));
           }
         }, {
           key: "getListActiveGroup",
           value: function getListActiveGroup() {
-            var _this13 = this;
+            var _this17 = this;
 
             this.subscribe = this.apiService.get('v2/report_active_group', {}).subscribe(function (data) {
-              _this13.lists = data;
-              console.log(_this13.lists);
+              _this17.lists = data;
+              console.log(_this17.lists);
             }, function (error) {
               if (error.status == 401) {
-                _this13.alertToRelogin();
+                _this17.alertToRelogin();
               }
             });
           }
         }, {
           key: "gotoSelectPeriode",
           value: function gotoSelectPeriode(item, type) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
               var id_questionnaire_desa, id_questionnaire_dusun, index, element, id_questionnaire, dataParam;
-              return regeneratorRuntime.wrap(function _callee17$(_context17) {
+              return regeneratorRuntime.wrap(function _callee20$(_context20) {
                 while (1) {
-                  switch (_context17.prev = _context17.next) {
+                  switch (_context20.prev = _context20.next) {
                     case 0:
                       if (!(item['Q_' + type].length > 1)) {
-                        _context17.next = 7;
+                        _context20.next = 7;
                         break;
                       }
 
@@ -1644,52 +2220,52 @@
                       }
 
                       this.presentAlertSelectTarget(id_questionnaire_desa, id_questionnaire_dusun);
-                      _context17.next = 18;
+                      _context20.next = 18;
                       break;
 
                     case 7:
                       id_questionnaire = item['Q_' + type][0].id;
-                      _context17.prev = 8;
-                      _context17.next = 11;
+                      _context20.prev = 8;
+                      _context20.next = 11;
                       return this.getPeriode(id_questionnaire);
 
                     case 11:
-                      dataParam = _context17.sent;
+                      dataParam = _context20.sent;
                       this.NavController.navigateForward(['/laporan/selectperiode', dataParam[0]]);
-                      _context17.next = 18;
+                      _context20.next = 18;
                       break;
 
                     case 15:
-                      _context17.prev = 15;
-                      _context17.t0 = _context17["catch"](8);
+                      _context20.prev = 15;
+                      _context20.t0 = _context20["catch"](8);
 
-                      if (_context17.t0.status == 401) {
+                      if (_context20.t0.status == 401) {
                         this.alertToRelogin();
                       }
 
                     case 18:
                     case "end":
-                      return _context17.stop();
+                      return _context20.stop();
                   }
                 }
-              }, _callee17, this, [[8, 15]]);
+              }, _callee20, this, [[8, 15]]);
             }));
           }
         }, {
           key: "getPeriode",
           value: function getPeriode(id_questionnaire) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
-              var _this14 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
+              var _this18 = this;
 
-              return regeneratorRuntime.wrap(function _callee19$(_context19) {
+              return regeneratorRuntime.wrap(function _callee22$(_context22) {
                 while (1) {
-                  switch (_context19.prev = _context19.next) {
+                  switch (_context22.prev = _context22.next) {
                     case 0:
-                      return _context19.abrupt("return", new Promise(function (resolve, rejected) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this14, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
-                          return regeneratorRuntime.wrap(function _callee18$(_context18) {
+                      return _context22.abrupt("return", new Promise(function (resolve, rejected) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this18, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
+                          return regeneratorRuntime.wrap(function _callee21$(_context21) {
                             while (1) {
-                              switch (_context18.prev = _context18.next) {
+                              switch (_context21.prev = _context21.next) {
                                 case 0:
                                   try {
                                     this.subscribe = this.apiService.get('v2/report_show_periode?id_questionnaire=' + id_questionnaire, {}).subscribe(function (data) {
@@ -1703,25 +2279,31 @@
 
                                 case 1:
                                 case "end":
-                                  return _context18.stop();
+                                  return _context21.stop();
                               }
                             }
-                          }, _callee18, this);
+                          }, _callee21, this);
                         }));
                       }));
 
                     case 1:
                     case "end":
-                      return _context19.stop();
+                      return _context22.stop();
                   }
                 }
-              }, _callee19);
+              }, _callee22);
             }));
           }
         }, {
           key: "getMonthName",
           value: function getMonthName(number) {
             return moment__WEBPACK_IMPORTED_MODULE_4__().month(parseInt(number) - 1).format('MMMM');
+          }
+        }, {
+          key: "gotoDataDasar",
+          value: function gotoDataDasar() {
+            // this.NavController.navigateBack(['/home'], { replaceUrl: true });
+            this.NavController.navigateForward(['/laporan/datadasardesa', []]);
           }
         }, {
           key: "goBack",
@@ -1761,6 +2343,245 @@
         /*! ./groups.page.scss */
         "./src/app/pages/laporan/groups/groups.page.scss"))["default"]]
       })], GroupsPage);
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/laporan/informasidesa/informasidesa.page.scss":
+    /*!*********************************************************************!*\
+      !*** ./src/app/pages/laporan/informasidesa/informasidesa.page.scss ***!
+      \*********************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppPagesLaporanInformasidesaInformasidesaPageScss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "ion-header ion-toolbar {\n  --background: #2f9495;\n  color: #ffffff;\n}\n\nion-content #container {\n  padding: 10px;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 47%;\n  transform: translateY(-50%);\n}\n\nion-content ion-item {\n  border: 1px solid #eaeaea;\n  margin-bottom: 10px;\n  border-radius: 5px;\n}\n\n.label-title {\n  white-space: break-spaces !important;\n}\n\nion-footer ion-toolbar {\n  --background: #2f9495 !important;\n  min-height: 70px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9pbmZvcm1hc2lkZXNhL2luZm9ybWFzaWRlc2EucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNJO0VBRUkscUJBQUE7RUFDQSxjQUFBO0FBRFI7O0FBU0k7RUFDSSxhQUFBO0VBR0Esa0JBQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFFBQUE7RUFDQSwyQkFBQTtBQVJSOztBQVdJO0VBQ0kseUJBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0FBVFI7O0FBY0E7RUFDSSxvQ0FBQTtBQVhKOztBQWVJO0VBQ0ksZ0NBQUE7RUFDQSxnQkFBQTtBQVpSIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9pbmZvcm1hc2lkZXNhL2luZm9ybWFzaWRlc2EucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWhlYWRlciB7XHJcbiAgICBpb24tdG9vbGJhciB7XHJcblxyXG4gICAgICAgIC0tYmFja2dyb3VuZDogIzJmOTQ5NTtcclxuICAgICAgICBjb2xvcjogI2ZmZmZmZjtcclxuXHJcbiAgICB9XHJcbn1cclxuXHJcbmlvbi1jb250ZW50IHtcclxuICAgIC8vIC0tYmFja2dyb3VuZDogIzJmOTQ5NTtcclxuXHJcbiAgICAjY29udGFpbmVyIHtcclxuICAgICAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgICAgIC8vIHRleHQtYWxpZ246IGNlbnRlcjtcclxuXHJcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgIGxlZnQ6IDA7XHJcbiAgICAgICAgcmlnaHQ6IDA7XHJcbiAgICAgICAgdG9wOiA0NyU7XHJcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xyXG4gICAgfVxyXG5cclxuICAgIGlvbi1pdGVtIHtcclxuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZWFlYWVhO1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG4gICAgfVxyXG59XHJcblxyXG5cclxuLmxhYmVsLXRpdGxlIHtcclxuICAgIHdoaXRlLXNwYWNlOiBicmVhay1zcGFjZXMgIWltcG9ydGFudDtcclxufVxyXG5cclxuaW9uLWZvb3RlciB7XHJcbiAgICBpb24tdG9vbGJhciB7XHJcbiAgICAgICAgLS1iYWNrZ3JvdW5kOiAjMmY5NDk1ICFpbXBvcnRhbnQ7XHJcbiAgICAgICAgbWluLWhlaWdodDogNzBweDtcclxuICAgIH1cclxufSJdfQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/laporan/informasidesa/informasidesa.page.ts":
+    /*!*******************************************************************!*\
+      !*** ./src/app/pages/laporan/informasidesa/informasidesa.page.ts ***!
+      \*******************************************************************/
+
+    /*! exports provided: InformasidesaPage */
+
+    /***/
+    function srcAppPagesLaporanInformasidesaInformasidesaPageTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "InformasidesaPage", function () {
+        return InformasidesaPage;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/_services/api.service */
+      "./src/app/_services/api.service.ts");
+
+      var InformasidesaPage = /*#__PURE__*/function () {
+        function InformasidesaPage(NavController, toastController, loadingController, apiService) {
+          _classCallCheck(this, InformasidesaPage);
+
+          this.NavController = NavController;
+          this.toastController = toastController;
+          this.loadingController = loadingController;
+          this.apiService = apiService;
+        }
+
+        _createClass(InformasidesaPage, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "ionViewDidEnter",
+          value: function ionViewDidEnter() {
+            this.getBasicData();
+          }
+        }, {
+          key: "presentLoading",
+          value: function presentLoading() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
+              var loading, _yield$loading$onDidD3, role, data;
+
+              return regeneratorRuntime.wrap(function _callee23$(_context23) {
+                while (1) {
+                  switch (_context23.prev = _context23.next) {
+                    case 0:
+                      _context23.next = 2;
+                      return this.loadingController.create({
+                        cssClass: 'my-custom-class',
+                        message: 'Mengirim data...',
+                        mode: 'ios',
+                        duration: 2000
+                      });
+
+                    case 2:
+                      loading = _context23.sent;
+                      _context23.next = 5;
+                      return loading.present();
+
+                    case 5:
+                      _context23.next = 7;
+                      return loading.onDidDismiss();
+
+                    case 7:
+                      _yield$loading$onDidD3 = _context23.sent;
+                      role = _yield$loading$onDidD3.role;
+                      data = _yield$loading$onDidD3.data;
+
+                    case 10:
+                    case "end":
+                      return _context23.stop();
+                  }
+                }
+              }, _callee23, this);
+            }));
+          }
+        }, {
+          key: "presentToast",
+          value: function presentToast(color, header, message) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
+              var toast;
+              return regeneratorRuntime.wrap(function _callee24$(_context24) {
+                while (1) {
+                  switch (_context24.prev = _context24.next) {
+                    case 0:
+                      _context24.next = 2;
+                      return this.toastController.create({
+                        header: header,
+                        message: message,
+                        color: color,
+                        mode: "ios",
+                        position: "middle",
+                        duration: 3000
+                      });
+
+                    case 2:
+                      toast = _context24.sent;
+                      toast.present();
+
+                    case 4:
+                    case "end":
+                      return _context24.stop();
+                  }
+                }
+              }, _callee24, this);
+            }));
+          }
+        }, {
+          key: "getBasicData",
+          value: function getBasicData() {
+            var _this19 = this;
+
+            var geo_id = localStorage.getItem('geo_id');
+            this.subscribe = this.apiService.get('v2/basic_data?geo_id=' + geo_id, {}).subscribe(function (data) {
+              console.log(data);
+
+              if (data.length > 0) {
+                var d = data[0];
+                _this19.rt = d.rt;
+                _this19.rw = d.rw;
+                _this19.posko_desa = d.posko_desa;
+                _this19.phone_number = d.phone_number;
+                _this19.telephone = d.telephone;
+              }
+            }, function (error) {
+              if (error.status == 401) {// this.alertToRelogin();
+              }
+            });
+          }
+        }, {
+          key: "kirimDataDasar",
+          value: function kirimDataDasar() {
+            var _this20 = this;
+
+            this.presentLoading();
+            var geo_id = localStorage.getItem('geo_id');
+            var paramPost = {
+              geo_id: geo_id,
+              rt: this.rt,
+              rw: this.rw,
+              posko_desa: this.posko_desa,
+              phone_number: this.phone_number,
+              telephone: this.telephone
+            };
+            this.subscribe = this.apiService.post('v2/basic_data', paramPost).subscribe(function (data) {
+              // this.getListItems();
+              setTimeout(function () {
+                _this20.presentToast('success', 'Success', 'Data tersimpan'); // this.NavController.navigateBack(['/basicdata/registrasidusun'], { replaceUrl: true });
+
+              }, 2000);
+            }, function (error) {
+              setTimeout(function () {
+                _this20.presentToast('danger', 'Error', 'Data tidak tersimpan');
+              }, 2000);
+            });
+          }
+        }, {
+          key: "goBack",
+          value: function goBack() {
+            this.NavController.navigateBack(['/laporan/datadasardesa'], {
+              replaceUrl: true
+            });
+          }
+        }]);
+
+        return InformasidesaPage;
+      }();
+
+      InformasidesaPage.ctorParameters = function () {
+        return [{
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"]
+        }, {
+          type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]
+        }];
+      };
+
+      InformasidesaPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-informasidesa',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! raw-loader!./informasidesa.page.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/informasidesa/informasidesa.page.html"))["default"],
+        providers: [src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! ./informasidesa.page.scss */
+        "./src/app/pages/laporan/informasidesa/informasidesa.page.scss"))["default"]]
+      })], InformasidesaPage);
       /***/
     },
 
@@ -1849,6 +2670,24 @@
       var _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! ./selectdusunonly/selectdusunonly.page */
       "./src/app/pages/laporan/selectdusunonly/selectdusunonly.page.ts");
+      /* harmony import */
+
+
+      var _datadasardesa_datadasardesa_page__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      /*! ./datadasardesa/datadasardesa.page */
+      "./src/app/pages/laporan/datadasardesa/datadasardesa.page.ts");
+      /* harmony import */
+
+
+      var _datadasardesaform_datadasardesaform_page__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      /*! ./datadasardesaform/datadasardesaform.page */
+      "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.ts");
+      /* harmony import */
+
+
+      var _informasidesa_informasidesa_page__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      /*! ./informasidesa/informasidesa.page */
+      "./src/app/pages/laporan/informasidesa/informasidesa.page.ts");
 
       var routes = [{
         path: 'formlaporan',
@@ -1874,6 +2713,15 @@
       }, {
         path: 'selectdusunonly',
         component: _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_10__["SelectdusunonlyPage"]
+      }, {
+        path: 'datadasardesa',
+        component: _datadasardesa_datadasardesa_page__WEBPACK_IMPORTED_MODULE_11__["DatadasardesaPage"]
+      }, {
+        path: 'datadasardesaform',
+        component: _datadasardesaform_datadasardesaform_page__WEBPACK_IMPORTED_MODULE_12__["DatadasardesaformPage"]
+      }, {
+        path: 'informasidesa',
+        component: _informasidesa_informasidesa_page__WEBPACK_IMPORTED_MODULE_13__["InformasidesaPage"]
       }];
 
       var LaporanPageRoutingModule = function LaporanPageRoutingModule() {
@@ -1990,6 +2838,24 @@
       var _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ./selectdusunonly/selectdusunonly.page */
       "./src/app/pages/laporan/selectdusunonly/selectdusunonly.page.ts");
+      /* harmony import */
+
+
+      var _datadasardesa_datadasardesa_page__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! ./datadasardesa/datadasardesa.page */
+      "./src/app/pages/laporan/datadasardesa/datadasardesa.page.ts");
+      /* harmony import */
+
+
+      var _datadasardesaform_datadasardesaform_page__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      /*! ./datadasardesaform/datadasardesaform.page */
+      "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.ts");
+      /* harmony import */
+
+
+      var _informasidesa_informasidesa_page__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      /*! ./informasidesa/informasidesa.page */
+      "./src/app/pages/laporan/informasidesa/informasidesa.page.ts");
 
       var LaporanPageModule = function LaporanPageModule() {
         _classCallCheck(this, LaporanPageModule);
@@ -1997,7 +2863,7 @@
 
       LaporanPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _laporan_routing_module__WEBPACK_IMPORTED_MODULE_5__["LaporanPageRoutingModule"]],
-        declarations: [_formlaporan_formlaporan_page__WEBPACK_IMPORTED_MODULE_6__["FormlaporanPage"], _selecttime_selecttime_page__WEBPACK_IMPORTED_MODULE_7__["SelecttimePage"], _selectdusun_selectdusun_page__WEBPACK_IMPORTED_MODULE_8__["SelectdusunPage"], _listlaporan_listlaporan_page__WEBPACK_IMPORTED_MODULE_9__["ListlaporanPage"], _viewlaporan_viewlaporan_page__WEBPACK_IMPORTED_MODULE_10__["ViewlaporanPage"], _groups_groups_page__WEBPACK_IMPORTED_MODULE_11__["GroupsPage"], _selectperiode_selectperiode_page__WEBPACK_IMPORTED_MODULE_12__["SelectperiodePage"], _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_13__["SelectdusunonlyPage"]]
+        declarations: [_formlaporan_formlaporan_page__WEBPACK_IMPORTED_MODULE_6__["FormlaporanPage"], _selecttime_selecttime_page__WEBPACK_IMPORTED_MODULE_7__["SelecttimePage"], _selectdusun_selectdusun_page__WEBPACK_IMPORTED_MODULE_8__["SelectdusunPage"], _listlaporan_listlaporan_page__WEBPACK_IMPORTED_MODULE_9__["ListlaporanPage"], _viewlaporan_viewlaporan_page__WEBPACK_IMPORTED_MODULE_10__["ViewlaporanPage"], _groups_groups_page__WEBPACK_IMPORTED_MODULE_11__["GroupsPage"], _selectperiode_selectperiode_page__WEBPACK_IMPORTED_MODULE_12__["SelectperiodePage"], _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_13__["SelectdusunonlyPage"], _datadasardesa_datadasardesa_page__WEBPACK_IMPORTED_MODULE_14__["DatadasardesaPage"], _datadasardesaform_datadasardesaform_page__WEBPACK_IMPORTED_MODULE_15__["DatadasardesaformPage"], _informasidesa_informasidesa_page__WEBPACK_IMPORTED_MODULE_16__["InformasidesaPage"]]
       })], LaporanPageModule);
       /***/
     },
@@ -2101,15 +2967,15 @@
         }, {
           key: "alertToRelogin",
           value: function alertToRelogin() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
-              var _this15 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
+              var _this21 = this;
 
               var alert;
-              return regeneratorRuntime.wrap(function _callee20$(_context20) {
+              return regeneratorRuntime.wrap(function _callee25$(_context25) {
                 while (1) {
-                  switch (_context20.prev = _context20.next) {
+                  switch (_context25.prev = _context25.next) {
                     case 0:
-                      _context20.next = 2;
+                      _context25.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Warning !',
@@ -2123,34 +2989,34 @@
                             localStorage.removeItem('geo_id');
                             localStorage.removeItem('api_key');
 
-                            _this15.router.navigate(['front/']);
+                            _this21.router.navigate(['front/']);
                           }
                         }]
                       });
 
                     case 2:
-                      alert = _context20.sent;
-                      _context20.next = 5;
+                      alert = _context25.sent;
+                      _context25.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context20.stop();
+                      return _context25.stop();
                   }
                 }
-              }, _callee20, this);
+              }, _callee25, this);
             }));
           }
         }, {
           key: "getListLaporan",
           value: function getListLaporan() {
-            var _this16 = this;
+            var _this22 = this;
 
             this.subscribe = this.apiService.get('v2/user_areas_list?type=' + this.params.Type + '&geo_id=' + this.geo_id, {}).subscribe(function (data) {
-              _this16.lists = data;
+              _this22.lists = data;
             }, function (error) {
               if (error.status == 401) {
-                _this16.alertToRelogin();
+                _this22.alertToRelogin();
               }
             });
           }
@@ -2164,7 +3030,7 @@
         }, {
           key: "gotoSelectDusun",
           value: function gotoSelectDusun(item) {
-            var _this17 = this;
+            var _this23 = this;
 
             this.subscribe = this.apiService.get('v2/user_areas_list_detail?glue=' + item.glue + '&geo_id=' + this.geo_id, {}).subscribe(function (data) {
               if (data.length > 0) {
@@ -2213,7 +3079,7 @@
                   id_questionnaire: ''
                 };
 
-                _this17.NavController.navigateForward(['/laporan/selectdusun', paramToDusun]);
+                _this23.NavController.navigateForward(['/laporan/selectdusun', paramToDusun]);
               }
             });
           }
@@ -2373,13 +3239,13 @@
         }, {
           key: "alertToOptionSavingReport",
           value: function alertToOptionSavingReport(target, item) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
-              var _this18 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
+              var _this24 = this;
 
               var header, message, buttons, actionSheet;
-              return regeneratorRuntime.wrap(function _callee22$(_context22) {
+              return regeneratorRuntime.wrap(function _callee27$(_context27) {
                 while (1) {
-                  switch (_context22.prev = _context22.next) {
+                  switch (_context27.prev = _context27.next) {
                     case 0:
                       header = 'Laporan Untuk Desa';
                       message = this.isDesaTemporarySave ? 'Anda menyimpan Laporan Sementara' : '';
@@ -2392,7 +3258,7 @@
                       buttons = [{
                         text: 'Isi Kembali',
                         handler: function handler() {
-                          _this18.gotoFormQuestion();
+                          _this24.gotoFormQuestion();
                         }
                       }, {
                         text: 'Tutup',
@@ -2407,26 +3273,26 @@
                           text: 'Hapus Laporan Sementara',
                           role: 'destructive',
                           handler: function handler() {
-                            _this18.removeFromTemporary();
+                            _this24.removeFromTemporary();
                           }
                         });
                         buttons.push({
                           text: 'Kirim Laporan',
                           handler: function handler() {
-                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this18, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
-                              return regeneratorRuntime.wrap(function _callee21$(_context21) {
+                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this24, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
+                              return regeneratorRuntime.wrap(function _callee26$(_context26) {
                                 while (1) {
-                                  switch (_context21.prev = _context21.next) {
+                                  switch (_context26.prev = _context26.next) {
                                     case 0:
-                                      _context21.next = 2;
+                                      _context26.next = 2;
                                       return this.sendToServer();
 
                                     case 2:
                                     case "end":
-                                      return _context21.stop();
+                                      return _context26.stop();
                                   }
                                 }
-                              }, _callee21, this);
+                              }, _callee26, this);
                             }));
                           }
                         });
@@ -2436,12 +3302,12 @@
                         buttons.push({
                           text: 'Lihat Laporan',
                           handler: function handler() {
-                            _this18.gotoViewLaporan();
+                            _this24.gotoViewLaporan();
                           }
                         });
                       }
 
-                      _context22.next = 8;
+                      _context27.next = 8;
                       return this.actionSheetController.create({
                         header: header,
                         cssClass: 'my-custom-class',
@@ -2450,28 +3316,28 @@
                       });
 
                     case 8:
-                      actionSheet = _context22.sent;
-                      _context22.next = 11;
+                      actionSheet = _context27.sent;
+                      _context27.next = 11;
                       return actionSheet.present();
 
                     case 11:
                     case "end":
-                      return _context22.stop();
+                      return _context27.stop();
                   }
                 }
-              }, _callee22, this);
+              }, _callee27, this);
             }));
           }
         }, {
           key: "presentToast",
           value: function presentToast(color, header, message) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
               var toast;
-              return regeneratorRuntime.wrap(function _callee23$(_context23) {
+              return regeneratorRuntime.wrap(function _callee28$(_context28) {
                 while (1) {
-                  switch (_context23.prev = _context23.next) {
+                  switch (_context28.prev = _context28.next) {
                     case 0:
-                      _context23.next = 2;
+                      _context28.next = 2;
                       return this.toastController.create({
                         header: header,
                         message: message,
@@ -2482,28 +3348,28 @@
                       });
 
                     case 2:
-                      toast = _context23.sent;
+                      toast = _context28.sent;
                       toast.present();
 
                     case 4:
                     case "end":
-                      return _context23.stop();
+                      return _context28.stop();
                   }
                 }
-              }, _callee23, this);
+              }, _callee28, this);
             }));
           }
         }, {
           key: "presentLoading",
           value: function presentLoading(message, duration) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
-              var loading, _yield$loading$onDidD2, role, data;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
+              var loading, _yield$loading$onDidD4, role, data;
 
-              return regeneratorRuntime.wrap(function _callee24$(_context24) {
+              return regeneratorRuntime.wrap(function _callee29$(_context29) {
                 while (1) {
-                  switch (_context24.prev = _context24.next) {
+                  switch (_context29.prev = _context29.next) {
                     case 0:
-                      _context24.next = 2;
+                      _context29.next = 2;
                       return this.loadingController.create({
                         cssClass: 'my-custom-class',
                         message: message,
@@ -2512,37 +3378,37 @@
                       });
 
                     case 2:
-                      loading = _context24.sent;
-                      _context24.next = 5;
+                      loading = _context29.sent;
+                      _context29.next = 5;
                       return loading.present();
 
                     case 5:
-                      _context24.next = 7;
+                      _context29.next = 7;
                       return loading.onDidDismiss();
 
                     case 7:
-                      _yield$loading$onDidD2 = _context24.sent;
-                      role = _yield$loading$onDidD2.role;
-                      data = _yield$loading$onDidD2.data;
+                      _yield$loading$onDidD4 = _context29.sent;
+                      role = _yield$loading$onDidD4.role;
+                      data = _yield$loading$onDidD4.data;
 
                     case 10:
                     case "end":
-                      return _context24.stop();
+                      return _context29.stop();
                   }
                 }
-              }, _callee24, this);
+              }, _callee29, this);
             }));
           }
         }, {
           key: "alertToOptionSavingReport2",
           value: function alertToOptionSavingReport2(target, item) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
-              var _this19 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
+              var _this25 = this;
 
               var header, message, buttons, alert;
-              return regeneratorRuntime.wrap(function _callee26$(_context26) {
+              return regeneratorRuntime.wrap(function _callee31$(_context31) {
                 while (1) {
-                  switch (_context26.prev = _context26.next) {
+                  switch (_context31.prev = _context31.next) {
                     case 0:
                       // console.log(item);
                       header = 'Laporan Untuk Desa';
@@ -2556,7 +3422,7 @@
                       buttons = [{
                         text: 'Isi Kembali',
                         handler: function handler() {
-                          _this19.gotoFormQuestion();
+                          _this25.gotoFormQuestion();
                         }
                       }];
 
@@ -2564,26 +3430,26 @@
                         buttons.push({
                           text: 'Hapus Laporan Sementara',
                           handler: function handler() {
-                            _this19.removeFromTemporary();
+                            _this25.removeFromTemporary();
                           }
                         });
                         buttons.push({
                           text: 'Kirim Laporan',
                           handler: function handler() {
-                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this19, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
-                              return regeneratorRuntime.wrap(function _callee25$(_context25) {
+                            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this25, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
+                              return regeneratorRuntime.wrap(function _callee30$(_context30) {
                                 while (1) {
-                                  switch (_context25.prev = _context25.next) {
+                                  switch (_context30.prev = _context30.next) {
                                     case 0:
-                                      _context25.next = 2;
+                                      _context30.next = 2;
                                       return this.sendToServer();
 
                                     case 2:
                                     case "end":
-                                      return _context25.stop();
+                                      return _context30.stop();
                                   }
                                 }
-                              }, _callee25, this);
+                              }, _callee30, this);
                             }));
                           }
                         });
@@ -2593,12 +3459,12 @@
                         buttons.push({
                           text: 'Lihat Laporan',
                           handler: function handler() {
-                            _this19.gotoViewLaporan();
+                            _this25.gotoViewLaporan();
                           }
                         });
                       }
 
-                      _context26.next = 8;
+                      _context31.next = 8;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: header,
@@ -2609,44 +3475,44 @@
                       });
 
                     case 8:
-                      alert = _context26.sent;
-                      _context26.next = 11;
+                      alert = _context31.sent;
+                      _context31.next = 11;
                       return alert.present();
 
                     case 11:
                     case "end":
-                      return _context26.stop();
+                      return _context31.stop();
                   }
                 }
-              }, _callee26, this);
+              }, _callee31, this);
             }));
           }
         }, {
           key: "sendToServer",
           value: function sendToServer() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
-              var _this20 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
+              var _this26 = this;
 
-              return regeneratorRuntime.wrap(function _callee29$(_context29) {
+              return regeneratorRuntime.wrap(function _callee34$(_context34) {
                 while (1) {
-                  switch (_context29.prev = _context29.next) {
+                  switch (_context34.prev = _context34.next) {
                     case 0:
-                      _context29.next = 2;
+                      _context34.next = 2;
                       return new Promise(function (resolve, reject) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this20, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
-                          var _this21 = this;
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this26, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
+                          var _this27 = this;
 
                           var dataAnswers, newParams, params;
-                          return regeneratorRuntime.wrap(function _callee28$(_context28) {
+                          return regeneratorRuntime.wrap(function _callee33$(_context33) {
                             while (1) {
-                              switch (_context28.prev = _context28.next) {
+                              switch (_context33.prev = _context33.next) {
                                 case 0:
                                   this.presentLoading('Mengirim laporan...', 2000);
-                                  _context28.next = 3;
+                                  _context33.next = 3;
                                   return this.setParamBeforeToSendServer();
 
                                 case 3:
-                                  dataAnswers = _context28.sent;
+                                  dataAnswers = _context33.sent;
                                   newParams = localStorage.getItem('paramsToFormLaporan');
                                   newParams = JSON.parse(newParams);
                                   params = {
@@ -2656,13 +3522,13 @@
                                     answer: JSON.stringify(dataAnswers)
                                   };
                                   this.subscribe = this.apiService.post('v2/user_area_questionnaire', params).subscribe(function (data) {
-                                    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this21, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
-                                      var _this22 = this;
+                                    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this27, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
+                                      var _this28 = this;
 
                                       var geo_id, temporarySave, newTemp, index, element;
-                                      return regeneratorRuntime.wrap(function _callee27$(_context27) {
+                                      return regeneratorRuntime.wrap(function _callee32$(_context32) {
                                         while (1) {
-                                          switch (_context27.prev = _context27.next) {
+                                          switch (_context32.prev = _context32.next) {
                                             case 0:
                                               geo_id = localStorage.getItem('geo_id');
                                               temporarySave = localStorage.getItem('temporarySave_' + geo_id);
@@ -2682,64 +3548,64 @@
                                               this.checkIfDesaTemporarySave(); // console.log(data);
 
                                               setTimeout(function () {
-                                                _this22.presentToast('success', 'Sukses', 'Data tersimpan');
+                                                _this28.presentToast('success', 'Sukses', 'Data tersimpan');
 
                                                 resolve('');
                                               }, 2000);
 
                                             case 9:
                                             case "end":
-                                              return _context27.stop();
+                                              return _context32.stop();
                                           }
                                         }
-                                      }, _callee27, this);
+                                      }, _callee32, this);
                                     }));
                                   }, function (error) {
                                     // this.presentAlertConfirmError();
                                     console.log(error);
 
-                                    _this21.presentToast('error', 'Gagal', 'Tidak tersimpan');
+                                    _this27.presentToast('error', 'Gagal', 'Tidak tersimpan');
 
                                     reject(error);
                                   });
 
                                 case 8:
                                 case "end":
-                                  return _context28.stop();
+                                  return _context33.stop();
                               }
                             }
-                          }, _callee28, this);
+                          }, _callee33, this);
                         }));
                       });
 
                     case 2:
-                      return _context29.abrupt("return", _context29.sent);
+                      return _context34.abrupt("return", _context34.sent);
 
                     case 3:
                     case "end":
-                      return _context29.stop();
+                      return _context34.stop();
                   }
                 }
-              }, _callee29);
+              }, _callee34);
             }));
           }
         }, {
           key: "setParamBeforeToSendServer",
           value: function setParamBeforeToSendServer() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
-              var _this23 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
+              var _this29 = this;
 
-              return regeneratorRuntime.wrap(function _callee31$(_context31) {
+              return regeneratorRuntime.wrap(function _callee36$(_context36) {
                 while (1) {
-                  switch (_context31.prev = _context31.next) {
+                  switch (_context36.prev = _context36.next) {
                     case 0:
-                      _context31.next = 2;
+                      _context36.next = 2;
                       return new Promise(function (resolve, reject) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this23, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this29, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
                           var newParams, glue, id_questionnaire, geo_id, data_answer, drafQuestions, answers, go_to_id, i, element, answer, a, element_answer, ans_id_question_opstion, c, c_e, newAns;
-                          return regeneratorRuntime.wrap(function _callee30$(_context30) {
+                          return regeneratorRuntime.wrap(function _callee35$(_context35) {
                             while (1) {
-                              switch (_context30.prev = _context30.next) {
+                              switch (_context35.prev = _context35.next) {
                                 case 0:
                                   newParams = localStorage.getItem('paramsToFormLaporan');
                                   newParams = JSON.parse(newParams);
@@ -2806,22 +3672,22 @@
 
                                 case 13:
                                 case "end":
-                                  return _context30.stop();
+                                  return _context35.stop();
                               }
                             }
-                          }, _callee30);
+                          }, _callee35);
                         }));
                       });
 
                     case 2:
-                      return _context31.abrupt("return", _context31.sent);
+                      return _context36.abrupt("return", _context36.sent);
 
                     case 3:
                     case "end":
-                      return _context31.stop();
+                      return _context36.stop();
                   }
                 }
-              }, _callee31);
+              }, _callee36);
             }));
           }
         }, {
@@ -2856,7 +3722,7 @@
         }, {
           key: "checkIfDesaTemporarySave",
           value: function checkIfDesaTemporarySave() {
-            var _this24 = this;
+            var _this30 = this;
 
             var geo_id = localStorage.getItem('geo_id');
             var temporarySave = localStorage.getItem('temporarySave_' + geo_id);
@@ -2880,21 +3746,21 @@
               var _glue = this.firstPathGlue + this.params.value;
 
               this.subscribe = this.apiService.get('v2/user_area_reports_desa?ans_id=' + ans_id_desa + '&id_questionnaire=' + selectDesa_id_questionnaire + '&glue=' + _glue, {}).subscribe(function (data) {
-                _this24.dataDesaFromServer = data.user_area_report[0];
-                _this24.desaVersionSubmitToServer = _this24.dataDesaFromServer['version'];
+                _this30.dataDesaFromServer = data.user_area_report[0];
+                _this30.desaVersionSubmitToServer = _this30.dataDesaFromServer['version'];
               });
             }
           }
         }, {
           key: "getListDusun",
           value: function getListDusun() {
-            var _this25 = this;
+            var _this31 = this;
 
             this.arrDusun = [];
             var geo_id = localStorage.getItem('geo_id');
             var glue_header = this.firstPathGlue + this.params.value;
             this.subscribe = this.apiService.get('v2/user_areas?no_expand=user,geo&geo_id=' + geo_id + '&glue_header=' + glue_header, {}).subscribe(function (data) {
-              _this25.arrDusun = data;
+              _this31.arrDusun = data;
               var dataTemp = [];
               var geo_id = localStorage.getItem('geo_id');
               var temporarySave = localStorage.getItem('temporarySave_' + geo_id);
@@ -2903,13 +3769,13 @@
                 dataTemp = JSON.parse(temporarySave);
               }
 
-              for (var i = 0; i < _this25.arrDusun.length; i++) {
-                var element = _this25.arrDusun[i];
-                _this25.arrDusun[i].isTemporary = false;
-                var glue = _this25.firstPathGlue + _this25.params.value + '-' + element.id;
+              for (var i = 0; i < _this31.arrDusun.length; i++) {
+                var element = _this31.arrDusun[i];
+                _this31.arrDusun[i].isTemporary = false;
+                var glue = _this31.firstPathGlue + _this31.params.value + '-' + element.id;
 
                 if (dataTemp.indexOf(glue) != -1) {
-                  _this25.arrDusun[i].isTemporary = true;
+                  _this31.arrDusun[i].isTemporary = true;
                 }
               }
             });
@@ -3118,15 +3984,15 @@
         }, {
           key: "presentActionSheetInputFormDusun",
           value: function presentActionSheetInputFormDusun(newParams) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
-              var _this26 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
+              var _this32 = this;
 
               var actionSheet;
-              return regeneratorRuntime.wrap(function _callee32$(_context32) {
+              return regeneratorRuntime.wrap(function _callee37$(_context37) {
                 while (1) {
-                  switch (_context32.prev = _context32.next) {
+                  switch (_context37.prev = _context37.next) {
                     case 0:
-                      _context32.next = 2;
+                      _context37.next = 2;
                       return this.actionSheetController.create({
                         header: 'Pilih Aksi',
                         cssClass: 'my-custom-class',
@@ -3134,13 +4000,13 @@
                         buttons: [{
                           text: 'Lihat Laporan',
                           handler: function handler() {
-                            _this26.gotoViewLaporan(newParams); // console.log('Share clicked');
+                            _this32.gotoViewLaporan(newParams); // console.log('Share clicked');
 
                           }
                         }, {
                           text: 'Isi Kembali',
                           handler: function handler() {
-                            _this26.presentAlertConfirmBeforeFillout(newParams);
+                            _this32.presentAlertConfirmBeforeFillout(newParams);
                           }
                         }, {
                           text: 'Tutup',
@@ -3151,30 +4017,30 @@
                       });
 
                     case 2:
-                      actionSheet = _context32.sent;
-                      _context32.next = 5;
+                      actionSheet = _context37.sent;
+                      _context37.next = 5;
                       return actionSheet.present();
 
                     case 5:
                     case "end":
-                      return _context32.stop();
+                      return _context37.stop();
                   }
                 }
-              }, _callee32, this);
+              }, _callee37, this);
             }));
           }
         }, {
           key: "presentAlertConfirmBeforeFillout",
           value: function presentAlertConfirmBeforeFillout(newParams) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
-              var _this27 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
+              var _this33 = this;
 
               var alert;
-              return regeneratorRuntime.wrap(function _callee33$(_context33) {
+              return regeneratorRuntime.wrap(function _callee38$(_context38) {
                 while (1) {
-                  switch (_context33.prev = _context33.next) {
+                  switch (_context38.prev = _context38.next) {
                     case 0:
-                      _context33.next = 2;
+                      _context38.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: newParams.target_name,
@@ -3190,32 +4056,32 @@
                         }, {
                           text: 'Ya',
                           handler: function handler() {
-                            _this27.NavController.navigateForward(['/laporan/formlaporan', newParams]);
+                            _this33.NavController.navigateForward(['/laporan/formlaporan', newParams]);
                           }
                         }]
                       });
 
                     case 2:
-                      alert = _context33.sent;
-                      _context33.next = 5;
+                      alert = _context38.sent;
+                      _context38.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context33.stop();
+                      return _context38.stop();
                   }
                 }
-              }, _callee33, this);
+              }, _callee38, this);
             }));
           }
         }, {
           key: "gotListDusun",
           value: function gotListDusun() {
-            var _this28 = this;
+            var _this34 = this;
 
             var id_questionnaire = this.params.selectDusun_id_questionnaire;
             this.subscribe = this.apiService.get('v2/user_area_reports_listdusun?id_questionnaire=' + id_questionnaire + '&glue=' + this.params.glue, {}).subscribe(function (data) {
-              _this28.arrDusun = data;
+              _this34.arrDusun = data;
               console.log(data); // this.catecories = data.List;
             });
           }
@@ -3426,14 +4292,14 @@
         }, {
           key: "presentLoading",
           value: function presentLoading() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
-              var loading, _yield$loading$onDidD3, role, data;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
+              var loading, _yield$loading$onDidD5, role, data;
 
-              return regeneratorRuntime.wrap(function _callee34$(_context34) {
+              return regeneratorRuntime.wrap(function _callee39$(_context39) {
                 while (1) {
-                  switch (_context34.prev = _context34.next) {
+                  switch (_context39.prev = _context39.next) {
                     case 0:
-                      _context34.next = 2;
+                      _context39.next = 2;
                       return this.loadingController.create({
                         cssClass: 'my-custom-class',
                         message: 'Loading...',
@@ -3442,40 +4308,40 @@
                       });
 
                     case 2:
-                      loading = _context34.sent;
-                      _context34.next = 5;
+                      loading = _context39.sent;
+                      _context39.next = 5;
                       return loading.present();
 
                     case 5:
-                      _context34.next = 7;
+                      _context39.next = 7;
                       return loading.onDidDismiss();
 
                     case 7:
-                      _yield$loading$onDidD3 = _context34.sent;
-                      role = _yield$loading$onDidD3.role;
-                      data = _yield$loading$onDidD3.data;
+                      _yield$loading$onDidD5 = _context39.sent;
+                      role = _yield$loading$onDidD5.role;
+                      data = _yield$loading$onDidD5.data;
                       console.log('Loading dismissed!');
 
                     case 11:
                     case "end":
-                      return _context34.stop();
+                      return _context39.stop();
                   }
                 }
-              }, _callee34, this);
+              }, _callee39, this);
             }));
           }
         }, {
           key: "presentAlertConfirmBeforeFillout",
           value: function presentAlertConfirmBeforeFillout(newParams) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
-              var _this29 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
+              var _this35 = this;
 
               var alert;
-              return regeneratorRuntime.wrap(function _callee35$(_context35) {
+              return regeneratorRuntime.wrap(function _callee40$(_context40) {
                 while (1) {
-                  switch (_context35.prev = _context35.next) {
+                  switch (_context40.prev = _context40.next) {
                     case 0:
-                      _context35.next = 2;
+                      _context40.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Konfirmasi',
@@ -3492,36 +4358,36 @@
                         }, {
                           text: 'Ya',
                           handler: function handler() {
-                            _this29.NavController.navigateForward(['/laporan/formlaporan', newParams]);
+                            _this35.NavController.navigateForward(['/laporan/formlaporan', newParams]);
                           }
                         }]
                       });
 
                     case 2:
-                      alert = _context35.sent;
-                      _context35.next = 5;
+                      alert = _context40.sent;
+                      _context40.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context35.stop();
+                      return _context40.stop();
                   }
                 }
-              }, _callee35, this);
+              }, _callee40, this);
             }));
           }
         }, {
           key: "presentActionSheetInputFormDesa",
           value: function presentActionSheetInputFormDesa(newParams) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
-              var _this30 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
+              var _this36 = this;
 
               var actionSheet;
-              return regeneratorRuntime.wrap(function _callee36$(_context36) {
+              return regeneratorRuntime.wrap(function _callee41$(_context41) {
                 while (1) {
-                  switch (_context36.prev = _context36.next) {
+                  switch (_context41.prev = _context41.next) {
                     case 0:
-                      _context36.next = 2;
+                      _context41.next = 2;
                       return this.actionSheetController.create({
                         header: 'Pilih Aksi',
                         cssClass: 'my-custom-class',
@@ -3529,13 +4395,13 @@
                         buttons: [{
                           text: 'Lihat Laporan',
                           handler: function handler() {
-                            _this30.gotoViewLaporan(newParams); // console.log('Share clicked');
+                            _this36.gotoViewLaporan(newParams); // console.log('Share clicked');
 
                           }
                         }, {
                           text: 'Isi Kembali',
                           handler: function handler() {
-                            _this30.presentAlertConfirmBeforeFillout(newParams);
+                            _this36.presentAlertConfirmBeforeFillout(newParams);
                           }
                         }, {
                           text: 'Tutup',
@@ -3546,28 +4412,28 @@
                       });
 
                     case 2:
-                      actionSheet = _context36.sent;
-                      _context36.next = 5;
+                      actionSheet = _context41.sent;
+                      _context41.next = 5;
                       return actionSheet.present();
 
                     case 5:
                     case "end":
-                      return _context36.stop();
+                      return _context41.stop();
                   }
                 }
-              }, _callee36, this);
+              }, _callee41, this);
             }));
           }
         }, {
           key: "presentAlertNoQuestion",
           value: function presentAlertNoQuestion() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
               var alert;
-              return regeneratorRuntime.wrap(function _callee37$(_context37) {
+              return regeneratorRuntime.wrap(function _callee42$(_context42) {
                 while (1) {
-                  switch (_context37.prev = _context37.next) {
+                  switch (_context42.prev = _context42.next) {
                     case 0:
-                      _context37.next = 2;
+                      _context42.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Info !',
@@ -3581,33 +4447,33 @@
                       });
 
                     case 2:
-                      alert = _context37.sent;
-                      _context37.next = 5;
+                      alert = _context42.sent;
+                      _context42.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context37.stop();
+                      return _context42.stop();
                   }
                 }
-              }, _callee37, this);
+              }, _callee42, this);
             }));
           }
         }, {
           key: "getListPeriode",
           value: function getListPeriode() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
               var date, week, year, rangeStart, rangeEnd, newWeek, status, next, no, d, _newWeek, _status, initialDate, _next, _no, MomentFormat, Month, Year, MonthLabel, Start, End, newMonth, _status2, _initialDate, _next2, _no2, _MomentFormat, Quarter, _Year, _Start, _End, Value, newList, _status3;
 
-              return regeneratorRuntime.wrap(function _callee38$(_context38) {
+              return regeneratorRuntime.wrap(function _callee43$(_context43) {
                 while (1) {
-                  switch (_context38.prev = _context38.next) {
+                  switch (_context43.prev = _context43.next) {
                     case 0:
                       this.presentLoading();
                       this.listTime = []; // Mingguan
 
                       if (!(this.params.type == 'Mingguan')) {
-                        _context38.next = 38;
+                        _context43.next = 38;
                         break;
                       }
 
@@ -3624,11 +4490,11 @@
                         glue: this.headerGlue + week + '-' + year,
                         sort: 1
                       };
-                      _context38.next = 11;
+                      _context43.next = 11;
                       return this.checkFill(newWeek);
 
                     case 11:
-                      status = _context38.sent;
+                      status = _context43.sent;
                       newWeek['status'] = status;
                       this.listTime.push(newWeek);
                       next = true;
@@ -3636,7 +4502,7 @@
 
                     case 16:
                       if (!next) {
-                        _context38.next = 35;
+                        _context43.next = 35;
                         break;
                       }
 
@@ -3647,12 +4513,12 @@
                       rangeEnd = d.endOf('isoWeek').format('DD MMM YYYY');
 
                       if (!(week > this.params.range_end && year == this.params.range_year_end)) {
-                        _context38.next = 27;
+                        _context43.next = 27;
                         break;
                       }
 
                       next = false;
-                      return _context38.abrupt("break", 35);
+                      return _context43.abrupt("break", 35);
 
                     case 27:
                       _newWeek = {
@@ -3663,26 +4529,26 @@
                         glue: this.headerGlue + week + '-' + year,
                         sort: no += 1
                       };
-                      _context38.next = 30;
+                      _context43.next = 30;
                       return this.checkFill(_newWeek);
 
                     case 30:
-                      _status = _context38.sent;
+                      _status = _context43.sent;
                       _newWeek['status'] = _status;
                       this.listTime.push(_newWeek);
 
                     case 33:
-                      _context38.next = 16;
+                      _context43.next = 16;
                       break;
 
                     case 35:
                       console.log(this.listTime);
-                      _context38.next = 89;
+                      _context43.next = 89;
                       break;
 
                     case 38:
                       if (!(this.params.type == 'Bulanan')) {
-                        _context38.next = 65;
+                        _context43.next = 65;
                         break;
                       }
 
@@ -3693,7 +4559,7 @@
 
                     case 42:
                       if (!_next) {
-                        _context38.next = 63;
+                        _context43.next = 63;
                         break;
                       }
 
@@ -3703,12 +4569,12 @@
                       console.log('Month', _no, Month, parseInt(this.params.range_end) - 1);
 
                       if (!(parseInt(Month) > parseInt(this.params.range_end) && parseInt(Year) == this.params.range_year_end)) {
-                        _context38.next = 52;
+                        _context43.next = 52;
                         break;
                       }
 
                       _next = false;
-                      return _context38.abrupt("break", 63);
+                      return _context43.abrupt("break", 63);
 
                     case 52:
                       MonthLabel = MomentFormat.format('MMMM');
@@ -3722,25 +4588,25 @@
                         glue: this.headerGlue + Month + '-' + Year,
                         sort: _no += 1
                       };
-                      _context38.next = 58;
+                      _context43.next = 58;
                       return this.checkFill(newMonth);
 
                     case 58:
-                      _status2 = _context38.sent;
+                      _status2 = _context43.sent;
                       newMonth['status'] = _status2;
                       this.listTime.push(newMonth);
 
                     case 61:
-                      _context38.next = 42;
+                      _context43.next = 42;
                       break;
 
                     case 63:
-                      _context38.next = 89;
+                      _context43.next = 89;
                       break;
 
                     case 65:
                       if (!(this.params.type == 'Triwulan')) {
-                        _context38.next = 89;
+                        _context43.next = 89;
                         break;
                       }
 
@@ -3750,7 +4616,7 @@
 
                     case 69:
                       if (!_next2) {
-                        _context38.next = 89;
+                        _context43.next = 89;
                         break;
                       }
 
@@ -3759,12 +4625,12 @@
                       _Year = _MomentFormat.format('YYYY');
 
                       if (!(Quarter > parseInt(this.params.range_end) && parseInt(_Year) == parseInt(this.params.range_year_end))) {
-                        _context38.next = 78;
+                        _context43.next = 78;
                         break;
                       }
 
                       _next2 = false;
-                      return _context38.abrupt("break", 89);
+                      return _context43.abrupt("break", 89);
 
                     case 78:
                       _Start = _MomentFormat.startOf('quarter').format('DD MMMM YYYY');
@@ -3778,24 +4644,24 @@
                         glue: this.headerGlue + Value,
                         sort: _no2 += 1
                       };
-                      _context38.next = 84;
+                      _context43.next = 84;
                       return this.checkFill(newList);
 
                     case 84:
-                      _status3 = _context38.sent;
+                      _status3 = _context43.sent;
                       newList['status'] = _status3;
                       this.listTime.push(newList);
 
                     case 87:
-                      _context38.next = 69;
+                      _context43.next = 69;
                       break;
 
                     case 89:
                     case "end":
-                      return _context38.stop();
+                      return _context43.stop();
                   }
                 }
-              }, _callee38, this);
+              }, _callee43, this);
             }));
           }
         }, {
@@ -3808,10 +4674,10 @@
         }, {
           key: "checkFill",
           value: function checkFill(paramsCheck) {
-            var _this31 = this;
+            var _this37 = this;
 
             return new Promise(function (resolve, reject) {
-              _this31.subscribe = _this31.apiService.get('v2/check_report?id_questionnaire=' + _this31.params.id + '&glue=' + paramsCheck.glue + '&geo_id=' + _this31.geo_id + '&target=' + _this31.params.target, {}).subscribe(function (data) {
+              _this37.subscribe = _this37.apiService.get('v2/check_report?id_questionnaire=' + _this37.params.id + '&glue=' + paramsCheck.glue + '&geo_id=' + _this37.geo_id + '&target=' + _this37.params.target, {}).subscribe(function (data) {
                 resolve(data.status); // this.arrDusun = data;
                 // console.log(data);
                 // this.catecories = data.List;
@@ -3823,18 +4689,18 @@
         }, {
           key: "gotoFormLaporan",
           value: function gotoFormLaporan(item) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee44() {
               var dataAnswerID, newParams;
-              return regeneratorRuntime.wrap(function _callee39$(_context39) {
+              return regeneratorRuntime.wrap(function _callee44$(_context44) {
                 while (1) {
-                  switch (_context39.prev = _context39.next) {
+                  switch (_context44.prev = _context44.next) {
                     case 0:
-                      _context39.prev = 0;
-                      _context39.next = 3;
+                      _context44.prev = 0;
+                      _context44.next = 3;
                       return this.gotAnswerID(item);
 
                     case 3:
-                      dataAnswerID = _context39.sent;
+                      dataAnswerID = _context44.sent;
 
                       // (this.params.target == 0)
                       if (this.params.target == 0) {
@@ -3867,45 +4733,45 @@
                         }
                       }
 
-                      _context39.next = 10;
+                      _context44.next = 10;
                       break;
 
                     case 7:
-                      _context39.prev = 7;
-                      _context39.t0 = _context39["catch"](0);
+                      _context44.prev = 7;
+                      _context44.t0 = _context44["catch"](0);
                       this.presentAlertNoQuestion();
 
                     case 10:
                     case "end":
-                      return _context39.stop();
+                      return _context44.stop();
                   }
                 }
-              }, _callee39, this, [[0, 7]]);
+              }, _callee44, this, [[0, 7]]);
             }));
           }
         }, {
           key: "gotAnswerID",
           value: function gotAnswerID(item) {
-            var _this32 = this;
+            var _this38 = this;
 
             return new Promise(function (resolve, reject) {
               var params = {
-                type: _this32.params.type,
-                selectDusun: _this32.params.target == 0 ? 1 : 0,
-                selectDusun_id_questionnaire: _this32.params.id,
-                selectDesa: _this32.params.target == 0 ? 0 : 1,
-                selectDesa_id_questionnaire: _this32.params.id,
+                type: _this38.params.type,
+                selectDusun: _this38.params.target == 0 ? 1 : 0,
+                selectDusun_id_questionnaire: _this38.params.id,
+                selectDesa: _this38.params.target == 0 ? 0 : 1,
+                selectDesa_id_questionnaire: _this38.params.id,
                 value: item.value,
-                geo_id: _this32.geo_id,
+                geo_id: _this38.geo_id,
                 label: item.label,
                 range: item.range,
                 id_questionnaire: ''
               };
-              _this32.subscribe = _this32.apiService.post('v2/user_area_reports_target', params).subscribe(function (data) {
-                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this32, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
-                  return regeneratorRuntime.wrap(function _callee40$(_context40) {
+              _this38.subscribe = _this38.apiService.post('v2/user_area_reports_target', params).subscribe(function (data) {
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this38, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
+                  return regeneratorRuntime.wrap(function _callee45$(_context45) {
                     while (1) {
-                      switch (_context40.prev = _context40.next) {
+                      switch (_context45.prev = _context45.next) {
                         case 0:
                           item.ans_id_dusun = data.ans_data.ans_id_dusun;
                           item.ans_id_desa = data.ans_data.ans_id_desa; // item.netwotkInformation = 'Online';
@@ -3915,10 +4781,10 @@
 
                         case 3:
                         case "end":
-                          return _context40.stop();
+                          return _context45.stop();
                       }
                     }
-                  }, _callee40);
+                  }, _callee45);
                 }));
               }, function (error) {
                 // this.presentAlertConfirmError();
@@ -4099,15 +4965,15 @@
         }, {
           key: "presentAlertNoQuestion",
           value: function presentAlertNoQuestion() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
-              var _this33 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee46() {
+              var _this39 = this;
 
               var alert;
-              return regeneratorRuntime.wrap(function _callee41$(_context41) {
+              return regeneratorRuntime.wrap(function _callee46$(_context46) {
                 while (1) {
-                  switch (_context41.prev = _context41.next) {
+                  switch (_context46.prev = _context46.next) {
                     case 0:
-                      _context41.next = 2;
+                      _context46.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Info !',
@@ -4119,36 +4985,36 @@
                           role: 'cancel',
                           cssClass: 'secondary',
                           handler: function handler() {
-                            _this33.goBack();
+                            _this39.goBack();
                           }
                         }]
                       });
 
                     case 2:
-                      alert = _context41.sent;
-                      _context41.next = 5;
+                      alert = _context46.sent;
+                      _context46.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context41.stop();
+                      return _context46.stop();
                   }
                 }
-              }, _callee41, this);
+              }, _callee46, this);
             }));
           }
         }, {
           key: "alertToRelogin",
           value: function alertToRelogin() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
-              var _this34 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee47() {
+              var _this40 = this;
 
               var alert;
-              return regeneratorRuntime.wrap(function _callee42$(_context42) {
+              return regeneratorRuntime.wrap(function _callee47$(_context47) {
                 while (1) {
-                  switch (_context42.prev = _context42.next) {
+                  switch (_context47.prev = _context47.next) {
                     case 0:
-                      _context42.next = 2;
+                      _context47.next = 2;
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Warning !',
@@ -4162,28 +5028,28 @@
                             localStorage.removeItem('geo_id');
                             localStorage.removeItem('api_key');
 
-                            _this34.router.navigate(['front/']);
+                            _this40.router.navigate(['front/']);
                           }
                         }]
                       });
 
                     case 2:
-                      alert = _context42.sent;
-                      _context42.next = 5;
+                      alert = _context47.sent;
+                      _context47.next = 5;
                       return alert.present();
 
                     case 5:
                     case "end":
-                      return _context42.stop();
+                      return _context47.stop();
                   }
                 }
-              }, _callee42, this);
+              }, _callee47, this);
             }));
           }
         }, {
           key: "getTargetQuestion",
           value: function getTargetQuestion() {
-            var _this35 = this;
+            var _this41 = this;
 
             var netwotkInformation = localStorage.getItem('netwotkInformation');
 
@@ -4195,15 +5061,15 @@
                     var element = data.user_area_report[i];
 
                     if (element.target == 0) {
-                      _this35.selectDusun = 1;
-                      _this35.selectDusun_id_questionnaire = element.id;
+                      _this41.selectDusun = 1;
+                      _this41.selectDusun_id_questionnaire = element.id;
                     } else if (element.target == 1) {
-                      _this35.selectDesa = 1;
-                      _this35.selectDesa_id_questionnaire = element.id;
+                      _this41.selectDesa = 1;
+                      _this41.selectDesa_id_questionnaire = element.id;
                     }
                   }
                 } else {
-                  _this35.presentAlertNoQuestion();
+                  _this41.presentAlertNoQuestion();
                 }
               });
             } else {
@@ -4231,27 +5097,27 @@
         }, {
           key: "getListExistingLaporan",
           value: function getListExistingLaporan() {
-            var _this36 = this;
+            var _this42 = this;
 
             this.subscribe = this.apiService.get('v2/user_areas_list?type=' + this.params.Type + '&geo_id=' + this.geo_id, {}).subscribe(function (data) {
-              _this36.hideListTime = data;
+              _this42.hideListTime = data;
 
-              if (_this36.params.Type == 'Mingguan') {
-                _this36.subtitle = 'Pilih Minggu';
+              if (_this42.params.Type == 'Mingguan') {
+                _this42.subtitle = 'Pilih Minggu';
 
-                _this36.getRangeWeek(54);
-              } else if (_this36.params.Type == 'Bulanan') {
-                _this36.subtitle = 'Pilih Bulan';
+                _this42.getRangeWeek(54);
+              } else if (_this42.params.Type == 'Bulanan') {
+                _this42.subtitle = 'Pilih Bulan';
 
-                _this36.getBulan(12);
-              } else if (_this36.params.Type == 'Triwulan') {
-                _this36.subtitle = 'Pilih Triwulan';
+                _this42.getBulan(12);
+              } else if (_this42.params.Type == 'Triwulan') {
+                _this42.subtitle = 'Pilih Triwulan';
 
-                _this36.getTriwulan(5);
+                _this42.getTriwulan(5);
               }
             }, function (error) {
               if (error.status == 401) {
-                _this36.alertToRelogin();
+                _this42.alertToRelogin();
               }
             });
           }
@@ -4364,7 +5230,7 @@
         }, {
           key: "gotoSelectDusun",
           value: function gotoSelectDusun(newParams) {
-            var _this37 = this;
+            var _this43 = this;
 
             newParams.Type = this.params.Type;
             newParams.selectDusun = this.selectDusun;
@@ -4389,10 +5255,10 @@
                 id_questionnaire: ''
               };
               this.subscribe = this.apiService.post('v2/user_area_reports_target', params).subscribe(function (data) {
-                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this37, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
-                  return regeneratorRuntime.wrap(function _callee43$(_context43) {
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this43, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee48() {
+                  return regeneratorRuntime.wrap(function _callee48$(_context48) {
                     while (1) {
-                      switch (_context43.prev = _context43.next) {
+                      switch (_context48.prev = _context48.next) {
                         case 0:
                           newParams.ans_id_dusun = data.ans_data.ans_id_dusun;
                           newParams.ans_id_desa = data.ans_data.ans_id_desa;
@@ -4401,10 +5267,10 @@
 
                         case 4:
                         case "end":
-                          return _context43.stop();
+                          return _context48.stop();
                       }
                     }
-                  }, _callee43, this);
+                  }, _callee48, this);
                 }));
               }, function (error) {// this.presentAlertConfirmError();
               });
@@ -4577,7 +5443,7 @@
         }, {
           key: "getQuestion",
           value: function getQuestion() {
-            var _this38 = this;
+            var _this44 = this;
 
             this.listQuestion = [];
             var glue = this.params.glue;
@@ -4588,7 +5454,7 @@
               if (data.user_area_report.length > 0) {
                 var q = data.user_area_report[0];
                 var geo_id = localStorage.getItem('geo_id');
-                localStorage.setItem(_this38.params.id_questionnaire + '_drafQuestions_' + geo_id, JSON.stringify(q.Question));
+                localStorage.setItem(_this44.params.id_questionnaire + '_drafQuestions_' + geo_id, JSON.stringify(q.Question));
                 var newListQuestion = [];
 
                 for (var index = 0; index < q.Question.length; index++) {
@@ -4608,8 +5474,8 @@
                   newListQuestion.push(element);
                 }
 
-                _this38.listQuestion = newListQuestion;
-                console.log(_this38.listQuestion);
+                _this44.listQuestion = newListQuestion;
+                console.log(_this44.listQuestion);
               }
             }, function (error) {
               console.log(error);

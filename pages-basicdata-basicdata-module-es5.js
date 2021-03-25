@@ -1929,7 +1929,8 @@
                       return this.loadingController.create({
                         cssClass: 'my-custom-class',
                         message: message,
-                        mode: 'ios'
+                        mode: 'ios',
+                        duration: 3000
                       });
 
                     case 2:
@@ -2068,12 +2069,8 @@
             this.subscribe = this.apiService.get('user_areas?no_expand=user,geo&geo_id=' + geo_id, {}).subscribe(function (data) {
               // this.catecories = data.List;
               _this18.items = data; // console.log(data);
-
-              _this18.progressloading.dismiss();
             }, function (error) {
               _this18.presentToast('danger', 'Gagal', 'Gagal mendapatkan data, cobalah beberapa saat lagi', 2000);
-
-              _this18.progressloading.dismiss();
             });
           }
         }, {

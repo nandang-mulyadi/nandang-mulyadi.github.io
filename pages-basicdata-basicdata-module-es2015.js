@@ -1147,7 +1147,8 @@ let RegistrasidusunPage = class RegistrasidusunPage {
             this.progressloading = yield this.loadingController.create({
                 cssClass: 'my-custom-class',
                 message: message,
-                mode: 'ios'
+                mode: 'ios',
+                duration: 3000
             });
             return this.progressloading.present();
         });
@@ -1209,10 +1210,8 @@ let RegistrasidusunPage = class RegistrasidusunPage {
             // this.catecories = data.List;
             this.items = data;
             // console.log(data);
-            this.progressloading.dismiss();
         }, error => {
             this.presentToast('danger', 'Gagal', 'Gagal mendapatkan data, cobalah beberapa saat lagi', 2000);
-            this.progressloading.dismiss();
         });
     }
     goBack() {

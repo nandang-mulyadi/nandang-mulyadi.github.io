@@ -1,5 +1,31 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-laporan-laporan-module"],{
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesa/datadasardesa.page.html":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesa/datadasardesa.page.html ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Data Dasar Desa</ion-title>\n  </ion-toolbar>\n\n\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <div *ngIf=\"listAPBDes.length>0\">\n\n    \n\n    <ion-list>\n      <ion-item   (click)=\"gotoInformasiDasarDesa()\" lines=\"full\">\n            <ion-icon slot=\"start\" color=\"success\" *ngIf=\"statusBasicInformasi==1\" name=\"checkmark-circle\"></ion-icon>\n            <!-- <ion-icon slot=\"start\" color=\"warning\"  *ngIf=\"item.status == 1\" name=\"timer\"></ion-icon> -->\n            <ion-icon slot=\"start\" color=\"medium\" *ngIf=\"statusBasicInformasi==0\" name=\"ellipse-outline\"></ion-icon>\n            <ion-label>\n              <h2 class=\"label-title\">Informasi Dasar Desa</h2>\n            </ion-label>\n            <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\n          </ion-item>\n      <ion-list-header>\n          DATA REFOCUSING APB Desa\n        </ion-list-header>\n        <ion-item  *ngFor=\"let item of listAPBDes\"  (click)=\"gotoDataDasarForm(item)\" lines=\"full\">\n            <ion-icon slot=\"start\" color=\"success\" *ngIf=\"item.status==2\" name=\"checkmark-circle\"></ion-icon>\n            <ion-icon slot=\"start\" color=\"warning\"  *ngIf=\"item.status == 1\" name=\"timer\"></ion-icon>\n            <ion-icon slot=\"start\" color=\"medium\" *ngIf=\"item.status==0\" name=\"ellipse-outline\"></ion-icon>\n            <ion-label>\n              <h3 class=\"label-title\">{{ item.description }}</h3>\n              <p>{{ item.code }}</p>\n            </ion-label>\n            <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\n          </ion-item>\n    </ion-list>\n\n  </div>\n\n  \n\n\n</ion-content>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.html":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.html ***!
+  \*******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Form Data Dasar</ion-title>\n\n    <!-- <ion-buttons slot=\"primary\">\n      <ion-button color=\"light\" fill=\"solid\" size=\"small\">\n        {{question_current / question_total * 100}} %\n      </ion-button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ params.code }} - {{ params.description }}\n    </ion-title>\n    \n  </ion-toolbar>\n  \n</ion-header>\n\n<ion-content mode=\"ios\">\n\n\n  <ion-card>\n\n    <div *ngIf=\"listQuestions.length>0\">\n\n      <div *ngFor=\"let item of listQuestions; let i = index\">\n\n        <ion-card-content>\n          {{ item.code }} - {{ item.descriptions }}\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\"  style=\"text-align: right;\" [(ngModel)]=\"listQuestions[i].value\" ></ion-input>\n          </ion-item>\n          <p style=\"text-align: right;color: #ff5722;\">{{ formatRupiah(listQuestions[i].value) }}</p>\n        </ion-card-content>\n\n      </div>\n\n    </div>\n\n    \n  </ion-card>\n\n</ion-content>\n\n<ion-footer class=\"ion-no-border\" mode=\"ios\">\n  <ion-toolbar>\n    <ion-row>\n      <ion-col size=\"6\">\n      </ion-col>\n      <ion-col size=\"6\">\n        <ion-button expand=\"block\" (click)=\"kirimDataDasar()\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Kirim\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button>\n      </ion-col>\n    </ion-row>\n  </ion-toolbar>\n</ion-footer>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/formlaporan/formlaporan.page.html":
 /*!*******************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/formlaporan/formlaporan.page.html ***!
@@ -9,7 +35,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack(0)\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Isi Laporan {{ title }}</ion-title>\n\n    <!-- <ion-buttons slot=\"primary\">\n      <ion-button color=\"light\" fill=\"solid\" size=\"small\">\n        {{question_current / question_total * 100}} %\n      </ion-button>\n    </ion-buttons> -->\n\n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\n    </ion-title>\n    \n  </ion-toolbar>\n  <ion-progress-bar color=\"warning\" [value]=\"question_current/question_total\"></ion-progress-bar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  \n\n  <div id=\"container-custom\" *ngIf=\"showCurrentQuestion\">\n\n    <ion-card *ngIf=\"!showButtonSend\">\n      <ion-card-content>\n        \n        <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"currentQuestion?.question\"></div>\n\n        <!-- Multiple select (single select) -->\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 3\">\n          <ion-radio-group value=\"\" *ngIf=\"currentQuestion.Options.length>0\" \n            (ionChange)=\"radioGroupChange($event)\" value=\"{{ singleAnswer }}\">\n            <ion-item lines=\"none\" *ngFor=\"let option of currentQuestion.Options\">\n              <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n              <ion-radio slot=\"start\" value=\"{{ option.id }}\"></ion-radio>\n            </ion-item>\n          </ion-radio-group>\n        </ion-list>\n\n\n        <!-- Boolean -->\n        <ion-segment  *ngIf=\"currentQuestion.id_question_type == 2 && currentQuestion.Options.length>0\" \n          (ionChange)=\"segmentChanged($event)\" value=\"{{ singleAnswer }}\">\n          <ion-segment-button *ngFor=\"let option of currentQuestion.Options\" value=\"{{option.id}}\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n          </ion-segment-button>\n        </ion-segment>\n\n\n        <!-- Essay text -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 1\" lines=\"none\">\n          <ion-textarea rows=\"3\" placeholder=\"Ketik jawaban...\" [(ngModel)]=\"singleAnswer\"></ion-textarea>\n        </ion-item>\n\n        <!-- Essay number -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 5\" lines=\"none\">\n          <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input>\n        </ion-item>\n\n        <!-- Essay date -->\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 7\" lines=\"none\">\n          <!-- <ion-item>\n            <ion-label>MMMM</ion-label>\n            <ion-datetime displayFormat=\"MMMM\" value=\"2012-12-15T13:47:20.789\"></ion-datetime>\n          </ion-item> -->\n\n            <ion-datetime displayFormat=\"DD/MMM/YYYY\" pickerFormat=\"DD MMM YYYY\" cancel-text=\"Tutup\" done-text=\"Pilih\" \n            [(ngModel)]=\"singleAnswer\" placeholder=\"Pilih tanggal\"></ion-datetime>\n            \n          <!-- <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input> -->\n        </ion-item>\n\n        <!-- Essay image -->\n        <div *ngIf=\"currentQuestion.id_question_type == 6\" style=\"margin-bottom: 15px;\">\n          <ion-row>\n            <ion-col text-center>\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromGalery()\">\n                  <ion-icon slot=\"start\" name=\"image\"></ion-icon>\n                  Buka Galery</ion-button>\n            </ion-col>\n            <ion-col text-center>\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromCamera()\">\n                  <ion-icon slot=\"start\" name=\"camera\"></ion-icon>\n                  Buka Kamera</ion-button>\n            </ion-col>\n          </ion-row>\n        </div>\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 6 && !singleAnswer == ''\" style=\"--padding-bottom:15px;--padding-top:15px;\" lines=\"none\">\n              <img src=\"{{singleAnswer}}\" alt=\"\" srcset=\"\">\n        </ion-item>\n\n\n        <!-- Multiple select (multy select) -->\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 4\">\n          <ion-item *ngFor=\"let option of currentQuestion.Options\" lines=\"none\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n            <!-- [(ngModel)]=\"entry.isChecked\" -->\n            <ion-checkbox slot=\"end\" (ionChange)=\"selectSize($event)\" value=\"{{ option.id }}\" [(ngModel)]=\"option.isChecked\" ></ion-checkbox>\n          </ion-item>\n        </ion-list>\n\n      </ion-card-content>\n    </ion-card>\n\n    <div *ngIf=\"showButtonSend\" style=\"padding: 15px;\">\n      <ion-card>\n\n        <img src=\"./assets/sending.jpg\" />\n\n        <ion-card-content>\n          \n          <ion-button style=\"margin-bottom: 10px;\" (click)=\"getNextQuestion( 0, 'next' )\" expand=\"block\" fill=\"solid\" color=\"light\">Koreksi Ulang Laporan</ion-button>\n          <!-- <ion-button style=\"margin-bottom: 10px;\" *ngIf=\"params.page_from!='temporary'\" (click)=\"temporarySave()\" expand=\"block\" fill=\"solid\" color=\"medium\">Simpan Laporan Sementara</ion-button> -->\n          <ion-button (click)=\"sendAnswer()\" expand=\"block\" fill=\"solid\" color=\"warning\">Kirim Laporan</ion-button>\n\n        </ion-card-content>\n      </ion-card>\n    </div>\n    \n  </div>\n  \n</ion-content>\n\n<ion-footer *ngIf=\"!showButtonSend\" class=\"ion-no-border\" mode=\"ios\">\n  <ion-toolbar>\n    <ion-row>\n      <ion-col size=\"6\">\n        <!-- {{question_current}} -->\n        <ion-button *ngIf=\"showButtonBack\" expand=\"block\" (click)=\"getNextQuestion( number_of_back, 'back' )\" shape=\"round\" color=\"light\" fill=\"solid\">\n          <ion-icon slot=\"start\" name=\"arrow-back-outline\"></ion-icon>\n          Sebelumnya</ion-button>\n      </ion-col>\n      <ion-col size=\"6\">\n        <ion-button expand=\"block\" (click)=\"getNextQuestion( number_of_forward, 'next')\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Selanjutnya\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button>\n\n        \n        <!-- <ion-button *ngIf=\"!showButtonForward\" expand=\"block\" (click)=\"sendAnswer()\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Kirim Jawaban\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button> -->\n      </ion-col>\n    </ion-row>\n  </ion-toolbar>\n</ion-footer>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\r\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button color=\"light\" (click)=\"goBack(0)\">\r\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\r\n      </ion-button>\r\n    </ion-buttons>\r\n    <ion-title>Isi Laporan {{ title }}</ion-title>\r\n\r\n    <!-- <ion-buttons slot=\"primary\">\r\n      <ion-button color=\"light\" fill=\"solid\" size=\"small\">\r\n        {{question_current / question_total * 100}} %\r\n      </ion-button>\r\n    </ion-buttons> -->\r\n\r\n  </ion-toolbar>\r\n\r\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\r\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\r\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\r\n    </ion-title>\r\n    \r\n  </ion-toolbar>\r\n  <ion-progress-bar color=\"warning\" [value]=\"question_current/question_total\"></ion-progress-bar>\r\n</ion-header>\r\n\r\n<ion-content mode=\"ios\">\r\n\r\n  \r\n\r\n  <div id=\"container-custom\" *ngIf=\"showCurrentQuestion\">\r\n\r\n    <ion-card *ngIf=\"!showButtonSend\">\r\n      <ion-card-content>\r\n        \r\n        <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"currentQuestion?.question\"></div>\r\n\r\n        <!-- Multiple select (single select) -->\r\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 3\">\r\n          <ion-radio-group value=\"\" *ngIf=\"currentQuestion.Options.length>0\" \r\n            (ionChange)=\"radioGroupChange($event)\" value=\"{{ singleAnswer }}\">\r\n            <ion-item lines=\"none\" *ngFor=\"let option of currentQuestion.Options\">\r\n              <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\r\n              <ion-radio slot=\"start\" value=\"{{ option.id }}\"></ion-radio>\r\n            </ion-item>\r\n          </ion-radio-group>\r\n        </ion-list>\r\n\r\n\r\n        <!-- Boolean -->\r\n        <ion-segment  *ngIf=\"currentQuestion.id_question_type == 2 && currentQuestion.Options.length>0\" \r\n          (ionChange)=\"segmentChanged($event)\" value=\"{{ singleAnswer }}\">\r\n          <ion-segment-button *ngFor=\"let option of currentQuestion.Options\" value=\"{{option.id}}\">\r\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\r\n          </ion-segment-button>\r\n        </ion-segment>\r\n\r\n\r\n        <!-- Essay text -->\r\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 1\" lines=\"none\">\r\n          <ion-textarea rows=\"3\" placeholder=\"Ketik jawaban...\" [(ngModel)]=\"singleAnswer\"></ion-textarea>\r\n        </ion-item>\r\n\r\n        <!-- Essay number -->\r\n        <div *ngIf=\"currentQuestion.id_question_type == 5\">\r\n\r\n          <ion-item lines=\"none\">\r\n          <!-- <ion-input type=\"text\" style=\"text-align: right;\" (keypress)=\"numberOnlyValidation($event)\" [(ngModel)]=\"singleAnswer\" (ngModelChange)=\"updateQuantity(singleAnswer)\"></ion-input> -->\r\n            <ion-input type=\"text\" style=\"text-align: right;\" [(ngModel)]=\"singleAnswer\"></ion-input>\r\n          </ion-item>\r\n\r\n          <p style=\"text-align: right;color: #ff5722;\">{{ formatRupiah(singleAnswer) }}</p>\r\n\r\n        </div>\r\n        \r\n\r\n        <!-- Essay date -->\r\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 7\" lines=\"none\">\r\n          <!-- <ion-item>\r\n            <ion-label>MMMM</ion-label>\r\n            <ion-datetime displayFormat=\"MMMM\" value=\"2012-12-15T13:47:20.789\"></ion-datetime>\r\n          </ion-item> -->\r\n\r\n            <ion-datetime displayFormat=\"DD/MMM/YYYY\" pickerFormat=\"DD MMM YYYY\" cancel-text=\"Tutup\" done-text=\"Pilih\" \r\n            [(ngModel)]=\"singleAnswer\" placeholder=\"Pilih tanggal\"></ion-datetime>\r\n            \r\n          <!-- <ion-input type=\"number\" [(ngModel)]=\"singleAnswer\"></ion-input> -->\r\n        </ion-item>\r\n\r\n        <!-- Essay image -->\r\n        <div *ngIf=\"currentQuestion.id_question_type == 6\" style=\"margin-bottom: 15px;\">\r\n          <ion-row>\r\n            <ion-col text-center>\r\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromGalery()\">\r\n                  <ion-icon slot=\"start\" name=\"image\"></ion-icon>\r\n                  Buka Galery</ion-button>\r\n            </ion-col>\r\n            <ion-col text-center>\r\n              <ion-button expand=\"block\" color=\"medium\" (click)=\"getImagesFromCamera()\">\r\n                  <ion-icon slot=\"start\" name=\"camera\"></ion-icon>\r\n                  Buka Kamera</ion-button>\r\n            </ion-col>\r\n          </ion-row>\r\n        </div>\r\n        <ion-item *ngIf=\"currentQuestion.id_question_type == 6 && !singleAnswer == ''\" style=\"--padding-bottom:15px;--padding-top:15px;\" lines=\"none\">\r\n              <img src=\"{{singleAnswer}}\" alt=\"\" srcset=\"\">\r\n        </ion-item>\r\n\r\n\r\n        <!-- Multiple select (multy select) -->\r\n        <ion-list *ngIf=\"currentQuestion.id_question_type == 4\">\r\n          <ion-item *ngFor=\"let option of currentQuestion.Options\" lines=\"none\">\r\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\r\n            <!-- [(ngModel)]=\"entry.isChecked\" -->\r\n            <ion-checkbox slot=\"end\" (ionChange)=\"selectSize($event)\" value=\"{{ option.id }}\" [(ngModel)]=\"option.isChecked\" ></ion-checkbox>\r\n          </ion-item>\r\n        </ion-list>\r\n\r\n      </ion-card-content>\r\n    </ion-card>\r\n\r\n    <div *ngIf=\"showButtonSend\" style=\"padding: 15px;\">\r\n      <ion-card>\r\n\r\n        <img src=\"./assets/sending.jpg\" />\r\n\r\n        <ion-card-content>\r\n          \r\n          <ion-button style=\"margin-bottom: 10px;\" (click)=\"getNextQuestion( 0, 'next' )\" expand=\"block\" fill=\"solid\" color=\"light\">Koreksi Ulang Laporan</ion-button>\r\n          <!-- <ion-button style=\"margin-bottom: 10px;\" *ngIf=\"params.page_from!='temporary'\" (click)=\"temporarySave()\" expand=\"block\" fill=\"solid\" color=\"medium\">Simpan Laporan Sementara</ion-button> -->\r\n          <ion-button (click)=\"sendAnswer()\" expand=\"block\" fill=\"solid\" color=\"warning\">Kirim Laporan</ion-button>\r\n\r\n        </ion-card-content>\r\n      </ion-card>\r\n    </div>\r\n    \r\n  </div>\r\n  \r\n</ion-content>\r\n\r\n<ion-footer *ngIf=\"!showButtonSend\" class=\"ion-no-border\" mode=\"ios\">\r\n  <ion-toolbar>\r\n    <ion-row>\r\n      <ion-col size=\"6\">\r\n        <!-- {{question_current}} -->\r\n        <ion-button *ngIf=\"showButtonBack\" expand=\"block\" (click)=\"getNextQuestion( number_of_back, 'back' )\" shape=\"round\" color=\"light\" fill=\"solid\">\r\n          <ion-icon slot=\"start\" name=\"arrow-back-outline\"></ion-icon>\r\n          Sebelumnya</ion-button>\r\n      </ion-col>\r\n      <ion-col size=\"6\">\r\n        <ion-button expand=\"block\" (click)=\"getNextQuestion( number_of_forward, 'next')\" shape=\"round\" color=\"warning\" fill=\"solid\">\r\n          Selanjutnya\r\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\r\n        </ion-button>\r\n\r\n        \r\n        <!-- <ion-button *ngIf=\"!showButtonForward\" expand=\"block\" (click)=\"sendAnswer()\" shape=\"round\" color=\"warning\" fill=\"solid\">\r\n          Kirim Jawaban\r\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\r\n        </ion-button> -->\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-toolbar>\r\n</ion-footer>");
 
 /***/ }),
 
@@ -22,7 +48,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>List Group</ion-title>\n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      Pilih group pertanyaan untuk mulai mengisi laporan\n    </ion-title>\n    \n  </ion-toolbar>\n\n  <!-- <ion-toolbar style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      <ion-button expand=\"block\" (click)=\"selectTime()\" color=\"warning\" fill=\"solid\">Tambah Laporan</ion-button>\n    </ion-title>\n  </ion-toolbar> -->\n\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <ion-list *ngIf=\"lists.length > 0\" id=\"list-group\">\n    <ion-item *ngFor=\"let item of lists\" lines=\"full\" (click)=\"presentActionSheetSelectPeriode(item)\">\n      <ion-label>\n        <h3>{{item.title}}</h3>\n        <p><span [ngClass]=\"{'type-active' : item.Q_Mingguan.length>0 }\">Mingguan</span>\n          <span [ngClass]=\"{'type-active' : item.Q_Bulanan.length>0 }\">, Bulanan</span>\n          <span [ngClass]=\"{'type-active' : item.Q_Triwulan.length>0 }\">, Triwulan</span></p>\n        <span class=\"range-group\">{{getMonthName(item.month_start)}} {{item.year_start}}\n          <span *ngIf=\"item.is_period=='1'\"> - {{getMonthName(item.month_end)}} {{item.year_end}}</span>\n        </span>\n                </ion-label>\n      <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\n    </ion-item>\n  </ion-list>\n\n  \n\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button color=\"light\" (click)=\"goBack()\">\r\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\r\n      </ion-button>\r\n    </ion-buttons>\r\n    <ion-title>List Group</ion-title>\r\n  </ion-toolbar>\r\n\r\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\r\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\r\n      <!-- Pilih group pertanyaan untuk mulai mengisi laporan -->\r\n      <ion-button expand=\"block\" (click)=\"gotoDataDasar()\" color=\"warning\" fill=\"solid\">Data Dasar Desa</ion-button>\r\n    </ion-title>\r\n    \r\n  </ion-toolbar>\r\n\r\n  <!-- <ion-toolbar style=\"--background: #eaeaea;color: #333333;\">\r\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\r\n      <ion-button expand=\"block\" (click)=\"selectTime()\" color=\"warning\" fill=\"solid\">Tambah Laporan</ion-button>\r\n    </ion-title>\r\n  </ion-toolbar> -->\r\n\r\n</ion-header>\r\n\r\n<ion-content mode=\"ios\">\r\n\r\n  <ion-list *ngIf=\"lists.length > 0\" id=\"list-group\">\r\n    <ion-item *ngFor=\"let item of lists\" lines=\"full\" (click)=\"presentActionSheetSelectPeriode(item)\">\r\n      <ion-label>\r\n        <h3>{{item.title}}</h3>\r\n        <p><span [ngClass]=\"{'type-active' : item.Q_Mingguan.length>0 }\">Mingguan</span>\r\n          <span [ngClass]=\"{'type-active' : item.Q_Bulanan.length>0 }\">, Bulanan</span>\r\n          <span [ngClass]=\"{'type-active' : item.Q_Triwulan.length>0 }\">, Triwulan</span></p>\r\n        <span class=\"range-group\">{{getMonthName(item.month_start)}} {{item.year_start}}\r\n          <span *ngIf=\"item.is_period=='1'\"> - {{getMonthName(item.month_end)}} {{item.year_end}}</span>\r\n        </span>\r\n                </ion-label>\r\n      <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n  \r\n\r\n</ion-content>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/informasidesa/informasidesa.page.html":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/informasidesa/informasidesa.page.html ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Informasi Dasar</ion-title>\n\n  </ion-toolbar>\n\n  \n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <ion-card>\n\n    <div>\n\n      <div>\n\n        <ion-card-content>\n          Jumlah RT\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\" [(ngModel)]=\"rt\" ></ion-input>\n          </ion-item>\n\n          \n          Jumlah RW\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\" [(ngModel)]=\"rw\" ></ion-input>\n          </ion-item>\n\n          \n          Jumlah Posko Desa\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\" [(ngModel)]=\"posko_desa\" ></ion-input>\n          </ion-item>\n\n          \n          Nomor HP\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-label>+62</ion-label>\n            <ion-input [(ngModel)]=\"phone_number\" type=\"number\"></ion-input>\n          </ion-item>\n\n          \n          Nomor Telpon\n          <ion-item lines=\"none\" style=\"margin-top: 10px;\">\n            <ion-input type=\"number\" [(ngModel)]=\"telephone\" ></ion-input>\n          </ion-item>\n        </ion-card-content>\n\n      </div>\n\n    </div>\n\n    \n  </ion-card>\n\n\n</ion-content>\n\n\n<ion-footer class=\"ion-no-border\" mode=\"ios\">\n  <ion-toolbar>\n    <ion-row>\n      <ion-col size=\"6\">\n      </ion-col>\n      <ion-col size=\"6\">\n        <ion-button expand=\"block\" (click)=\"kirimDataDasar()\" shape=\"round\" color=\"warning\" fill=\"solid\">\n          Kirim\n          <ion-icon slot=\"end\" name=\"arrow-forward-outline\"></ion-icon>\n        </ion-button>\n      </ion-col>\n    </ion-row>\n  </ion-toolbar>\n</ion-footer>\n");
 
 /***/ }),
 
@@ -74,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Laporan {{target}} - {{params.type}}</ion-title>\n  </ion-toolbar>\n\n  <ion-toolbar style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      List Group <ion-icon name=\"chevron-forward-outline\"></ion-icon>\n      Laporan {{target}} <ion-icon name=\"chevron-forward-outline\"></ion-icon>\n      Pilih Periode {{params.type}}\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n  <ion-list *ngIf=\"listTime.length > 0\">\n    <ion-list-header>\n          {{params.title}}\n        </ion-list-header>\n    <ion-item *ngFor=\"let item of sortDESCBy('sort')\" (click)=\"gotoFormLaporan(item)\" lines=\"full\">\n      <ion-label>\n        <h3>{{item.label}}</h3>\n              <p>{{item.range}}</p>\n      </ion-label>\n      \n\n      <ion-icon slot=\"start\" color=\"success\" *ngIf=\"item.status==2\" name=\"checkmark-circle\"></ion-icon>\n      <ion-icon slot=\"start\" color=\"warning\"  *ngIf=\"item.status == 1\" name=\"timer\"></ion-icon>\n      <ion-icon slot=\"start\" color=\"medium\" *ngIf=\"item.status==0\" name=\"ellipse-outline\"></ion-icon>\n\n      <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button color=\"light\" (click)=\"goBack()\">\r\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\r\n      </ion-button>\r\n    </ion-buttons>\r\n    <ion-title>Laporan {{target}} - {{params.type}}</ion-title>\r\n  </ion-toolbar>\r\n\r\n  <ion-toolbar style=\"--background: #eaeaea;color: #333333;\">\r\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\r\n      List Group <ion-icon name=\"chevron-forward-outline\"></ion-icon>\r\n      Laporan {{target}} <ion-icon name=\"chevron-forward-outline\"></ion-icon>\r\n      Pilih Periode {{params.type}}\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content mode=\"ios\">\r\n  <ion-list *ngIf=\"listTime.length > 0\">\r\n    <ion-list-header>\r\n          {{params.title}}\r\n        </ion-list-header>\r\n    <ion-item *ngFor=\"let item of sortDESCBy('sort')\" (click)=\"gotoFormLaporan(item)\" lines=\"full\">\r\n      <ion-label>\r\n        <h3>{{item.label}}</h3>\r\n              <p>{{item.range}}</p>\r\n      </ion-label>\r\n      \r\n\r\n      <ion-icon slot=\"start\" color=\"success\" *ngIf=\"item.status==2\" name=\"checkmark-circle\"></ion-icon>\r\n      <ion-icon slot=\"start\" color=\"warning\"  *ngIf=\"item.status == 1\" name=\"timer\"></ion-icon>\r\n      <ion-icon slot=\"start\" color=\"medium\" *ngIf=\"item.status==0\" name=\"ellipse-outline\"></ion-icon>\r\n\r\n      <ion-icon slot=\"end\" color=\"medium\" name=\"chevron-forward-outline\"></ion-icon>\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -101,6 +140,244 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<ion-header mode=\"ios\" class=\"ion-no-border\">\n  <ion-toolbar style=\"height: 57px;padding-top: 5px;\">\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"light\" (click)=\"goBack()\">\n        <ion-icon name=\"chevron-back-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Laporan {{ title }}</ion-title>\n\n    \n  </ion-toolbar>\n\n  <ion-toolbar *ngIf=\"subtitle!=''\" style=\"--background: #eaeaea;color: #333333;\">\n    <ion-title size=\"small\" style=\"padding-bottom: 7px;\">\n      {{ subtitle }}<br/>{{subtitle_2}}<br/>{{subtitle_3}}\n    </ion-title>\n    \n  </ion-toolbar>\n</ion-header>\n\n<ion-content mode=\"ios\">\n\n  <div *ngIf=\"listQuestion.length > 0\">\n    <div *ngFor=\"let item of listQuestion\">\n      \n      <ion-card *ngIf=\"item.Answers.length > 0\">\n        <!-- <ion-item style=\"--background: #eaeaea;--padding-bottom:0px;--inner-padding-bottom:0px;\" lines=\"none\">\n          \n          <ion-label class=\"label-title\">\n            <div style=\"margin-bottom: 15px;\"  [innerHTML]=\"item?.question\"></div>\n          </ion-label>          \n        </ion-item> -->\n\n        <ion-card-content>\n\n          <ion-label class=\"label-title\" [innerHTML]=\"item?.question\"></ion-label>\n\n          <!-- Boolean -->\n           <ion-grid *ngIf=\"item.id_question_type == 2 && item.Answers.length>0\" fixed=\"true\">\n             <ion-row>\n               <ion-col class=\"boolean-1\">\n                <div [ngClass]=\"{'boolean-active' : item.Answers[0].id_question_option == item.Options[0].id }\" [innerHTML]=\"item.Options[0]?.option\"></div>\n              </ion-col>\n               <ion-col class=\"boolean-2\">\n                <div [ngClass]=\"{'boolean-active' : item.Answers[0].id_question_option == item.Options[1].id }\" [innerHTML]=\"item.Options[1]?.option\"></div>\n              </ion-col>\n             </ion-row>\n           </ion-grid>\n\n\n        <!-- Essay text -->\n        <div *ngIf=\"item.id_question_type == 1\">\n          <b>Jawaban : </b>{{item.Answers[0].essay_text}}\n        </div>\n\n        <!-- Essay number -->\n        <div *ngIf=\"item.id_question_type == 5\">\n          <b>Jawaban : </b>{{item.Answers[0].essay_number}}\n        </div>\n\n        <!-- Essay number -->\n        <div *ngIf=\"item.id_question_type == 7\">\n          <b>Jawaban : </b>{{ formatingDate(item.Answers[0].essay_date)}}\n        </div>\n\n        <!-- Essay file -->\n        <div *ngIf=\"item.id_question_type == 6\">\n          <b>Jawaban : </b>\n          <div>\n            <img src=\"https://movtaskforce.oss-ap-southeast-5.aliyuncs.com/answers/{{item.Answers[0].essay_file}}\"  alt=\"{{item.Answers[0].essay_file}}\"/>\n          </div>\n        </div>\n\n\n        <ion-list *ngIf=\"item.id_question_type == 3 && item.Options.length>0  && item.Answers.length>0\">\n          <ion-item *ngFor=\"let option of item.Options\" lines=\"full\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n\n            <ion-icon slot=\"start\" *ngIf=\"item.Answers[0].id_question_option != option.id\" color=\"medium\" name=\"ellipse-outline\"></ion-icon>\n            <ion-icon slot=\"start\" *ngIf=\"item.Answers[0].id_question_option == option.id\" color=\"success\" name=\"checkmark-circle\"></ion-icon>\n          </ion-item>\n        </ion-list>\n\n        <ion-list *ngIf=\"item.id_question_type == 4 && item.Options.length>0  && item.Answers.length>0\">\n          <ion-item *ngFor=\"let option of item.Options\" lines=\"full\">\n            <ion-label class=\"label-title\" [innerHTML]=\"option?.option\"></ion-label>\n\n            <ion-icon slot=\"end\" *ngIf=\"!item.Answers.includes(option.id)\" color=\"medium\" name=\"ellipse-outline\"></ion-icon>\n            <ion-icon slot=\"end\" *ngIf=\"item.Answers.includes(option.id)\" color=\"success\" name=\"checkmark-circle\"></ion-icon>\n          </ion-item>\n        </ion-list>\n\n\n        </ion-card-content>\n      </ion-card>\n\n    </div>\n  </div>\n\n</ion-content>\n");
+
+/***/ }),
+
+/***/ "./src/app/pages/laporan/datadasardesa/datadasardesa.page.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/laporan/datadasardesa/datadasardesa.page.scss ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("ion-header ion-toolbar {\n  --background: #2f9495;\n  color: #ffffff;\n}\n\nion-content #listLaporan ion-card-content {\n  text-align: center;\n}\n\nion-content #list-group .range-group {\n  color: #fffdfd;\n  background: #92949c9e;\n  font-size: 12px;\n  padding-left: 5px;\n  padding-right: 5px;\n  border-radius: 3px;\n}\n\nion-content #list-group p {\n  color: #e6e6e6;\n}\n\nion-content #list-group .type-active {\n  color: #576c7d;\n}\n\n.label-title {\n  white-space: break-spaces !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9kYXRhZGFzYXJkZXNhL2RhdGFkYXNhcmRlc2EucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNJO0VBRUkscUJBQUE7RUFDQSxjQUFBO0FBRFI7O0FBVUk7RUFDSSxrQkFBQTtBQVBSOztBQVlRO0VBQ0ksY0FBQTtFQUNBLHFCQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtBQVZaOztBQWFRO0VBQ0ksY0FBQTtBQVhaOztBQWNRO0VBQ0ksY0FBQTtBQVpaOztBQXFCQTtFQUNJLG9DQUFBO0FBbEJKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9kYXRhZGFzYXJkZXNhL2RhdGFkYXNhcmRlc2EucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWhlYWRlciB7XHJcbiAgICBpb24tdG9vbGJhciB7XHJcblxyXG4gICAgICAgIC0tYmFja2dyb3VuZDogIzJmOTQ5NTtcclxuICAgICAgICBjb2xvcjogI2ZmZmZmZjtcclxuXHJcbiAgICB9XHJcbn1cclxuXHJcbmlvbi1jb250ZW50IHtcclxuICAgIC8vIC0tYmFja2dyb3VuZDogI2NhZWNlOTtcclxuICAgIC8vIC0tcGFkZGluZy10b3A6IDMwcHg7XHJcblxyXG4gICAgI2xpc3RMYXBvcmFuIGlvbi1jYXJkLWNvbnRlbnQge1xyXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIH1cclxuXHJcbiAgICAjbGlzdC1ncm91cCB7XHJcblxyXG4gICAgICAgIC5yYW5nZS1ncm91cCB7XHJcbiAgICAgICAgICAgIGNvbG9yOiAjZmZmZGZkO1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kOiAjOTI5NDljOWU7XHJcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgICAgICAgICAgcGFkZGluZy1sZWZ0OiA1cHg7XHJcbiAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6IDVweDtcclxuICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogM3B4O1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgcCB7XHJcbiAgICAgICAgICAgIGNvbG9yOiAjZTZlNmU2O1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgLnR5cGUtYWN0aXZlIHtcclxuICAgICAgICAgICAgY29sb3I6ICM1NzZjN2Q7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxufVxyXG5cclxuXHJcblxyXG5cclxuLmxhYmVsLXRpdGxlIHtcclxuICAgIHdoaXRlLXNwYWNlOiBicmVhay1zcGFjZXMgIWltcG9ydGFudDtcclxufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/pages/laporan/datadasardesa/datadasardesa.page.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/pages/laporan/datadasardesa/datadasardesa.page.ts ***!
+  \*******************************************************************/
+/*! exports provided: DatadasardesaPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatadasardesaPage", function() { return DatadasardesaPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/api.service */ "./src/app/_services/api.service.ts");
+
+
+
+
+let DatadasardesaPage = class DatadasardesaPage {
+    constructor(NavController, apiService) {
+        this.NavController = NavController;
+        this.apiService = apiService;
+        this.listAPBDes = [];
+        this.statusBasicInformasi = 0;
+    }
+    ngOnInit() {
+    }
+    ionViewDidEnter() {
+        this.getBasicData();
+        this.getListAPBDes();
+    }
+    getListAPBDes() {
+        let geo_id = localStorage.getItem('geo_id');
+        this.subscribe = this.apiService.get('v2/apbdes?geo_id=' + geo_id, {}).subscribe(data => {
+            console.log(data);
+            this.listAPBDes = data;
+        }, error => {
+            if (error.status == 401) {
+                // this.alertToRelogin();
+            }
+        });
+    }
+    getBasicData() {
+        let geo_id = localStorage.getItem('geo_id');
+        this.subscribe = this.apiService.get('v2/basic_data?geo_id=' + geo_id, {}).subscribe(data => {
+            console.log(data);
+            if (data.length > 0) {
+                this.statusBasicInformasi = 1;
+            }
+        }, error => {
+            if (error.status == 401) {
+                // this.alertToRelogin();
+            }
+        });
+    }
+    gotoDataDasarForm(item) {
+        console.log(item);
+        this.NavController.navigateForward(['/laporan/datadasardesaform', item]);
+    }
+    gotoInformasiDasarDesa() {
+        this.NavController.navigateForward(['/laporan/informasidesa', []]);
+    }
+    goBack() {
+        this.NavController.navigateBack(['/laporan/groups'], { replaceUrl: true });
+    }
+};
+DatadasardesaPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
+    { type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] }
+];
+DatadasardesaPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-datadasardesa',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./datadasardesa.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesa/datadasardesa.page.html")).default,
+        providers: [src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./datadasardesa.page.scss */ "./src/app/pages/laporan/datadasardesa/datadasardesa.page.scss")).default]
+    })
+], DatadasardesaPage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.scss ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("ion-header ion-toolbar {\n  --background: #2f9495;\n  color: #ffffff;\n}\n\nion-content #container {\n  padding: 10px;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 47%;\n  transform: translateY(-50%);\n}\n\nion-content ion-item {\n  border: 1px solid #eaeaea;\n  margin-bottom: 10px;\n  border-radius: 5px;\n}\n\n.label-title {\n  white-space: break-spaces !important;\n}\n\nion-footer ion-toolbar {\n  --background: #2f9495 !important;\n  min-height: 70px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9kYXRhZGFzYXJkZXNhZm9ybS9kYXRhZGFzYXJkZXNhZm9ybS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0k7RUFFSSxxQkFBQTtFQUNBLGNBQUE7QUFEUjs7QUFTSTtFQUNJLGFBQUE7RUFHQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLDJCQUFBO0FBUlI7O0FBV0k7RUFDSSx5QkFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7QUFUUjs7QUFjQTtFQUNJLG9DQUFBO0FBWEo7O0FBZUk7RUFDSSxnQ0FBQTtFQUNBLGdCQUFBO0FBWlIiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9sYXBvcmFuL2RhdGFkYXNhcmRlc2Fmb3JtL2RhdGFkYXNhcmRlc2Fmb3JtLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1oZWFkZXIge1xyXG4gICAgaW9uLXRvb2xiYXIge1xyXG5cclxuICAgICAgICAtLWJhY2tncm91bmQ6ICMyZjk0OTU7XHJcbiAgICAgICAgY29sb3I6ICNmZmZmZmY7XHJcblxyXG4gICAgfVxyXG59XHJcblxyXG5pb24tY29udGVudCB7XHJcbiAgICAvLyAtLWJhY2tncm91bmQ6ICMyZjk0OTU7XHJcblxyXG4gICAgI2NvbnRhaW5lciB7XHJcbiAgICAgICAgcGFkZGluZzogMTBweDtcclxuICAgICAgICAvLyB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcblxyXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICBsZWZ0OiAwO1xyXG4gICAgICAgIHJpZ2h0OiAwO1xyXG4gICAgICAgIHRvcDogNDclO1xyXG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcclxuICAgIH1cclxuXHJcbiAgICBpb24taXRlbSB7XHJcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2VhZWFlYTtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgIH1cclxufVxyXG5cclxuXHJcbi5sYWJlbC10aXRsZSB7XHJcbiAgICB3aGl0ZS1zcGFjZTogYnJlYWstc3BhY2VzICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbmlvbi1mb290ZXIge1xyXG4gICAgaW9uLXRvb2xiYXIge1xyXG4gICAgICAgIC0tYmFja2dyb3VuZDogIzJmOTQ5NSAhaW1wb3J0YW50O1xyXG4gICAgICAgIG1pbi1oZWlnaHQ6IDcwcHg7XHJcbiAgICB9XHJcbn0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.ts ***!
+  \***************************************************************************/
+/*! exports provided: DatadasardesaformPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatadasardesaformPage", function() { return DatadasardesaformPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/api.service */ "./src/app/_services/api.service.ts");
+
+
+
+
+
+let DatadasardesaformPage = class DatadasardesaformPage {
+    constructor(NavController, route, toastController, loadingController, apiService) {
+        this.NavController = NavController;
+        this.route = route;
+        this.toastController = toastController;
+        this.loadingController = loadingController;
+        this.apiService = apiService;
+        this.listQuestions = [];
+        this.params = this.route.snapshot.params;
+        console.log(this.params);
+    }
+    ngOnInit() {
+    }
+    ionViewDidEnter() {
+        this.getListAPBDesDetail();
+    }
+    presentLoading() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const loading = yield this.loadingController.create({
+                cssClass: 'my-custom-class',
+                message: 'Mengirim data...',
+                mode: 'ios',
+                duration: 2000
+            });
+            yield loading.present();
+            const { role, data } = yield loading.onDidDismiss();
+            // console.log('Loading dismissed!');
+        });
+    }
+    presentToast(color, header, message) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const toast = yield this.toastController.create({
+                header: header,
+                message: message,
+                color: color,
+                mode: "ios",
+                position: "middle",
+                duration: 3000
+            });
+            toast.present();
+        });
+    }
+    getListAPBDesDetail() {
+        let geo_id = localStorage.getItem('geo_id');
+        this.subscribe = this.apiService.get('v2/apbdes_details?geo_id=' + geo_id + '&apbdesa_head_id=' + this.params.id, {}).subscribe(data => {
+            console.log(data);
+            this.listQuestions = data;
+        }, error => {
+            if (error.status == 401) {
+                // this.alertToRelogin();
+            }
+        });
+    }
+    kirimDataDasar() {
+        this.presentLoading();
+        let geo_id = localStorage.getItem('geo_id');
+        let paramPost = {
+            geo_id: geo_id,
+            apbdesa_head_id: this.params.id,
+            listQuestions: JSON.stringify(this.listQuestions)
+        };
+        this.subscribe = this.apiService.post('v2/apbdes_details', paramPost).subscribe(data => {
+            // this.getListItems();
+            setTimeout(() => {
+                this.presentToast('success', 'Success', 'Data tersimpan');
+                // this.NavController.navigateBack(['/basicdata/registrasidusun'], { replaceUrl: true });
+            }, 2000);
+        }, error => {
+            setTimeout(() => {
+                this.presentToast('danger', 'Error', 'Data tidak tersimpan');
+            }, 2000);
+        });
+    }
+    formatRupiah(angka) {
+        if (angka != null && angka != '') {
+            var number_string = parseFloat(angka).toString(), split = number_string.split(','), sisa = split[0].length % 3, rupiah = split[0].substr(0, sisa), ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+            // tambahkan titik jika yang di input sudah menjadi angka ribuan
+            if (ribuan) {
+                let separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+            }
+            rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+            return rupiah;
+        }
+    }
+    goBack() {
+        this.NavController.navigateBack(['/laporan/datadasardesa'], { replaceUrl: true });
+    }
+};
+DatadasardesaformPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["LoadingController"] },
+    { type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"] }
+];
+DatadasardesaformPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-datadasardesaform',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./datadasardesaform.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.html")).default,
+        providers: [src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./datadasardesaform.page.scss */ "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.scss")).default]
+    })
+], DatadasardesaformPage);
+
+
 
 /***/ }),
 
@@ -134,10 +411,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/api.service */ "./src/app/_services/api.service.ts");
 /* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "./node_modules/@ionic-native/camera/__ivy_ngcc__/ngx/index.js");
 /* harmony import */ var _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/image-picker/ngx */ "./node_modules/@ionic-native/image-picker/__ivy_ngcc__/ngx/index.js");
-/* harmony import */ var moment_locale_id__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! moment/locale/id */ "./node_modules/moment/locale/id.js");
-/* harmony import */ var moment_locale_id__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment_locale_id__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var src_app_modals_input_number_input_number_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/_modals/input-number/input-number.component */ "./src/app/_modals/input-number/input-number.component.ts");
+/* harmony import */ var moment_locale_id__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! moment/locale/id */ "./node_modules/moment/locale/id.js");
+/* harmony import */ var moment_locale_id__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(moment_locale_id__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -148,8 +426,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let FormlaporanPage = class FormlaporanPage {
-    constructor(route, NavController, apiService, toastController, alertController, loadingController, camera, imagePicker) {
+    constructor(route, NavController, apiService, toastController, alertController, loadingController, camera, imagePicker, modalController) {
         this.route = route;
         this.NavController = NavController;
         this.apiService = apiService;
@@ -158,6 +437,7 @@ let FormlaporanPage = class FormlaporanPage {
         this.loadingController = loadingController;
         this.camera = camera;
         this.imagePicker = imagePicker;
+        this.modalController = modalController;
         this.title = '';
         this.subtitle = '';
         this.subtitle_2 = '';
@@ -187,8 +467,7 @@ let FormlaporanPage = class FormlaporanPage {
     ngOnInit() {
         this.getQuestion();
     }
-    ngitung() {
-    }
+    ngitung() { }
     presentToast(color, header, message) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const toast = yield this.toastController.create({
@@ -213,6 +492,18 @@ let FormlaporanPage = class FormlaporanPage {
             yield loading.present();
             const { role, data } = yield loading.onDidDismiss();
             // console.log('Loading dismissed!');
+        });
+    }
+    openModal() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const modal = yield this.modalController.create({
+                component: src_app_modals_input_number_input_number_component__WEBPACK_IMPORTED_MODULE_7__["InputNumberComponent"],
+                cssClass: 'my-custom-modal-css',
+                mode: 'ios',
+                showBackdrop: false,
+                componentProps: []
+            });
+            return yield modal.present();
         });
     }
     temporarySave() {
@@ -652,6 +943,43 @@ let FormlaporanPage = class FormlaporanPage {
             }));
         });
     }
+    updateQuantity2(qp) {
+        this.singleAnswer = qp / 100;
+        this.singleAnswer = qp + '%';
+    }
+    updateQuantity(q) {
+        let angka = q.toString().replace(/\./g, '');
+        // console.log(angka);
+        // console.log(angka);
+        var number_string = parseFloat(angka).toString(), split = number_string.split(','), sisa = split[0].length % 3, rupiah = split[0].substr(0, sisa), ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+        // tambahkan titik jika yang di input sudah menjadi angka ribuan
+        if (ribuan) {
+            let separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        this.singleAnswer = rupiah;
+    }
+    formatRupiah(angka) {
+        if (angka != null && angka != '') {
+            var number_string = parseFloat(angka).toString(), split = number_string.split(','), sisa = split[0].length % 3, rupiah = split[0].substr(0, sisa), ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+            // tambahkan titik jika yang di input sudah menjadi angka ribuan
+            if (ribuan) {
+                let separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+            }
+            rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+            return rupiah;
+        }
+    }
+    numberOnlyValidation(event) {
+        const pattern = /[0-9.,]/;
+        let inputChar = String.fromCharCode(event.charCode);
+        if (!pattern.test(inputChar)) {
+            // invalid character, prevent input
+            event.preventDefault();
+        }
+    }
     beforeSendAnswer(back) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             return yield new Promise((resolve, reject) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
@@ -785,7 +1113,7 @@ let FormlaporanPage = class FormlaporanPage {
         return res;
     }
     formatingToInsertDB(myDate) {
-        return moment__WEBPACK_IMPORTED_MODULE_8__(myDate).format('YYYY-MM-DD');
+        return moment__WEBPACK_IMPORTED_MODULE_9__(myDate).format('YYYY-MM-DD');
     }
     goBack(refresh) {
         if (this.params.page_from == 'selectdusun') {
@@ -818,7 +1146,8 @@ FormlaporanPage.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["LoadingController"] },
     { type: _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_5__["Camera"] },
-    { type: _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_6__["ImagePicker"] }
+    { type: _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_6__["ImagePicker"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"] }
 ];
 FormlaporanPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1076,6 +1405,10 @@ let GroupsPage = class GroupsPage {
     getMonthName(number) {
         return moment__WEBPACK_IMPORTED_MODULE_4__().month((parseInt(number) - 1)).format('MMMM');
     }
+    gotoDataDasar() {
+        // this.NavController.navigateBack(['/home'], { replaceUrl: true });
+        this.NavController.navigateForward(['/laporan/datadasardesa', []]);
+    }
     goBack() {
         this.NavController.navigateBack(['/home'], { replaceUrl: true });
     }
@@ -1096,6 +1429,139 @@ GroupsPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./groups.page.scss */ "./src/app/pages/laporan/groups/groups.page.scss")).default]
     })
 ], GroupsPage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/laporan/informasidesa/informasidesa.page.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/laporan/informasidesa/informasidesa.page.scss ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("ion-header ion-toolbar {\n  --background: #2f9495;\n  color: #ffffff;\n}\n\nion-content #container {\n  padding: 10px;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 47%;\n  transform: translateY(-50%);\n}\n\nion-content ion-item {\n  border: 1px solid #eaeaea;\n  margin-bottom: 10px;\n  border-radius: 5px;\n}\n\n.label-title {\n  white-space: break-spaces !important;\n}\n\nion-footer ion-toolbar {\n  --background: #2f9495 !important;\n  min-height: 70px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9pbmZvcm1hc2lkZXNhL2luZm9ybWFzaWRlc2EucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNJO0VBRUkscUJBQUE7RUFDQSxjQUFBO0FBRFI7O0FBU0k7RUFDSSxhQUFBO0VBR0Esa0JBQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLFFBQUE7RUFDQSwyQkFBQTtBQVJSOztBQVdJO0VBQ0kseUJBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0FBVFI7O0FBY0E7RUFDSSxvQ0FBQTtBQVhKOztBQWVJO0VBQ0ksZ0NBQUE7RUFDQSxnQkFBQTtBQVpSIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGFwb3Jhbi9pbmZvcm1hc2lkZXNhL2luZm9ybWFzaWRlc2EucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWhlYWRlciB7XHJcbiAgICBpb24tdG9vbGJhciB7XHJcblxyXG4gICAgICAgIC0tYmFja2dyb3VuZDogIzJmOTQ5NTtcclxuICAgICAgICBjb2xvcjogI2ZmZmZmZjtcclxuXHJcbiAgICB9XHJcbn1cclxuXHJcbmlvbi1jb250ZW50IHtcclxuICAgIC8vIC0tYmFja2dyb3VuZDogIzJmOTQ5NTtcclxuXHJcbiAgICAjY29udGFpbmVyIHtcclxuICAgICAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgICAgIC8vIHRleHQtYWxpZ246IGNlbnRlcjtcclxuXHJcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgIGxlZnQ6IDA7XHJcbiAgICAgICAgcmlnaHQ6IDA7XHJcbiAgICAgICAgdG9wOiA0NyU7XHJcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xyXG4gICAgfVxyXG5cclxuICAgIGlvbi1pdGVtIHtcclxuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZWFlYWVhO1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG4gICAgfVxyXG59XHJcblxyXG5cclxuLmxhYmVsLXRpdGxlIHtcclxuICAgIHdoaXRlLXNwYWNlOiBicmVhay1zcGFjZXMgIWltcG9ydGFudDtcclxufVxyXG5cclxuaW9uLWZvb3RlciB7XHJcbiAgICBpb24tdG9vbGJhciB7XHJcbiAgICAgICAgLS1iYWNrZ3JvdW5kOiAjMmY5NDk1ICFpbXBvcnRhbnQ7XHJcbiAgICAgICAgbWluLWhlaWdodDogNzBweDtcclxuICAgIH1cclxufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/pages/laporan/informasidesa/informasidesa.page.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/pages/laporan/informasidesa/informasidesa.page.ts ***!
+  \*******************************************************************/
+/*! exports provided: InformasidesaPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InformasidesaPage", function() { return InformasidesaPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/api.service */ "./src/app/_services/api.service.ts");
+
+
+
+
+let InformasidesaPage = class InformasidesaPage {
+    constructor(NavController, toastController, loadingController, apiService) {
+        this.NavController = NavController;
+        this.toastController = toastController;
+        this.loadingController = loadingController;
+        this.apiService = apiService;
+    }
+    ngOnInit() {
+    }
+    ionViewDidEnter() {
+        this.getBasicData();
+    }
+    presentLoading() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const loading = yield this.loadingController.create({
+                cssClass: 'my-custom-class',
+                message: 'Mengirim data...',
+                mode: 'ios',
+                duration: 2000
+            });
+            yield loading.present();
+            const { role, data } = yield loading.onDidDismiss();
+            // console.log('Loading dismissed!');
+        });
+    }
+    presentToast(color, header, message) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const toast = yield this.toastController.create({
+                header: header,
+                message: message,
+                color: color,
+                mode: "ios",
+                position: "middle",
+                duration: 3000
+            });
+            toast.present();
+        });
+    }
+    getBasicData() {
+        let geo_id = localStorage.getItem('geo_id');
+        this.subscribe = this.apiService.get('v2/basic_data?geo_id=' + geo_id, {}).subscribe(data => {
+            console.log(data);
+            if (data.length > 0) {
+                let d = data[0];
+                this.rt = d.rt;
+                this.rw = d.rw;
+                this.posko_desa = d.posko_desa;
+                this.phone_number = d.phone_number;
+                this.telephone = d.telephone;
+            }
+        }, error => {
+            if (error.status == 401) {
+                // this.alertToRelogin();
+            }
+        });
+    }
+    kirimDataDasar() {
+        this.presentLoading();
+        let geo_id = localStorage.getItem('geo_id');
+        let paramPost = {
+            geo_id: geo_id,
+            rt: this.rt,
+            rw: this.rw,
+            posko_desa: this.posko_desa,
+            phone_number: this.phone_number,
+            telephone: this.telephone
+        };
+        this.subscribe = this.apiService.post('v2/basic_data', paramPost).subscribe(data => {
+            // this.getListItems();
+            setTimeout(() => {
+                this.presentToast('success', 'Success', 'Data tersimpan');
+                // this.NavController.navigateBack(['/basicdata/registrasidusun'], { replaceUrl: true });
+            }, 2000);
+        }, error => {
+            setTimeout(() => {
+                this.presentToast('danger', 'Error', 'Data tidak tersimpan');
+            }, 2000);
+        });
+    }
+    goBack() {
+        this.NavController.navigateBack(['/laporan/datadasardesa'], { replaceUrl: true });
+    }
+};
+InformasidesaPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"] },
+    { type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] }
+];
+InformasidesaPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-informasidesa',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./informasidesa.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/laporan/informasidesa/informasidesa.page.html")).default,
+        providers: [src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./informasidesa.page.scss */ "./src/app/pages/laporan/informasidesa/informasidesa.page.scss")).default]
+    })
+], InformasidesaPage);
 
 
 
@@ -1122,6 +1588,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _groups_groups_page__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./groups/groups.page */ "./src/app/pages/laporan/groups/groups.page.ts");
 /* harmony import */ var _selectperiode_selectperiode_page__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./selectperiode/selectperiode.page */ "./src/app/pages/laporan/selectperiode/selectperiode.page.ts");
 /* harmony import */ var _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./selectdusunonly/selectdusunonly.page */ "./src/app/pages/laporan/selectdusunonly/selectdusunonly.page.ts");
+/* harmony import */ var _datadasardesa_datadasardesa_page__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./datadasardesa/datadasardesa.page */ "./src/app/pages/laporan/datadasardesa/datadasardesa.page.ts");
+/* harmony import */ var _datadasardesaform_datadasardesaform_page__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./datadasardesaform/datadasardesaform.page */ "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.ts");
+/* harmony import */ var _informasidesa_informasidesa_page__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./informasidesa/informasidesa.page */ "./src/app/pages/laporan/informasidesa/informasidesa.page.ts");
+
+
+
 
 
 
@@ -1165,6 +1637,18 @@ const routes = [
     {
         path: 'selectdusunonly',
         component: _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_10__["SelectdusunonlyPage"]
+    },
+    {
+        path: 'datadasardesa',
+        component: _datadasardesa_datadasardesa_page__WEBPACK_IMPORTED_MODULE_11__["DatadasardesaPage"]
+    },
+    {
+        path: 'datadasardesaform',
+        component: _datadasardesaform_datadasardesaform_page__WEBPACK_IMPORTED_MODULE_12__["DatadasardesaformPage"]
+    },
+    {
+        path: 'informasidesa',
+        component: _informasidesa_informasidesa_page__WEBPACK_IMPORTED_MODULE_13__["InformasidesaPage"]
     }
 ];
 let LaporanPageRoutingModule = class LaporanPageRoutingModule {
@@ -1204,6 +1688,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _groups_groups_page__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./groups/groups.page */ "./src/app/pages/laporan/groups/groups.page.ts");
 /* harmony import */ var _selectperiode_selectperiode_page__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./selectperiode/selectperiode.page */ "./src/app/pages/laporan/selectperiode/selectperiode.page.ts");
 /* harmony import */ var _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./selectdusunonly/selectdusunonly.page */ "./src/app/pages/laporan/selectdusunonly/selectdusunonly.page.ts");
+/* harmony import */ var _datadasardesa_datadasardesa_page__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./datadasardesa/datadasardesa.page */ "./src/app/pages/laporan/datadasardesa/datadasardesa.page.ts");
+/* harmony import */ var _datadasardesaform_datadasardesaform_page__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./datadasardesaform/datadasardesaform.page */ "./src/app/pages/laporan/datadasardesaform/datadasardesaform.page.ts");
+/* harmony import */ var _informasidesa_informasidesa_page__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./informasidesa/informasidesa.page */ "./src/app/pages/laporan/informasidesa/informasidesa.page.ts");
+
+
+
 
 
 
@@ -1231,7 +1721,8 @@ LaporanPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         declarations: [_formlaporan_formlaporan_page__WEBPACK_IMPORTED_MODULE_6__["FormlaporanPage"],
             _selecttime_selecttime_page__WEBPACK_IMPORTED_MODULE_7__["SelecttimePage"], _selectdusun_selectdusun_page__WEBPACK_IMPORTED_MODULE_8__["SelectdusunPage"],
             _listlaporan_listlaporan_page__WEBPACK_IMPORTED_MODULE_9__["ListlaporanPage"], _viewlaporan_viewlaporan_page__WEBPACK_IMPORTED_MODULE_10__["ViewlaporanPage"], _groups_groups_page__WEBPACK_IMPORTED_MODULE_11__["GroupsPage"],
-            _selectperiode_selectperiode_page__WEBPACK_IMPORTED_MODULE_12__["SelectperiodePage"], _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_13__["SelectdusunonlyPage"]]
+            _selectperiode_selectperiode_page__WEBPACK_IMPORTED_MODULE_12__["SelectperiodePage"], _selectdusunonly_selectdusunonly_page__WEBPACK_IMPORTED_MODULE_13__["SelectdusunonlyPage"], _datadasardesa_datadasardesa_page__WEBPACK_IMPORTED_MODULE_14__["DatadasardesaPage"],
+            _datadasardesaform_datadasardesaform_page__WEBPACK_IMPORTED_MODULE_15__["DatadasardesaformPage"], _informasidesa_informasidesa_page__WEBPACK_IMPORTED_MODULE_16__["InformasidesaPage"]]
     })
 ], LaporanPageModule);
 
